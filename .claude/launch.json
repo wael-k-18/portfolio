@@ -1,0 +1,9 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "reference-site",
+      "url": "https://www.gq.com/sponsored/story/the-extraordinary-lab"
+    }
+  ]
+}
