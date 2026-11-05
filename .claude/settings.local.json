@@ -4,7 +4,8 @@
       "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --import-alias \"@/*\" --no-src-dir --yes)",
       "Bash(npm install *)",
       "WebFetch(domain:www.gq.com)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git push *)"
     ]
   }
 }
