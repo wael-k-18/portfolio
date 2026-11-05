@@ -1,0 +1,106 @@
+"use strict";(globalThis.webpackChunkverso=globalThis.webpackChunkverso||[]).push([[2808],{87098(e,o,t){t.d(o,{j:()=>r.A});var r=t(26022)},51257(e,o,t){t.d(o,{A:()=>S,W:()=>$});var r=t(96540),n=t(5556),i=t.n(n),s=t(32485),c=t.n(s),l=t(31989),a=t(76399),d=t(73730),u=t(49741),h=t(38080),b=t(31581),y=t(36185),p=t(13465),m=t(34967),g=t(60824);const f=()=>window.Kendra?.ADS??null,k=new URLSearchParams(window.location.search);function C(e){const o=e.replace(/.*\.(.*)$/,"$1");return parseInt(o.split("x")[1],10)}let v=null;function w(){if(v)return v;const e=document.querySelector('[class*="StickyHeroAdWrapper"]');if(!e)return null;if(e.closest(".one-nav"))return null;const o=e.querySelector(".ad.should-hold-space"),t=e.querySelector(".ad__slot.ad__slot--hero");if(!o||!t)return null;const r=parseInt(window.getComputedStyle(t).height,10)||60,n=parseInt(window.getComputedStyle(o).minHeight,10)||60;return v={adWrapper:o,wrapper:e,adSlot:t,minHeight:n,height:r},v}function $(e,o){const t=w();if(!t)return e;const{wrapper:r,minHeight:n,height:i,adWrapper:s}=t,c=r.classList.contains("ad-stickyhero-issticky"),l=Math.abs(n-i),a=Math.max(0,n-l);return c&&e&&o>n?(s.style.minHeight=`${i}px`,!1):c&&!e&&o<a?(s.style.minHeight=`${n}px`,!0):e}function A(e){const{className:o,configuredComponentRef:t,defaultCreativeHeightDesktop:n,defaultCreativeHeightMobile:i,holdAdHeightsConfig:{shoulHoldStickyHeroAd:s=!1}={},isNoAds:b,isStickyDisabledMobile:p,navVariation:m="",onFilled:$,setIsHeroAdVisible:A}=e,[S,_]=(0,r.useState)(!1),[R,H]=(0,r.useState)(!1),[E,B]=(0,r.useState)(!1),[I,D]=(0,r.useState)(250),N=(0,r.useRef)(!1),T=(0,r.useRef)([]),M=(0,r.useRef)(null),x=(0,r.useRef)(null),L=(0,r.useRef)(null),W=(0,r.useRef)(null),z=(0,r.useRef)(null),K=(0,r.useRef)(null),q=(0,r.useRef)(null),O=(0,r.useRef)(null),Y="sticky-hero"===k?.get("test")||s,V=(0,r.useRef)(!1),Z=(0,r.useCallback)(()=>{T.current.forEach(e=>e?.off?.()),T.current=[],M.current?.(),x.current?.(),L.current?.(),W.current?.(),z.current&&(clearTimeout(z.current),z.current=null),K.current&&(clearTimeout(K.current),K.current=null),q.current&&(clearTimeout(q.current),q.current=null),O.current&&(clearTimeout(O.current),O.current=null)},[]),P=(0,r.useCallback)(()=>{Z(),H(e=>{if(!e)return e;const o=w();if(o){const{adWrapper:e,minHeight:t}=o;e.style.minHeight=`${t}px`}return D(e=>(window.pageYOffset<e/2?(B(!1),_(!1),A?.(!1)):(A?.(!1),K.current=setTimeout(()=>{B(!1),_(!1),A?.(!1)},1e3)),e)),!1})},[Z,A]),G=(0,r.useCallback)(()=>{const e=f();if(Y){if(e){const o=e.on(g.c.LIBRARY_SLOT_RENDER_ENDED_EMPTY,e=>{"hero_0"===e.slotElementId&&P()});T.current.push(o)}else window.cnBus&&(L.current=window.cnBus.on("#.hero_0.empty",()=>{P()}));window.cnBus&&(W.current=window.cnBus.on("cnePlayer.stickyVideo.activated",()=>{P()}))}else{z.current=setTimeout(()=>P(),3e4);const o=()=>{O.current=setTimeout(()=>{N.current||P()},2e3)};if(e){const t=e.on(g.c.LIBRARY_STICKY_HERO_IMPRESSION_VIEWABLE,o);T.current.push(t)}else window.cnBus&&(x.current=window.cnBus.on("ads.stickyBanner.hero.impressionViewable",o))}},[Y,P]),F=(0,r.useCallback)(e=>{_(!0),D(e),A?.(!0),q.current=setTimeout(()=>{B(!0),H(!0),G()},1e3)},[A,G]),j=(0,r.useCallback)(e=>{let o,t;if(e?.size)o=e.size[1]??250,t=e.size[0]??0;else{const[[e]]=window.cnBus.history("ads.stickyBanner.hero.slotRenderEnded.#");o=C(e);const r=e.replace(/.*\.(.*)$/,"$1");t=parseInt(r.split("x")[0],10)||0}let r=o;if(v?.adWrapper){if(1===o&&t>0){r=v.adWrapper.offsetWidth/t}v.height=Math.round(r)}F(o)},[F]),U=(0,r.useCallback)(()=>{N.current=!0},[]);(0,r.useEffect)(()=>{if(V.current)return;V.current=!0;const e=f();if(e){const o=e.history().filter(e=>e.channel===g.c.LIBRARY_STICKY_HERO_RENDER_ENDED);if(0===o.length){const o=e.on(g.c.LIBRARY_STICKY_HERO_RENDER_ENDED,j);T.current.push(o)}else{const e=o[0].value,t=e.size?.[1]??250;D(t),_(!0),H(!0),G(),A?.(!0)}}else if(window.cnBus?.history){const e=window.cnBus.history("ads.stickyBanner.hero.slotRenderEnded.#");if(0===e.length)M.current=window.cnBus.on("ads.stickyBanner.hero.slotRenderEnded.#",j);else{const o=C(e[0][0]);D(o),_(!0),H(!0),G(),A?.(!0)}}},[j,G,A]),(0,r.useEffect)(()=>()=>{Z(),v=null},[Z]);const X=m.toLowerCase().includes("withsearchbar"),J=(0,r.useMemo)(()=>{if(S)return{"ad-stickyhero-issticky":!0,"ad-stickyhero-sticky-animating":E,[`ad-stickyhero-sticky-${I}`]:!R,"ad-stickyhero-sticky-visible":R}},[S,E,I,R]);return b?null:r.createElement(y.IO,{ref:t,className:c()(o,"ad-stickyhero",p?"ad-stickyhero-disable-mobile":"ad-stickyhero-enable-mobile",{"with-link-banner":m.toLowerCase().includes("linkbanner"),"with-searchbar":X},J),"data-testid":"sticky-hero-ad",onMouseEnter:U,onTouchStart:U,defaultCreativeHeightDesktop:n,defaultCreativeHeightMobile:i},S&&R&&r.createElement(d.A.Utility,{isIconButton:!0,ButtonIcon:a.A,className:"ad-stickyhero-button",label:"Close",onClickHandler:P,role:"button","aria-expanded":a.A}),r.createElement(h.Z,{group:"ads"},r.createElement(l.A,{position:"hero",onFilled:$,shouldHoldSpace:!0})),r.createElement(h.Z,{group:"consumer-marketing"},r.createElement(u.A,{position:"display-hero"})))}A.propTypes={configuredComponentRef:i().func,defaultCreativeHeightDesktop:i().number,defaultCreativeHeightMobile:i().number,className:i().string,isNoAds:i().bool,isStickyDisabledMobile:i().bool,navVariation:i().string,onFilled:i().func,setIsHeroAdVisible:i().func,holdAdHeightsConfig:i().shape({shoulHoldStickyHeroAd:i().bool})},A.displayName="StickyHeroAd";const S=(0,m.A)((0,b.N)((0,p.y)(A,"StickyHeroAd")),{keysToPluck:["isNoAds","holdAdHeightsConfig"]})},69741(e,o,t){t.d(o,{Gi:()=>y,_S:()=>u,dX:()=>g,tZ:()=>m});var r=t(38267),n=t(26865),i=t(96472),s=t(18730);const{timingButtonDefault:c}=i.L6,l=(0,n.Kq)(3),a=({selectionControlBackgroundColor:e,selectionControlBorderColor:o,selectionControlSize:t})=>r.AH`
+    transition-property: background, border;
+    transition-duration: ${c};
+    transition-timing-function: ease-in;
+    position: relative;
+    border-width: 1px;
+    border-style: solid;
+    ${({theme:e})=>(0,n._o)(e,"border-color",o)};
+    ${({theme:o})=>(0,n._o)(o,"background-color",e)};
+    width: ${t};
+    height: ${t};
+    pointer-events: none;
+
+    &::before {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition-property: background, border;
+      transition-duration: ${c};
+      transition-timing-function: ease-in;
+      opacity: 0;
+      content: '';
+    }
+  `,d=r.Ay.div.withConfig({displayName:"DiscoverySelectionControlStyledCheckbox"})`
+  ${a({selectionControlBackgroundColor:"colors.interactive.base.white",selectionControlBorderColor:"colors.interactive.base.black",selectionControlSize:l})}
+
+  &::before {
+    ${(({checkboxIconBorderWidth:e,checkboxIconColor:o})=>r.AH`
+    transform: translate(-50%, -60%) rotate(45deg);
+    border-width: 0 ${e} ${e} 0;
+    border-style: solid;
+    ${({theme:e})=>(0,n._o)(e,"border-color",o)};
+    width: 25%;
+    height: 75%;
+  `)({checkboxIconBorderWidth:"2px",checkboxIconColor:"colors.interactive.base.white"})}
+  }
+`,u=r.Ay.div.withConfig({displayName:"DiscoverySelectionControlStyledRadio"})`
+  ${a({selectionControlBackgroundColor:"colors.interactive.base.white",selectionControlBorderColor:"colors.interactive.base.black",selectionControlSize:l})}
+
+  border-radius: 100%;
+
+  &::before {
+    ${({theme:e})=>(({radioIconColor:e,theme:o})=>`\n    border-radius: 100%;\n    transform: translate(-50%, -50%);\n    border-radius: 100%;\n    ${(0,n._o)(o,"border-color",e)};\n    width: 50%;\n    height: 50%;\n  `)({radioIconColor:"colors.interactive.base.black",theme:e})}
+  }
+`,h=({theme:e})=>r.AH`
+    ${(({selectionControlBackgroundColor:e,theme:o})=>`\n    &:checked,\n    &:active {\n      + ${u}::before {\n        opacity: 1;\n      }\n      + ${d} {\n        &::before {\n          opacity: 1;\n        }\n        ${(0,n._o)(o,"border-color","colors.interactive.base.brand-primary")};\n        ${(0,n._o)(o,"background-color",e)};\n      }\n    }\n\n    &:disabled {\n      + ${u},\n        + ${d} {\n        ${(0,n._o)(o,"border-color","colors.interactive.base.light")};\n      }\n    }\n\n    &:disabled:checked {\n      + ${d} {\n        ${(0,n._o)(o,"background-color","colors.interactive.base.light")};\n\n      + ${u}::before {\n        ${(0,n._o)(o,"background-color","colors.interactive.base.light")};\n      }\n    }\n  `)({selectionControlBackgroundColor:"colors.interactive.base.brand-primary",theme:e})}
+  `,b=({theme:e})=>r.AH`
+    cursor: default;
+    pointer-events: none;
+    ${(0,n._o)(e,"color","colors.interactive.base.light")};
+  `,y=r.Ay.input.withConfig({displayName:"DiscoverySelectionControlNativeRadio"})`
+  ${({theme:e})=>h({theme:e})}
+`,p=r.Ay.input.withConfig({displayName:"DiscoverySelectionControlNativeCheckbox"})`
+  ${({theme:e})=>h({theme:e})}
+`,m=r.Ay.label.withConfig({displayName:"DiscoverySelectionControlLabelWrapper"})`
+  display: grid;
+  position: relative;
+  grid-column-gap: ${(0,n.Kq)(2)};
+  grid-template-columns: ${l} auto;
+  grid-row-gap: ${(0,n.Kq)(.5)};
+
+  @media (min-width: ${i.LO.md}) {
+    grid-column-gap: ${(0,n.Kq)(2)};
+    grid-row-gap: ${(0,n.Kq)(1)};
+  }
+
+  &:hover {
+    ${d} {
+      ${({theme:e})=>(0,n._o)(e,"border-color","colors.interactive.base.brand-primary")};
+    }
+
+    ${u} {
+      ${({theme:e})=>(0,n._o)(e,"border-color","colors.interactive.base.brand-primary")};
+    }
+
+    ${p}:checked + ${d} {
+      ${({theme:e})=>(0,n._o)(e,"background","colors.interactive.base.black")};
+      ${({theme:e})=>(0,n._o)(e,"border-color","colors.interactive.base.black")};
+    }
+
+    ${y}:checked + ${u} {
+      ${({theme:e})=>(0,n._o)(e,"background","colors.interactive.base.white")};
+    }
+  }
+
+  ${({isDisabled:e,theme:o})=>e&&b({theme:o})};
+`,g=((0,r.Ay)(s.v).withConfig({displayName:"DiscoverySelectionControlContext"}).attrs(e=>({as:"div",colorToken:"colors.discovery.body.white.description",typeIdentity:"typography.definitions.globalEditorial.context-primary",...e}))`
+  ${({theme:e,typeIdentity:o})=>(0,n.Gg)(e,o)}
+  grid-column-start: 2;
+  margin-bottom: ${(0,n.Kq)(.5)};
+  ${({theme:e,colorToken:o})=>(0,n._o)(e,"color",o)};
+  ${({isDisabled:e,theme:o})=>e&&b({theme:o})};
+  @media (min-width: ${i.LO.md}) {
+    margin-bottom: 0;
+  }
+`,(0,r.Ay)(s.v).withConfig({displayName:"DiscoverySelectionControlHed"}).attrs(e=>({as:"span",colorToken:"colors.discovery.body.white.heading",typeIdentity:"typography.definitions.discovery.hed-core-secondary",...e}))`
+  ${({theme:e,typeIdentity:o})=>(0,n.Gg)(e,o)}
+  ${({theme:e,colorToken:o})=>(0,n._o)(e,"color",o)};
+  ${({isDisabled:e,theme:o})=>e&&b({theme:o})};
+`);(0,r.Ay)(s.v).withConfig({displayName:"DiscoverySelectionControlDek"}).attrs(e=>({as:"span",colorToken:"colors.discovery.body.white.description",typeIdentity:"typography.definitions.discovery.description-core",...e}))`
+  ${({theme:e,typeIdentity:o})=>(0,n.Gg)(e,o)}
+  ${({theme:e,colorToken:o})=>(0,n._o)(e,"color",o)};
+  grid-column-start: 2;
+  ${({isDisabled:e,theme:o})=>e&&b({theme:o})};
+`},79499(e,o,t){t.d(o,{Ay:()=>a});var r=t(29421);const{MultipleSelect:n}=r.A,{MultipleSelectSearchableWithMenuControls:i}=r.A,{MultipleSelectWithMenuControls:s}=r.A,{Searchable:c}=r.A,{Static:l}=r.A,a=r.A},62930(e,o,t){t.d(o,{Ay:()=>i,jl:()=>r.A});var r=t(32272),n=t(13644);const i={Circle:r.A,Vogue:n.A}},55918(e,o,t){t.d(o,{Ze:()=>n.Z});var r=t(57743),n=t(39836);r.u,n.Z},57744(e,o,t){t.d(o,{M3:()=>s.A,Tk:()=>r.A,ro:()=>n.A,z5:()=>i.A});var r=t(82407),n=t(26410),i=(t(79810),t(27543)),s=t(34967)},86456(e,o,t){var r=t(84743);t.n(r)().defineLocale("zh-Hant-TW",{parentLocale:"zh-tw"})}}]);

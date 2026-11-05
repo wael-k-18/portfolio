@@ -1,0 +1,733 @@
+"use strict";(globalThis.webpackChunkverso=globalThis.webpackChunkverso||[]).push([[4223],{62077(e,a,o){o.d(a,{K2:()=>u});var t=o(38267),n=o(96472),r=o(1123),i=o(26865),s=o(99906),l=o(22652),d=o(48286),c=o(41108),m=o(75163);t.Ay.div.withConfig({displayName:"Wrapper"})`
+  ${(0,r.VO)()}
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: var(--grid-gap);
+  margin: 0 auto;
+  width: 100%;
+  max-width: ${n.LO.xxl};
+  row-gap: var(--grid-gap);
+  ${(0,r.aU)("padding")}
+
+  ${(0,i.H4)(n.LO.md)} {
+    grid-template-columns: repeat(12, 1fr);
+  }
+`,(0,t.Ay)(d.A).withConfig({displayName:"BundleBodyClamp"})`
+  grid-column: 1/-1;
+
+  ${(0,i.H4)(n.LO.md)} {
+    grid-column: 3/11;
+  }
+`;const u=(0,t.Ay)(l.A).withConfig({displayName:"BundleBodyContainer"})`
+  grid-column: 1/-1;
+
+  ${(0,i.H4)(n.LO.md)} {
+    grid-column: 3/11;
+  }
+
+  ${({shouldOverrideTypeToken:e})=>e?(0,i.Gg)("typography.definitions.consumptionEditorial.body-core"):(0,i.Gg)("typography.definitions.consumptionEditorial.subhed-aux-secondary")}
+
+  @media (max-width: ${s.VS.md}px) {
+    ${({shouldOverrideTypeToken:e})=>(0,i.Gg)("typography.definitions.consumptionEditorial.body-core")};
+  }
+
+  p:first-child {
+    padding-top: ${(0,i.Kq)(4)};
+    @media (min-width: ${n.LO.lg}) {
+      padding-top: ${(0,i.Kq)(9)};
+    }
+  }
+
+  p.callout--group-item {
+    padding-top: 0;
+  }
+
+  p.${m.pT.Component.BodyDropcap.split(" ").join(".")} {
+    margin-top: ${(0,i.Kq)(4,"px")};
+  }
+
+  ${({shouldOverrideSpacing:e})=>e&&`\n    h2,\n    h3,\n    h4,\n    h5 {\n      margin: ${(0,i.Kq)(5,"px")} 0;\n    }\n    `}
+
+  ${c.$m} {
+    display: grid;
+    grid-gap: 1.25rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (min-width: ${n.LO.md}) {
+      grid-template-columns: repeat(8, 1fr);
+    }
+
+    ${c.HO} {
+      grid-column: 2 / span 2;
+
+      @media (min-width: ${n.LO.md}) {
+        grid-column: 3 / span 4;
+      }
+    }
+  }
+`},97737(e,a,o){o.d(a,{Uz:()=>Le,XB:()=>Te});var t=o(96540),n=o(5556),r=o.n(n),i=o(32485),s=o.n(i),l=o(6442),d=o(19607),c=o(58447),m=o(51211),u=o(53499),g=o(79133),h=o(22043),p=o(91384),y=o(77498),b=o(49741),k=o(38080),C=o(26995),v=o(88820),f=o(83254),w=o(82873),A=o(16809),E=o(4665),$=o(78853),M=o(19362),B=o(15226),S=o(1850),N=o(56857),H=o(72147),P=o(96747),T=o(91706),L=o(94107),F=o(98338),R=o(82317),D=o(78250),O=o(29693),x=o(29752),I=o(66823),K=o(40581),V=o(51172),q=o(45675),U=o(41375),_=o(57926),J=o(60156),G=o(41433),W=o(89546),j=o(54765),z=o(50417),Q=o(70231),X=o(54608),Y=o(47940),Z=o(64185),ee=o(2060),ae=o(6337),oe=o(2860),te=o(85788),ne=o(52643),re=o(40133),ie=o(12501),se=o(90239),le=o(71724),de=o(67275),ce=o(48887),me=o(86659),ue=o(66862),ge=o(95779),he=o(97e3),pe=o(25671),ye=o(99906),be=o(64214),ke=o(94776),Ce=o(23479),ve=o(75389),fe=o(36276),we=o(29164),Ae=o(51054),Ee=o(14307),$e=o(62327),Me=o(95768),Be=o(75810);const Se="row-content",Ne=["verso-plp-filterable-feature","verso-plp-multisearch-filterable-feature"];let He=-1;const Pe=["verso-filterable-summary-list","verso-article-filterable-feature","verso-plp-multisearch-filterable-feature","verso-plp-filterable-feature","verso-plp-manual-curated","verso-plp-search-curated","verso-pim-collection"];function Te(e,{shouldUseGridForEmbed:a,shouldUseJumpLinksSectionStyleForEmbed:o,shouldShowAdsInMultiPackageBody:n}){const r=a?me.A.NarrowContentWithWideAdRail:de.rT;if(n)return t.createElement(ce.A,{FullBleedContentWrapper:r,GeneralContentWrapper:r,RailContent:()=>t.createElement(k.Z,{group:"ads"},t.createElement(d.A,{position:"rail"})),jsonml:e.body});const i=t.createElement(te.A,{copilotId:e.copilotId,body:e.body,dangerousHed:e.dangerousHed,dangerousDek:e.dangerousDek});return o?t.createElement(de.qC,{className:"verso-section-jump-links-wrapper"},i):i}function Le(e,a,o,n={},r={}){const{hasNoBottomMargin:i,hasReducedMargin:s,tickerMarginTopType:l,hasVersoFeaturesReducedMargin:d,hasMediumMargin:c}=r;return e>0?t.createElement(ae.A,{key:e,hasReducedMargin:s,hasNoTopMargin:!!d,hasNoBottomMargin:!!i,hasMediumMargin:c,hasConsistentSpacing:o},t.createElement(de.ab,{isInvertedTheme:a,id:n.id},t.createElement(D.A,{marginTopType:l,...n,index:e,isInvertedTheme:a}))):t.createElement(de.ab,{key:e,isInvertedTheme:a,id:n.id},t.createElement(D.A,{marginTopType:l,hasMinimalBottomMargin:s,index:e,...n,isInvertedTheme:a}))}function Fe(e){return!!e?.items?.length}function Re(e,a){return Pe.includes(e)&&-1===He?(He=a,a):He}function De(e,a,o,n,r={},i=!1,l={}){const{buttonVariation:u,btnStyle:g,collageComponentTemplates:D,associatedComponentRules:te,gridVariationForEmbed:ce,hasCarouselSliderPagination:me,hasControls:Ne,hasDiscoveryPullQuoteUnderline:He,hasNavigationButtonVariation:Pe,hasCarouselSliderPaginationForArticle:Oe,hasPlpFilterableContainerBackgroundColor:xe,hasPlpFilterableContainerLightBackgroundColor:Ie,hasRelatedContainerBackgroundColor:Ke,hasVersoFeaturesIncreasedVerticalPadding:Ve,hasVersoFeaturesIncreasedVerticalPaddingTop:qe,hasNoBottomMargin:Ue,hasNoTopBottomMarginOnMobile:_e,hasMarginBottomMultiPackageRow:Je,hasMarginTopMultiPackageRow:Ge,hasMediumMargin:We,hasReducedMargin:je,hasStickyLinkBanner:ze,hasTickerSpecialTheme:Qe,hasTopAndBottomBorderQuote:Xe,hasNoBackgroundColor:Ye,hasNoStickyNavigationBanner:Ze,ProductListingCarouselContainersData:ea,lightBgLinkBannerLayout:aa,lowestHierarchy:oa,includeSummaryCollageEight:ta,isEmbedWrapperFullBleed:na,shouldEnableBundleComponentAnalytics:ra,shouldHideAds:ia,shouldHideNewsletter:sa,shouldCheckProductInView:la,shouldUseConstrainedParagraph:da,shouldUseJumpLinksSectionStyleForEmbed:ca,shouldUseThreeColumnsForContributors:ma,shouldUseFourColumnsForContributors:ua,shouldUseGridForEmbed:ga,shouldShowAdsInMultiPackageBody:ha,shouldUseGridWrapperForEmbed:pa,shouldShowPaginatedButtonAtEnd:ya,shouldShowSummaryGridButton:ba,hideCuratedShowsList:ka,showPriceForProduct:Ca,expVariationName:va,formatMessage:fa,nativeTrendingPosition:wa,summaryCollageOneVariation:Aa,shouldRenderForyouComponent:Ea,shouldRenderForyouComponentByDefault:$a}=l,Ma=R.A[Aa];let Ba="";if(te){const a=(0,le.rB)(e,te);Ba=a?.behavior??Ba}const Sa=!(0,le.rB)(e,D)&&r.featureFlags.preferCollectionGrid,Na=r.featureFlags.hasNewsletterWithoutWrapper,Ha=r.config?.commenting?.enableCommentsCount,Pa=r.config?.account?.bookmark,Ta=Pa?.enableCardLevelBookmark||!1,La=Pa?.enableBookmarkDrawers||!1,Fa=r.config?.featureFlags?.enableBookmarking||!1;ra&&(e.shouldEnableBundleComponentAnalytics=ra);const Ra=e=>(ea&&ea[0])===e,Da=r.bundle.showDisclaimer&&r.config?.unifiedProductCard?.enableAffiliateDisclaimerLabel,{newsletterId:Oa,dangerousHed:xa="",frequencyBadge:Ia=""}=r.newsletter||{},Ka=(e,a)=>{if(!e)return;a();const o={type:"impression",newsletter_id:String(Oa),newsletter_title:xa,cadence:Ia,subject:"verso-hp-midpage"};(0,Ee.pu)(o)},Va=e=>t.createElement(Me.A,{isPhotoBookmarkingEnabled:Fa},e),qa=({container:e,hasConsistentSpacing:a,summaryCollageVariation:i})=>Fe(e)?t.createElement(Me.A,{isPhotoBookmarkingEnabled:La,key:n},t.createElement(ae.A,{dataJourneyHook:Se,hasNoBottomMargin:!0,hasNoTopMargin:!!o.hasVersoFeaturesReducedMargin,hasMarginBottomMultiPackageRow:Je,hasMarginTopMultiPackageRow:Ge,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:a},t.createElement(_.A,{container:e,hasIncreasedVerticalPadding:Ve,hasIncreasedVerticalPaddingTop:qe,hasMinimalVerticalSpacing:o.hasVersoFeaturesReducedMargin,lowestHierarchy:r.bundle.isDestinationBundle?oa:"",shouldPreferCollectionGrid:Sa,shouldUseAdInCollectionGrid:r.featureFlags.shouldUseAdInCollectionGrid,shouldEnableBookmarkDrawers:La,shouldEnableCardLevelBookmark:Ta,shouldEnableCommentsCount:Ha,shouldUseBookmarkV2:r.featureFlags.shouldUseBookmarkV2,isDestinationBundle:r.bundle.isDestinationBundle,summaryCollageVariation:i,hasNoTopBottomMarginOnMobile:_e,hasReducedMargin:je,hasConsistentSpacing:a,shouldUseCustomMargin:o.shouldUseCustomMargin}))):null;switch(e.template){case"verso-features":return Ea&&"Carousel"===e.layout?null:qa({container:e,hasConsistentSpacing:i});case"verso-native-five-feature":case"verso-native-three-feature":case"verso-search-features":case"verso-article-and-curated-search":case"verso-features-with-recs-override":case"verso-multi-package-feature":case"visual-story-carousel":return qa({container:e,hasConsistentSpacing:i});case"spotlight-article":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasReducedMargin:je,hasConsistentSpacing:i},t.createElement(V.A,{...e}));case"spotlight-contributor":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasReducedMargin:je,hasRightAndLeftMargin:!0,hasConsistentSpacing:i},t.createElement(V.A.ContributorSummarySpotlight,{...e}));case"spotlight-story":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasReducedMargin:je,hasRightAndLeftMargin:!0,hasConsistentSpacing:i},t.createElement(V.A.StorySummarySpotlight,{...e}));case"verso-native-featured-item":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasReducedMargin:je,hasConsistentSpacing:i},t.createElement(Ma,{...e,hasPaddingOnContent:!0,customNativeBackgroundColor:"colors.background.adContainer.special"}));case"verso-audio-article":return t.createElement(ae.A,{key:n,className:s()("collection-grid-row"),hasReducedMargin:je,hasConsistentSpacing:i},t.createElement(T.A.FourColumnsWithIcon,{...e}));case"verso-features-rows":return qa({container:e,hasConsistentSpacing:i,summaryCollageVariation:"RowsWithDekAndItemsBelow"});case"verso-promobox":case"solo-promo":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasMarginTopMultiPackageRow:Ge,hasConsistentSpacing:i},t.createElement(de.S_,null,t.createElement(B.A,{isInvertedTheme:a,...e,isInverted:r.bundle.isInvertedTheme,hasNativeImgLazyLoading:!0})));case"verso-homepage-event-list":return e.eventItems&&t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.fm,null,t.createElement(v.A,{events:[e.eventItems]})));case"verso-homepage-tabbable-event-list":return e.eventItems&&t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.fm,null,t.createElement(v.A.SortByMonth,{events:e.eventItems,links:e.links,marquee:e.marquee,shouldUseTabs:e.shouldUseTabs,title:""})));case"verso-homepage-event":return e.eventItems&&t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.fm,null,t.createElement(v.A.SortByMonth,{events:[e.eventItems]})));case"verso-pullquote":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},t.createElement(de.NK,{hasTopAndBottomBorderQuote:Xe},t.createElement(C.A,{...e,hasUnderline:He})));case"verso-spotlight-contributor":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasReducedMargin:je,hasConsistentSpacing:i},t.createElement(Q.A,{...e}));case"verso-summary-spotlight":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(q.A,{...e}));case"verso-native":return ia?null:t.createElement(se.A,{key:n},t.createElement(ae.A,{dataJourneyHook:Se,className:"homepage__native-ad",hasReducedMargin:je,hasMediumMargin:We,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i,isNativeAd:!0},t.createElement(k.Z,{group:"ads"},t.createElement(d.A,{position:"promo"}))));case"verso-cne-video":case"verso-cne-search-video":{const{dangerousDek:a,dangerousHed:o,isSpecialTheme:r,items:s,shouldUseBundleData:l,hasBottomMargin:d,hasGridWithMargins:c,hasTopMargin:m,shouldHideCNEVideoDek:u,sectionTitleVariation:g}=e;return t.createElement(ae.A,{className:"verso-bundle-cne-embed",key:n,dataJourneyHook:Se,hasMediumMargin:We,hasMarginTopMultiPackageRow:Ge,hasNoBottomMargin:r&&Ue,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},t.createElement(h.A,{dangerousHed:o,dangerousDek:a,isSpecialTheme:r,items:s,isBundle:!0,shouldUseBundleData:l,shouldHideCNEVideoDek:u,shouldHaveTeaser:!0,hasBottomMargin:d,hasGridWithMargins:c,hasTopMargin:m,videoEmbedPosition:$e.sm,sectionTitleVariation:g}))}case"verso-native-cne-video":{if(!Fe(e))return null;const{dangerousHed:a,items:o}=e;return t.createElement(ae.A,{className:"verso-bundle-cne-embed",key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(h.A,{dangerousHed:a,items:o}))}case"homepage-latest-comments-carousel":return e.items?.length?t.createElement(ae.A,{key:e.id||n,dataJourneyHook:Se,hasNoBottomMargin:Ue,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},t.createElement(I.A,{...e})):null;case"verso-screening-room":return e.reviews?.length?t.createElement(ae.A,{key:e.id||n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(K.A,{...e})):null;case"verso-related":case"verso-related-list-curation":return t.createElement(ae.A,{dataJourneyHook:Se,key:n,className:s()({"homepage__related-row":Ke,"summary-collection-row":!0}),hasMarginBottomMultiPackageRow:Je,hasMarginTopMultiPackageRow:Ge,hasNoBottomMargin:Ue,hasMediumMargin:We,hasConsistentSpacing:i},t.createElement(H.A,{...e,hasBackgroundColor:Ke,nativeTrendingPosition:wa,shouldTrackSnowplowRecircEvent:!0}));case"verso-searchable-summary-collection":{const{dangerousHed:a}=e;return t.createElement(ae.A,{className:"verso-searchable-summary-collection",hasConsistentSpacing:i},t.createElement(S.A,{dangerousHed:a}))}case"verso-summary-collection-row":return t.createElement(ae.A,{className:"verso-summary-collection-row summary-collection-row",key:n,dataJourneyHook:Se,hasMarginTopMultiPackageRow:Ge,hasConsistentSpacing:i},t.createElement(H.A,{isInvertedTheme:a,...e}));case"verso-summary-grid-compact":return Fe(e)?t.createElement(ae.A,{className:"verso-summary-grid-compact",key:n,dataJourneyHook:Se,hasNoBottomMargin:Ue,hasConsistentSpacing:i},t.createElement(de.fm,null,t.createElement(P.A,{...e,hasButton:ba,showPrice:Ca}))):null;case"verso-news-feed":return t.createElement(ae.A,{key:n,className:"news-feed-row",dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.pY,null,t.createElement(m.A,{...e})));case"verso-river":case"verso-river-list":{const{bundle:{containers:s,homepagePromoUnitOrder:l=[],isPodcastBundle:d}}=r,c=l.map((e,t)=>De(s.find(a=>e===a.template)||{template:e},a,o,t,r,i)).filter(Boolean),{dangerousHed:m="",noChannelItems:h=!1,searchUrl:p="",hasRule:y=!0}=e,b=new URLSearchParams(p);return e.searchQuery=b.get("q"),t.createElement("div",{key:n},h&&(b.get("q")||b.get("hierarchy"))&&t.createElement(ae.A,{dataJourneyHook:Se,hasMediumMargin:We,hasReducedMargin:je,hasNoTopMargin:!!o.hasNoTopMargin,hasNoBottomMargin:!!o.hasNoBottomMargin,hasMarginTopMultiPackageRow:Ge,hasConsistentSpacing:i},t.createElement(de.yk,{className:"no-items",hasRule:y},t.createElement("h3",null,fa(O.A.noStories)),t.createElement("div",null,t.createElement("p",null,fa(O.A.exploreInstead))))),t.createElement(ae.A,{dataJourneyHook:Se,hasMediumMargin:We,hasReducedMargin:je,hasNoTopMargin:!!o.hasNoTopMargin,hasNoBottomMargin:!!o.hasNoBottomMargin,hasNoTopBottomMarginOnMobile:_e,hasMarginTopMultiPackageRow:Ge,hasConsistentSpacing:i},d?t.createElement(ne.Xi,{...e,shouldShowRiverHed:!0,summaryItemHedTag:"h3",hasLineAboveBelowInTitle:!0,hasLineAboveBelowTitleHead:!0,hasExtraTitlePadding:!0,dangerousHed:m||r.relatedArticleHed||fa(re.A.relatedArticleHed),chunkSize:3,summaryItemVariation:"SideBySideDesktopOnly",shouldHidePublishDate:!1,hasRail:!1,hasRule:h?!h:y}):t.createElement(L.A,{...e,summaryItemHedTag:"h3",promoUnits:c,recircRiver:(Ua=m,Ua.replace(/<[^>]*>/g,"")),hasRule:h?!h:y,shouldUseBookmarkV2:r.featureFlags.shouldUseBookmarkV2,shouldEnableBookmarkDrawers:La,shouldEnableCardLevelBookmark:Ta,shouldEnableCommentsCount:Ha})),!ya&&function(e,a,o,n,r={}){return ke.F[r?.layout]?.isPaginated&&t.createElement(de.Jv,{key:"paginated","data-test-id":"read-more-button-between",hasConsistentSpacing:n},t.createElement(M.A,{currentPage:e.bundle.paginatedPage,totalResults:r.totalResults,limit:r.limit,buttonVariation:a,btnStyle:o,filter:r.filter,searchQuery:r.searchQuery,shouldEnableBundleComponentAnalytics:r.shouldEnableBundleComponentAnalytics}))}(r,u,g,i,e))}case"summary-carousel":{if(!Fe(e))return null;const{items:a,dangerousHed:o,dangerousDek:s}=e;return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasNoBottomMargin:Ue,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},t.createElement(x.A,{items:a,dangerousHed:o,dangerousDek:s,shouldEnableBundleComponentAnalytics:ra,enableRecircTrackingUrls:r.featureFlags?.enableRecircTrackingUrls,hasNoTopBottomMarginOnMobile:_e,href:"/video",inputKind:"link"}))}case"verso-native-one-river":return Fe(e)?t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(L.A,{isMidContentAdsDisabled:r.bundle.isMidContentAdsDisabled,...e,shouldShowRiverHed:!0,hasLineAboveBelowTitleHead:!0,hasRule:!1,hasNoTopBottomMarginOnMobile:_e})):null;case"newsletter":case"newsletter-subscribe":return sa?null:Na?t.createElement(we.A,{onIntersectionViewport:Ka,observerOptions:{rootMargin:"0px"},className:"multipackage-newsletter-viewport",key:n},t.createElement(y.A,{...r.newsletter,sourceCode:"verso-hp-midpage",position:`container-newsletter-${n}`})):t.createElement(ae.A,{className:"homepage__newsletter-row",key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.L7,null,t.createElement(we.A,{onIntersectionViewport:Ka,observerOptions:{rootMargin:"0px"},className:"multipackage-newsletter-viewport"},t.createElement(y.A,{...r.newsletter,sourceCode:"verso-hp-midpage"}))));case"verso-ticker":return t.createElement("div",{key:n,className:s()("ticker-view",{"ticker-view--has-special-theme":Qe}),"data-journey-hook":[0,2].includes(n)?null:Se},t.createElement(de.ab,null,t.createElement(b.A,{position:"cm-ticker"})),!r.featureFlags.hideTicker&&Le(n,r.bundle.isInvertedTheme,i,e,o));case"verso-link-banner":{let a=ze;return"VisualCarousel"===e.layout&&(a=!1),e.hasContent&&t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasMediumMargin:We,hasNoBottomMargin:Ue,hasStickyLinkBanner:a,hasLightBgForLinkBanner:aa===e.layout,hasConsistentSpacing:i},t.createElement(w.A,{...e}))}case"verso-navigation-list":return e.hasContent&&t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasMediumMargin:We,hasNoBottomMargin:Ue,hasStickyLinkBanner:("NavigationListAnchored"===e.layout||"NavigationListTextOverlayOnImage"===e.layout)&&!Ze,hasLightBgForLinkBanner:aa===e.layout,hasConsistentSpacing:i},t.createElement(A.r,{...e,isInvertedTheme:a,shouldTrackSnowplowEvent:!0}));case"verso-image-slide-show":return e.hasContent?t.createElement(ae.A,{dataJourneyHook:Se,key:n,hasMediumMargin:We,hasMarginTopMultiPackageRow:Ge,hasConsistentSpacing:i},t.createElement(f.A,{...e.imageSlideShowData})):null;case"list":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(L.A,{...e}));case"verso-native-list":return Fe(e)?t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(L.A,{...e,summaryItemVariationList:["SideBySideCenterImageLeft","SideBySideCenterImageRight"],summaryItemClassName:"summary-item--discovery-hed-consumption-dek"})):null;case"verso-featured-item":return t.createElement(ae.A,{dataJourneyHook:Se,className:"verso-featured-item-row",key:n,hasReducedMargin:je,hasNoTopMargin:!!o.hasVersoFeaturesReducedMargin,hasNoBottomMargin:Ue,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},t.createElement(Ma,{...e,hasNoTopBottomMarginOnMobile:_e}));case"verso-section-jump-links":return t.createElement(ae.A,{key:n,className:"verso-embed-row verso-section-jump-links-row",dataJourneyHook:Se,hasConsistentSpacing:i},Te(e,{shouldUseGridForEmbed:ga,shouldUseConstrainedParagraph:da,shouldUseJumpLinksSectionStyleForEmbed:ca,shouldUseGridWrapperForEmbed:pa,gridVariationForEmbed:ce}));case"verso-collection-grid":case"verso-native-two-river":return Fe(e)?t.createElement(ae.A,{key:n,className:"collection-grid-row",dataJourneyHook:Se,hasNoBottomMargin:!!o.hasNoBottomMargin,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},t.createElement(T.A,{...e})):null;case"verso-contributors":return t.createElement(ae.A,{key:n,className:s()("collection-grid-row",Ba),hasReducedMargin:je,hasNoBottomMargin:Ue,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},function(e,a,o){return a?t.createElement(T.A.ContributorsInThreeColumnsWithButton,{...e}):o?t.createElement(T.A.ContributorsInFourColumns,{...e}):t.createElement(T.A.Contributors,{...e})}(e,ma,ua));case"verso-issue-feature":return t.createElement(ae.A,{dataJourneyHook:Se,key:n,className:s()("verso-issue-feature-row",{[Ba]:ta}),hasReducedMargin:je,hasNoTopBottomMarginOnMobile:_e,hasConsistentSpacing:i},t.createElement(G.A,{...e}));case"verso-cm-unit":return t.createElement(ae.A,{key:n,className:"cm-unit-row",dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.kC,null,t.createElement(b.A,{position:"homepage-mid-content"})));case"verso-cta-link":return e.hasLink?"hasMultiPackageRowWrapper"===e.layout?t.createElement(ae.A,{key:n,alignItem:"center",dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.t3,{...e,btnStyle:"outlined"})):t.createElement(de.t3,{...e,btnStyle:"outlined"}):null;case"verso-curated-shows":case"verso-tags-list":return Fe(e)?t.createElement(ae.A,{key:n,className:"curated-shows-row",dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(U.A,{...e,hideCuratedShowsList:ka})):null;case"verso-native-product":{if(!Fe(e))return null;const{items:a,dangerousHed:o}=e;return t.createElement(ae.A,{className:"product__list",key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(W.A,{items:a,dangerousHed:o,isSponsoredAffiliateLinksEnabled:r.bundle.isSponsoredAffiliateLinksEnabled}))}case"verso-native-product-carousel":{if(!Fe(e))return null;const{items:a,dangerousHed:o,dangerousDek:s}=e;return Va(t.createElement(ae.A,{className:"product__carousel",key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(j.A,{items:a,dangerousHed:o,dangerousDek:s,isSponsoredAffiliateLinksEnabled:r.bundle.isSponsoredAffiliateLinksEnabled,enableAffiliateDisclaimerLabel:Da,hasNoTopBottomMarginOnMobile:_e,isFirstProductListingContainer:Ra(e)&&!r.bundle.hasDefaultAffiliateDisclaimer,affiliateDisclaimer:r.bundle.affiliateDisclaimer,showDisclaimer:r.bundle.showDisclaimer})))}case"verso-live-stream":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(E.A,{...e}));case"verso-topics-list":return t.createElement(ae.A,{key:n,hasReducedMargin:je,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement($.A,{...e}));case"verso-fifty-fifty":case"verso-search-fifty-fifty":return t.createElement(ae.A,{dataJourneyHook:Se,className:"homepage__fifty-fifty-row",key:n,hasNoTopMargin:!!o.hasVersoFeaturesReducedMargin,hasNoBottomMargin:!!o.hasNoBottomMargin,hasConsistentSpacing:i},t.createElement(F.A,{...e,hasConsistentSpacing:i,Ad:d.A}));case"verso-mid-content-ad":return ia?null:t.createElement(se.A,{key:n},t.createElement("div",{"data-journey-hook":Se,className:s()("ad-container",{"ad-container-reduced-margin":je})},t.createElement(k.Z,{group:"ads"},t.createElement(d.A,{position:"mid-content",shouldHoldSpace:!0,shouldDisplayLabel:!0}))));case"verso-embed":return t.createElement(se.A,{key:n},t.createElement(ae.A,{className:"verso-embed-row",dataJourneyHook:Se,hasMediumMargin:We,isInvertedTheme:a,hasMarginTopMultiPackageRow:Ge,hasConsistentSpacing:i},Te(e,{shouldUseGridForEmbed:ga,shouldUseConstrainedParagraph:da,shouldShowAdsInMultiPackageBody:ha,shouldUseGridWrapperForEmbed:pa,gridVariationForEmbed:ce,isEmbedWrapperFullBleed:na})));case"verso-subtopic-discovery":case"verso-subtopics":return Fe(e)?t.createElement(ae.A,{key:n,className:"verso-subtopic-discovery-row",hasMarginBottomMultiPackageRow:Je,hasMarginTopMultiPackageRow:Ge,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(de.XN,null,t.createElement(N.A,{...e}))):null;case"verso-popin":return t.createElement("div",{key:n,id:e.variation,"data-journey-hook":Se});case"verso-trigs":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasRightAndLeftMargin:!0,hasConsistentSpacing:i},t.createElement(ge.A,{organizationSlug:r.config?.brand?.organizationSlug,deprecatedSlug:r.config?.brand?.deprecatedSlug,isMobileDevice:r.bundle?.isMobileView,pageType:"homepage"}));case"verso-filterable-summary-list":return Va(t.createElement(ae.A,{key:n,dataJourneyHook:Se,className:s()({"homepage__plp-filterable-row":xe&&!e?.isGrid}),hasNoTopMargin:!!o.hasNoTopMargin,hasNoBottomMargin:!!o.hasNoBottomMargin,hasIncreasedVerticalPadding:!0,hasConsistentSpacing:i},t.createElement(J.A,{...e,hasCarouselSliderPagination:me,isFirstProductListingContainer:Ra(e)&&!r.bundle.hasDefaultAffiliateDisclaimer,affiliateDisclaimer:r.bundle.affiliateDisclaimer,showDisclaimer:r.bundle.showDisclaimer,shouldEnableBookmarkDrawers:La,shouldEnableCardLevelBookmark:Ta,shouldEnableCommentsCount:Ha,containerIndex:Re(e.template,n)})));case"verso-article-filterable-feature":return t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(J.A,{...e,hasCarouselSliderPagination:Oe,isFirstProductListingContainer:Ra(e)&&!r.bundle.hasDefaultAffiliateDisclaimer,affiliateDisclaimer:r.bundle.affiliateDisclaimer,showDisclaimer:r.bundle.showDisclaimer,containerIndex:Re(e.template,n)}));case"verso-plp-multisearch-filterable-feature":case"verso-plp-filterable-feature":return Va(t.createElement(ae.A,{key:n,dataJourneyHook:Se,className:s()({"homepage__plp-filterable-row":xe&&!e?.isGrid}),hasPlpFilterableContainerLightBackgroundColor:Ie,hasNoTopMargin:!!o.hasNoTopMargin,hasNoBottomMargin:!!o.hasNoBottomMargin,hasMediumMargin:We,hasIncreasedVerticalPadding:!0,hasConsistentSpacing:i},t.createElement(J.A,{...e,enableAffiliateDisclaimerLabel:Da,shouldHideAffiliateLabelOnFirstRow:Ra(e),hasControls:Ne,hasCarouselSliderPagination:me,hasNavigationButtonVariation:Pe,shouldCheckProductInView:la,expVariationName:va,isFirstProductListingContainer:Ra(e)&&!r.bundle.hasDefaultAffiliateDisclaimer,affiliateDisclaimer:r.bundle.affiliateDisclaimer,showDisclaimer:r.bundle.showDisclaimer,containerIndex:Re(e.template,n)})));case"verso-plp-curated-visual":return Va(t.createElement(ae.A,{key:n,hasNoBottomMargin:Ue,hasConsistentSpacing:i},t.createElement(ue.A,{...e,enableAffiliateDisclaimerLabel:Da,isFirstProductListingContainer:Ra(e)&&!r.bundle.hasDefaultAffiliateDisclaimer,showDisclaimer:r.bundle.showDisclaimer})));case"verso-plp-manual-curated":case"verso-plp-search-curated":return Va(t.createElement(ae.A,{key:n,hasPlpFilterableContainerLightBackgroundColor:!Ye&&"ContentCarousel"===e.templateLayout,hasConsistentSpacing:i},t.createElement(he.A,{...e,enableAffiliateDisclaimerLabel:("verso-plp-manual-curated"===e.template||"ContentCarousel"===e.templateLayout)&&Da,shouldHideAffiliateLabelOnFirstRow:Ra(e),hasCarouselSliderPagination:me,isFirstProductListingContainer:Ra(e)&&!r.bundle.hasDefaultAffiliateDisclaimer,affiliateDisclaimer:r.bundle.affiliateDisclaimer,showDisclaimer:r.bundle.showDisclaimer,containerIndex:Re(e.template,n)})));case"verso-pim-collection":return Va(t.createElement(ae.A,{className:"verso-pim-collection-row",key:n,hasConsistentSpacing:i},t.createElement(pe.A,{container:e,pimCollectionBundleLinks:r.bundle.pimCollectionBundleLinks,isMobileView:r.bundle.isMobileView,shouldHideFilterComponent:r.bundle.pimCollectionHiddenFilter,isFirstProductListingContainer:Ra(e)&&!r.bundle.hasDefaultAffiliateDisclaimer,affiliateDisclaimer:r.bundle.affiliateDisclaimer,showDisclaimer:r.bundle.showDisclaimer,containerIndex:Re(e.template,n)})));case"verso-full-bleed-banner":return t.createElement(ae.A,{key:n,hasNoBottomMargin:Ue,hasConsistentSpacing:i},t.createElement(ee.A,{...e}));case"verso-best-stories-package":case"verso-hero-curated-feature":return Fe(e)?t.createElement(ae.A,{key:n,hasMarginBottomMultiPackageRow:Je,hasMarginTopMultiPackageRow:Ge,className:"verso-best-stories-package",hasConsistentSpacing:i},t.createElement(c.A,{...e,shouldEnableBookmarkDrawers:La,shouldEnableCardLevelBookmark:Ta,shouldEnableCommentsCount:Ha})):null;case"verso-in-page-marketing-newsletter":return e.isPositionBottom?null:t.createElement(ae.A,{className:"verso-in-page-marketing-newsletter-row",key:n,hasConsistentSpacing:i},t.createElement(we.A,{onIntersectionViewport:Ka,observerOptions:{rootMargin:"0px"},className:"multipackage-newsletter-viewport"},t.createElement(y.A,{...e,sourceCode:"verso-hp-midpage",position:`container-newsletter-${n}`,key:n,newsletterType:"impact-newsletter"})));case"verso-celebrated-entrypoint":return e.asset?t.createElement(ae.A,{key:n,dataJourneyHook:Se,hasConsistentSpacing:i},t.createElement(p.A,{...e})):null;case"featured-contributor":return t.createElement(ae.A,{key:n,hasNoBottomMargin:!0,hasConsistentSpacing:i},t.createElement(z.A,{...e}),t.createElement(F.A,{...e,summaryItemStickTopThreshold:ye.Vh.xl,hasConsistentSpacing:i}));case"all-fictions":return t.createElement(X.A,{...e,key:n,pageSize:e.limit,pageNumber:r.bundle.paginatedPage});case"podcast-articles":return t.createElement(Y.A,{...e,key:n});case"articles-about-author":case"more-by-author":return t.createElement(Z.A,{...e,key:n,pageNumber:r.bundle.paginatedPage});case"verso-flat-package":case"verso-focus-package":case"verso-puzzles-games-package":return t.createElement(ae.A,{key:n,hasConsistentSpacing:i},t.createElement(be.A,{index:n,...e}));case"verso-top-story-package":return t.createElement(t.Fragment,{key:n},t.createElement(Ce.A,{index:n,...e}),t.createElement(ie.Rv,null));case"verso-for-you-package":return Ea||$a?t.createElement(ae.A,{key:n,hasConsistentSpacing:i},t.createElement(Ae.A,null,t.createElement(ve.A,{index:n,...e}))):null;case"trending-curated":case"trending-collection":return t.createElement(ae.A,{key:n,hasConsistentSpacing:i},t.createElement(T.A.ThreeColumns,{shouldHideDangerousDek:!0,shouldHideContributors:!0,hasItemsRule:!1,...e}));case"verso-category-feature-container":return t.createElement(ae.A,{key:n,hasConsistentSpacing:i},t.createElement(T.A.FourColumns,{shouldHideDangerousDek:!1,shouldHideDangerousHedOfSummaryItem:!0,shouldUseArrowIconInSummaryItemDek:!0,isCategoryFeatureContainer:!0,...e}));case"cartoons":return t.createElement(ae.A,{key:n,hasConsistentSpacing:i},t.createElement(fe.A,{...e,carouselPlacedIn:"bundle"}));case"verso-collage":case"verso-collage-search":return t.createElement(ae.A,{key:n,hasConsistentSpacing:i},t.createElement(Be.j,{...e}));case"verso-issue-explorer":return t.createElement(oe.A,{key:n,...e});default:return null}var Ua}const Oe=({configuredComponentRef:e,associatedComponentRules:a,bundleProps:o,isInvertedTheme:n=!1,buttonVariation:r,btnStyle:i,collageComponentTemplates:d,hasDiscoveryPullQuoteUnderline:c,containers:m,gridVariationForEmbed:h="NarrowContentWithWideAdRail",hasCarouselSliderPagination:p,hasCarouselSliderPaginationForArticle:b=!1,shouldPushProductIds:k=!1,hasControls:C,shouldUseCustomMargin:v,hasNoBackgroundColor:f=!1,hasNoStickyNavigationBanner:w=!1,lightBgLinkBannerLayout:A,hasNavigationButtonVariation:E,hasNoBottomMargin:$=!1,hasNoTopBottomMarginOnMobile:B=!1,hasNoTopMargin:S=!1,hasPlpFilterableContainerBackgroundColor:N=!1,hasPlpFilterableContainerLightBackgroundColor:H=!1,hasRelatedContainerBackgroundColor:P=!0,hasTickerSpecialTheme:T=!1,hasTopAndBottomBorderQuote:L=!1,hasVersoFeaturesReducedMargin:F=!1,hasVersoFeaturesIncreasedVerticalPadding:R=!1,hasVersoFeaturesIncreasedVerticalPaddingTop:D=!1,hasMarginBottomMultiPackageRow:O=!1,hasMarginTopMultiPackageRow:x=!0,hasEvenSpacingMultiPackageRow:I=!1,hasMediumMargin:K=!1,hasReducedMargin:V=!1,hasStickyLinkBanner:q,isMidContentAdsDisabled:U=!1,isEmbedWrapperFullBleed:_=!1,hasConsistentSpacing:J,multiPackageCustomClassName:G,newsletterType:W="impact-newsletter",shouldAddHjIgnoreAttribute:j,shouldEnableBundleComponentAnalytics:z,shouldHideAds:Q=!1,shouldHideNewsletter:X=!1,shouldUseConstrainedParagraph:Y=!1,shouldUseJumpLinksSectionStyleForEmbed:Z=!1,shouldUseGridForEmbed:ee=!0,shouldUseGridWrapperForEmbed:oe=!1,shouldUseThreeColumnsForContributors:te=!1,shouldUseFourColumnsForContributors:ne=!1,lowestHierarchy:re,shouldCheckProductInView:ie,shouldShowAdsInMultiPackageBody:se=!1,shouldShowPaginatedButtonAtEnd:ce=!0,shouldShowSummaryGridButton:me=!0,hideCuratedShowsList:ue=!1,showPriceForProduct:ge=!1,expVariationName:he,nativeTrendingPosition:pe,summaryCollageOneVariation:ye="SingleFeature",shouldRenderForyouComponent:be,shouldRenderForyouComponentByDefault:Ce=!1})=>{t.useEffect(()=>{window.Kendra.TRACK_COMPONENT.broadcast(u.G.RENDER,{name:"MultiPackages"})},[]),t.useEffect(()=>{o.bundle&&o.bundle.containers&&o.bundle.containers.length&&k&&(0,g.q)(o.bundle.containers[0].items)},[o,k]);const ve={hasVersoFeaturesReducedMargin:F,hasReducedMargin:V,hasMediumMargin:K,hasNoBottomMargin:$,hasNoTopMargin:S,shouldUseCustomMargin:v},fe=m.some(e=>(0,le.rB)(e,d)&&8===e.items.length),we=(0,le.Oy)(m),{formatMessage:Ae}=(0,l.A)(),Ee={buttonVariation:r,btnStyle:i,collageComponentTemplates:d,hasDiscoveryPullQuoteUnderline:c,associatedComponentRules:a,gridVariationForEmbed:h,hasCarouselSliderPagination:p,hasControls:C,lightBgLinkBannerLayout:A,hasNavigationButtonVariation:E,hasCarouselSliderPaginationForArticle:b,hasNoTopBottomMarginOnMobile:B,hasPlpFilterableContainerBackgroundColor:N,hasPlpFilterableContainerLightBackgroundColor:H,hasRelatedContainerBackgroundColor:P,hasTopAndBottomBorderQuote:L,hasVersoFeaturesIncreasedVerticalPadding:R,hasVersoFeaturesIncreasedVerticalPaddingTop:D,hasNoBackgroundColor:f,hasNoStickyNavigationBanner:w,hasNoBottomMargin:$,hasMarginBottomMultiPackageRow:O,hasMarginTopMultiPackageRow:x,hasMediumMargin:K,hasReducedMargin:V,hasStickyLinkBanner:q,hasTickerSpecialTheme:T,includeSummaryCollageEight:fe,isEmbedWrapperFullBleed:_,isMidContentAdsDisabled:U,ProductListingCarouselContainersData:we,shouldCheckProductInView:ie,shouldEnableBundleComponentAnalytics:z,shouldHideAds:Q,shouldHideNewsletter:X,shouldUseConstrainedParagraph:Y,shouldUseGridForEmbed:ee,shouldUseJumpLinksSectionStyleForEmbed:Z,shouldUseGridWrapperForEmbed:oe,shouldUseThreeColumnsForContributors:te,shouldUseFourColumnsForContributors:ne,lowestHierarchy:re,shouldShowAdsInMultiPackageBody:se,shouldShowPaginatedButtonAtEnd:ce,shouldShowSummaryGridButton:me,hideCuratedShowsList:ue,showPriceForProduct:ge,expVariationName:he,formatMessage:Ae,nativeTrendingPosition:pe,summaryCollageOneVariation:ye,shouldRenderForyouComponent:be,shouldRenderForyouComponentByDefault:Ce},$e=m.find(({layout:e})=>ke.F[e]?.isPaginated),Me=m.find(({template:e,isPositionBottom:a})=>"verso-in-page-marketing-newsletter"===e&&a),Be=m.some(({template:e})=>Ne.includes(e));return t.createElement(de.Lz,{ref:e,customClass:G,className:"multi-packages"+(G?` ${G}`:""),hasNoTopBottomMarginOnMobile:B,hasMarginBottomMultiPackageRow:O,hasMarginTopMultiPackageRow:x,hasEvenSpacingMultiPackageRow:I,hasPlpFilterableFeature:Be,"data-hj-ignore-attributes":j?"":null,hasConsistentSpacing:J},m.map((e,a)=>De(e,n,ve,a,o,J,Ee)),$e&&ce&&t.createElement(de.Jv,{key:"paginated","data-test-id":"read-more-button-end",hasConsistentSpacing:J},t.createElement(M.A,{currentPage:o.bundle.paginatedPage,totalResults:$e.totalResults,limit:$e.limit,btnStyle:i,buttonVariation:r,filter:$e.filter,searchQuery:$e.searchQuery,shouldEnableBundleComponentAnalytics:$e.shouldEnableBundleComponentAnalytics})),Me&&t.createElement(ae.A,{className:s()("verso-in-page-marketing-newsletter-row",{"newletter-container-layout":!0}),hasNoBottomMargin:!!ve.hasNoBottomMargin,hasConsistentSpacing:J},t.createElement(y.A,{...Me,sourceCode:"verso-hp-midpage",position:"container-newsletter",newsletterType:W})))};Oe.propTypes={configuredComponentRef:r().func,associatedComponentRules:r().arrayOf(r().object),btnStyle:r().oneOf(["filled","outlined","text"]),bundleProps:r().object,buttonVariation:r().string,collageComponentTemplates:r().arrayOf(r().object),containers:r().array,expVariationName:r().string,gridVariationForEmbed:r().string,hasCarouselSliderPagination:r().bool,hasCarouselSliderPaginationForArticle:r().bool,hasConsistentSpacing:r().bool,hasControls:r().bool,hasDiscoveryPullQuoteUnderline:r().bool,hasEvenSpacingMultiPackageRow:r().bool,hasMarginBottomMultiPackageRow:r().bool,hasMarginTopMultiPackageRow:r().bool,hasMediumMargin:r().bool,hasNavigationButtonVariation:r().bool,hasNoBackgroundColor:r().bool,hasNoBottomMargin:r().bool,hasNoStickyNavigationBanner:r().bool,hasNoTopBottomMarginOnMobile:r().bool,hasNoTopMargin:r().bool,hasPlpFilterableContainerBackgroundColor:r().bool,hasPlpFilterableContainerLightBackgroundColor:r().bool,hasReducedMargin:r().bool,hasRelatedContainerBackgroundColor:r().bool,hasStickyLinkBanner:r().bool,hasTickerSpecialTheme:r().bool,hasTopAndBottomBorderQuote:r().bool,hasVersoFeaturesIncreasedVerticalPadding:r().bool,hasVersoFeaturesIncreasedVerticalPaddingTop:r().bool,hasVersoFeaturesReducedMargin:r().bool,hideCuratedShowsList:r().bool,isEmbedWrapperFullBleed:r().bool,isInvertedTheme:r().bool,isMidContentAdsDisabled:r().bool,lightBgLinkBannerLayout:r().string,lowestHierarchy:r().string,multiPackageCustomClassName:r().string,nativeTrendingPosition:r().number,newsletterType:r().string,shouldAddHjIgnoreAttribute:r().bool,shouldCheckProductInView:r().bool,shouldEnableBundleComponentAnalytics:r().bool,shouldHideAds:r().bool,shouldHideNewsletter:r().bool,shouldPushProductIds:r().bool,shouldRenderForyouComponent:r().bool,shouldRenderForyouComponentByDefault:r().bool,shouldShowAdsInMultiPackageBody:r().bool,shouldShowPaginatedButtonAtEnd:r().bool,shouldShowSummaryGridButton:r().bool,shouldUseConstrainedParagraph:r().bool,shouldUseCustomMargin:r().bool,shouldUseFourColumnsForContributors:r().bool,shouldUseGridForEmbed:r().bool,shouldUseGridWrapperForEmbed:r().bool,shouldUseJumpLinksSectionStyleForEmbed:r().bool,shouldUseThreeColumnsForContributors:r().bool,showPriceForProduct:r().bool,summaryCollageOneVariation:r().string,tickerMarginTopType:r().oneOf(["small","none","large"])},Oe.displayName="MultiPackages"},94631(e,a,o){o.d(a,{$R:()=>x,N0:()=>V,WV:()=>D,ie:()=>O});var t=o(38267),n=o(26865),r=o(16800),i=o(77346),s=o(22652),l=o(30),d=o(96472),c=o(66472),m=o(4081),u=o(57221),g=o(30543),h=o(18284),p=o(13465),y=o(13099),b=o(33500),k=o(62077),C=o(67275),v=o(4534),f=o(85095),w=o(69817),A=o(53985),E=o(94037),$=o(15622),M=o(69195),B=o(50531),S=o(89085),N=o(1123),H=o(86659),P=o(20139),T=o(73347),L=o(91513),F=o(61670),R=o(75163);const D=(0,t.Ay)("h1").withConfig({displayName:"HomepageHiddenContent"})`
+  display: none;
+`,O=((0,t.Ay)(i.A).withConfig({displayName:"HomepageHeader"})`
+  .news-feed-row {
+    /* If homepage header and news feed is first section bypass header styles */
+    .navigation--section {
+      margin-top: -${(0,n.Kq)(5)};
+      border-top: 0;
+    }
+  }
+`,(0,t.Ay)(i.A).withConfig({displayName:"HomepageHeader"})``,t.Ay.div.withConfig({displayName:"HomePageDisclaimerWrapper"})`
+  padding: 1rem;
+
+  .disclaimer {
+    padding: 0;
+  }
+  ${({hasGridFourColumnsLayout:e,hasDisclaimerBackground:a,theme:o})=>e&&t.AH`
+      ${a?(0,n._o)(o,"background-color","colors.background.light"):null};
+      margin-top: ${(0,n.Kq)(-7)};
+      padding-bottom: ${(0,n.Kq)(3)};
+      ${(0,n.H4)(d.LO.md)} {
+        margin-top: ${(0,n.Kq)(-5)};
+      }
+    `}
+`,(0,t.Ay)((0,p.y)(y.M.TextCenterNoTopRule,"Disclaimer")).withConfig({displayName:"HomePageDisclaimer"})`
+  grid-column: 1 / -1;
+  justify-content: center;
+  font-style: italic;
+
+  p {
+    ${(0,n.HK)("colors.interactive.base.black")};
+    ${(0,n.Gg)("typography.definitions.globalEditorial.context-secondary")};
+    padding: 0;
+    line-height: 1.125rem;
+  }
+
+  ${(0,n.H4)(d.LO.md)} {
+    grid-column: 3 / span 8;
+  }
+`,t.Ay.div.withConfig({displayName:"HomePageDisclaimerBorder"})`
+  margin: ${(0,n.Kq)(4)} ${(0,n.Kq)(2)} ${(0,n.Kq)(1)};
+  border-bottom: 1px solid
+    ${(0,n.HK)("colors.discovery.body.white.divider")};
+
+  @media (min-width: 0) and (max-width: ${d.LO.md}) {
+    margin: ${(0,n.Kq)(4)} ${(0,n.Kq)(1)} ${(0,n.Kq)(1)};
+  }
+`,(0,t.Ay)(s.A).withConfig({displayName:"HomepageChannelBody"})`
+  grid-column: 1/-1;
+  margin-bottom: 1rem;
+
+  ${(0,n.H4)(d.LO.md)} {
+    grid-column: 3/11;
+  }
+`),x=(0,t.Ay)("aside").withConfig({displayName:"HomepageSummaryListAside"})`
+  height: 100%;
+`,I=`\n  ul {\n    position: initial;\n    z-index: 2;\n    overflow-x: auto;\n    li {\n      .product__carousel__card {\n        margin-bottom: 0;\n        width: 100%;\n        height: 100%;\n        ${A.yh} {\n          ${A.eN} {\n            overflow: hidden;\n            ${E.F} > ${$.lk} {\n              ${$.dU} > a {\n                ${B.Lj} {\n                  ${(0,n.Gg)("typography.definitions.foundation.link-primary")};\n                }\n              }\n            }\n          }\n          ${A.$N} {\n            margin-right: 0;\n            margin-left: 0;\n            ${(0,n.H4)(d.LO.md)} {\n              margin-right: 0;\n              margin-left: 0;\n            }\n          }\n        }\n      }\n    }\n  }\n`,K=t.AH`
+  .homepage__half-column-row--with-border {
+    ${(0,n.H4)(d.LO.lg)} {
+      &:not(:last-of-type) {
+        border-right: 1px solid
+          ${(0,n.HK)("colors.discovery.lead.secondary.divider")};
+      }
+      /* catch-all to prevent a right border from showing
+       if two half columns sit beside each other */
+      + .homepage__half-column-row--with-border {
+        border-right: none;
+      }
+    }
+  }
+
+  .homepage__native-ad .ad--promo .ad__slot--promo {
+    display: block;
+  }
+
+  .homepage__plp-filterable-row {
+    background: ${(0,n.HK)("colors.discovery.body.light.background")};
+  }
+
+  .homepage__newsletter-row {
+    background: ${(0,n.HK)("colors.discovery.body.light.background")};
+    ${({hasFullBleedBackground:e,theme:a})=>!e&&`\n     background: none;\n     ${({theme:e,hasConsistentSpacing:a})=>a&&"0px"!==(0,r.FJ)(e,"gap-md")?"margin-bottom: 0px;":`margin-top: ${(0,n.Kq)(8)};`};\n     ${C.L7} {\n       background-color: ${(0,n.HK)(a,"colors.consumption.body.special.bg-card")};\n        ${(0,n.H4)(d.LO.lg)} {\n          ${w.zK} {\n            display: grid;\n            grid-template-columns: repeat(12, 1fr);\n            ${w.kO} {\n              grid-column: 3 / span 8;\n            }\n            ${w.on} {\n              grid-column: 4 / span 6;\n            }\n          }\n        }\n       }\n   `};
+
+    ${w.zK} {
+      ${w.on} {
+        ${w.tz} {
+          ${M.BI} {
+            ${({hideErrorTextPadding:e})=>e&&" padding: 0;\n         "};
+          }
+          ${w.F9} {
+            ${({isNewsletterDisclaimerCenterAligned:e})=>e&&"\n             text-align: center;\n           "};
+            ${({shouldOverrideColorToken:e,theme:a})=>e&&`\n             color: ${(0,n.HK)(a,"colors.discovery.body.light.description")};\n             a {\n               color: ${(0,n.HK)(a,"colors.discovery.body.light.description")};\n             }\n           `};
+          }
+        }
+      }
+    }
+  }
+
+  .homepage__related-row {
+    background-color: ${(0,n.HK)("colors.discovery.body.light.background")};
+  }
+
+  .newletter-container-layout {
+    display: grid;
+    ${({theme:e,backgroundColorSettingForNewsletter:a})=>a?`background-color: ${(0,n.HK)(e,`colors.discovery.body.${a}.background`)}`:`${(0,n.HK)("colors.background.light")}`};
+
+    .newsletter-subscribe-form {
+      grid-column: 1 / span 6;
+      margin: 0 auto;
+    }
+  }
+
+  .homepage__half-column-row {
+    &:not(:last-of-type) {
+      ${(0,n.H4)(d.LO.lg)} {
+        ${b.bU} {
+          ${(0,n.Gg)("typography.definitions.discovery.subhed-section-secondary")};
+        }
+        width: 50%;
+        max-width: ${(0,n.Kq)(100,"px")};
+      }
+
+      > .grid {
+        ${(0,n.H4)(d.LO.lg)} {
+          padding-right: var(--grid-gap);
+        }
+      }
+    }
+  }
+
+  ${c.fm} {
+    background: transparent;
+
+    .recirc-list.recirc-list--text-overlay {
+      margin-top: 0;
+    }
+  }
+
+  ${({theme:e})=>(0,l.j)(e,"main-background")}
+  .ad__slot--hero .cns-ads-stage {
+    ${({shouldHidePaddingBottom:e})=>!e&&"padding-bottom: 0;"}
+  }
+
+  ${u.qX},
+  ${v.Xv} {
+    a {
+      ${({theme:e})=>(0,n.pe)(e,"colors.consumption.body.standard.link","colors.consumption.body.standard.link-hover")};
+      transition: color ${d.L6.timingLinkDefault} ease;
+    }
+    text-align: center;
+  }
+  ${w.zK} {
+    ${w.on} {
+      text-align: left;
+    }
+    grid-column: 1 / -1;
+
+    ${(0,n.H4)(d.LO.md)} {
+      grid-column: 3 / span 8;
+    }
+
+    ${(0,n.H4)(d.LO.lg)} {
+      grid-column: 4 / span 6;
+    }
+  }
+
+  .newsletter-subscribe-form__hed {
+    margin-top: 0;
+    margin-bottom: ${(0,n.Kq)(2)};
+    ${({shouldOverrideColorToken:e})=>e&&`\n color: ${(0,n.HK)("colors.discovery.body.light.heading")};`};
+    ${(0,n.H4)(d.LO.md)} {
+      margin-bottom: ${(0,n.Kq)(2)};
+    }
+  }
+  ${w.G4} {
+    margin-top: 0;
+    margin-bottom: ${(0,n.Kq)(2)};
+    ${({shouldOverrideColorToken:e,theme:a})=>e&&`\n color: ${(0,n.HK)(a,"colors.discovery.body.light.description")};\n  a {\n   color: ${(0,n.HK)(a,"colors.discovery.body.light.description")};\n }`};
+
+    ${(0,n.H4)(d.LO.md)} {
+      margin-bottom: ${(0,n.Kq)(4)};
+    }
+  }
+  ${m.vY} {
+    &::before {
+      display: block;
+      ${({shouldHidePadding:e})=>!e&&`height: ${(0,n.Kq)(1,"px")};`}
+      content: '';
+    }
+
+    .channelfilter-wrapper {
+      grid-template-columns: 1fr;
+    }
+    ${C.Lz} {
+      > .product__list {
+        margin-right: ${(0,n.Kq)(7)};
+        margin-left: ${(0,n.Kq)(7)};
+        @media (min-width: 0) and (max-width: ${d.LO.md}) {
+          margin-right: ${(0,n.Kq)(3)};
+          margin-left: ${(0,n.Kq)(3)};
+        }
+
+        .callout--group {
+          margin: auto;
+          > ${A.ew} {
+            ${A.yh} > ${E.F} {
+              ${$.lk} > ${$.dU} {
+                a > ${B.Lj} {
+                  ${(0,n.Gg)("typography.definitions.foundation.link-primary")};
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .cm-unit-row {
+        margin-bottom: ${(0,n.Kq)(2)};
+
+        ${({hasEvenSpacing:e})=>e&&t.AH`
+            margin-top: ${(0,n.Kq)(6)};
+            margin-bottom: 0;
+            ${(0,n.H4)(d.LO.md)} {
+              margin-top: ${(0,n.Kq)(7)};
+              margin-bottom: 0;
+            }
+          `}
+
+        .consumer-marketing-unit {
+          grid-column: 1 / -1;
+          border-top: 1px solid
+            ${(0,n.HK)("colors.discovery.body.white.divider")};
+          padding-top: ${(0,n.Kq)(2)};
+
+          ${(0,n.H4)(d.LO.md)} {
+            margin-top: ${(0,n.Kq)(2)};
+          }
+        }
+      }
+
+      > .product__carousel {
+        max-width: 1600px;
+
+        div {
+          > button.carousel-control-button--back {
+            box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.15);
+          }
+
+          > button.carousel-control-button--forward {
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.15);
+          }
+        }
+
+        ${I}
+      }
+
+      > div > div[data-testid='SummaryRiverWrapper'] {
+        section[data-testid='SummaryRiverSection'] .summary-item--bundle {
+          grid-column-gap: var(--grid-gap);
+          margin: 0;
+        }
+      }
+    }
+
+    ${({hasEvenSpacing:e})=>e&&t.AH`
+        ~ ${P.S}:not(:empty) {
+          margin-top: ${(0,n.Kq)(6)};
+          ${(0,n.H4)(d.LO.md)} {
+            margin-top: ${(0,n.Kq)(7)};
+          }
+        }
+      `}
+  }
+
+  .summary-item--bundle {
+    .summary-item__content {
+      @media (min-width: ${d.LO.sm}) {
+        width: auto;
+      }
+      @media (min-width: ${d.LO.md}) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      @media (min-width: ${d.LO.md}) {
+        margin: 0;
+      }
+    }
+
+    .summary-item__hed,
+    .summary-item__byline {
+      @media (min-width: ${d.LO.md}) {
+        margin: 0;
+      }
+    }
+  }
+
+  .summary-collage-five {
+    .summary-item--bundle {
+      @media (min-width: ${d.LO.md}) {
+        .summary-item__hed {
+          margin-bottom: ${(0,n.Kq)(2)};
+          width: unset;
+        }
+
+        .summary-item__hed--no-margin-bottom {
+          margin-bottom: 0;
+          width: unset;
+        }
+      }
+    }
+  }
+
+  .summary-collection-grid--four-columns,
+  .summary-collage-one,
+  ${f.n} ${f.O9}:first-child {
+    .summary-item__image {
+      display: block;
+
+      &.responsive-asset {
+        margin-right: 0;
+        margin-left: 0;
+      }
+
+      @media (min-width: ${d.LO.md}) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+
+    .responsive-clip {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .ad-container.ad-container-reduced-margin {
+    .ad--mid-content {
+      @media (min-width: ${d.LO.md}) {
+        margin-bottom: ${(0,n.Kq)(2)};
+        padding: 0 0 0 0;
+      }
+    }
+  }
+
+  .ad-container {
+    .ad--mid-content {
+      margin-bottom: ${(0,n.Kq)(2)};
+      padding: 0 0 0 0;
+    }
+  }
+
+  .ad-container.ad-container-reduced-margin {
+    .ad--mid-content-with-padding {
+      @media (min-width: ${d.LO.md}) {
+        padding: 0 0 ${(0,n.Kq)(2)} 0;
+      }
+    }
+  }
+
+  .ticker-view--has-special-theme {
+    background-color: ${({theme:e})=>(0,n.HK)(e,"colors.consumption.body.special.bg-photo")};
+  }
+
+  ${({shouldShowFooterAdPadding:e})=>!e&&".cns-ads-slot-type-footer {\n  padding: 0;\n}"}
+
+  ${A.yh} {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  ${$.Sy} {
+    justify-content: left;
+    margin-left: 0;
+  }
+
+  .footer-toggle-chip-links {
+    padding-bottom: 30px;
+
+    .section-header__container--minimal-padding {
+      padding: ${(0,n.Kq)(2)} 0 0;
+    }
+  }
+
+  ${({hasBackground:e,theme:a})=>e&&a&&(0,l.j)(a,"page-background")};
+
+  .plp-storefornt_breadcrumb {
+    ${F.dx} {
+      text-transform: capitalize;
+
+      &:last-of-type {
+        a {
+          ${({theme:e})=>(0,n._o)(e,"color","colors.interactive.base.black")};
+        }
+      }
+    }
+  }
+`,V=(0,t.Ay)(h.A).withConfig({displayName:"HomepageWrapper"})`
+  ${K}
+`;(0,t.Ay)(g.A).withConfig({displayName:"HomepageWrapper"})`
+  ${K}
+`,t.Ay.div.withConfig({displayName:"HomepageBodyWrapperGrid"})`
+  ${(0,S.VG)()}
+  ${(0,N.aU)("padding")}
+`,(0,t.Ay)(H.A.NarrowContentWithWideAdRail).withConfig({displayName:"HomePageGridNarrowContentWithWideAdRail"})`
+  ${({shouldUsePaddingTopForHomePageBody:e})=>e&&`padding-top: ${(0,n.Kq)(4)};\n`}
+`,t.Ay.div.withConfig({displayName:"HomepageBundleBody"})`
+  ${k.K2} {
+    margin-top: ${(0,n.Kq)(5)};
+    margin-bottom: ${(0,n.Kq)(5)};
+
+    @media (min-width: ${d.LO.lg}) {
+      margin-top: ${(0,n.Kq)(6)};
+      margin-bottom: ${(0,n.Kq)(6)};
+    }
+
+    p:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      @media (min-width: ${d.LO.lg}) {
+        padding-top: 0;
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+`,(0,t.Ay)(T.Ay.IconAbove).withConfig({displayName:"HomepageSectionTitle"})``,(0,t.Ay)(L.A).withConfig({displayName:"BreadcrumbTrailComponent"})`
+  .${R.pT.Component.Breadcrumb.split(" ").join(".")},
+    .${R.pT.Component.BreadcrumbLink.split(" ").join(".")} {
+    color: ${(0,n.HK)("colors.interactive.base.deemphasized")};
+    ${(0,n.Gg)("typography.definitions.utility.input-core")};
+  }
+`},52643(e,a,o){o.d(a,{Xi:()=>N});var t=o(38267),n=o(26865),r=o(22652),i=o(30),s=o(96472),l=o(4081),d=o(48286),c=o(30543),m=o(18730),u=o(99906),g=o(94107),h=o(94828),p=o(63637),y=o(15641),b=o(68116),k=o(14207),C=o(30854),v=o(36211),f=o(89085),w=o(1123),A=o(86659),E=o(40653),$=o(80607),M=o(88317),B=o(6613),S=o(75163);(0,t.Ay)(r.A).withConfig({displayName:"PodcastDetailChannelBody"})`
+  grid-column: 1/-1;
+  margin-bottom: 1rem;
+
+  ${(0,n.H4)(s.LO.md)} {
+    grid-column: 3 / span 8;
+  }
+`,(0,t.Ay)("div").withConfig({displayName:"PodcastDetailContentHeader"})``,(0,t.Ay)("div").withConfig({displayName:"PodcastDetailBodyWrapperGrid"})`
+  ${(0,f.VG)()}
+  ${(0,w.aU)("padding")}
+    padding-bottom: ${(0,n.Kq)(2)};
+`,(0,t.Ay)("div").withConfig({displayName:"DekWrapper"})`
+  ${(0,f.VG)()}
+  ${(0,w.aU)("padding")}
+  padding-top:${(0,n.Kq)(5)};
+
+  > * {
+    grid-column: 1 / -1;
+    margin-top: ${(0,n.Kq)(2)};
+    margin-bottom: ${(0,n.Kq)(2)};
+  }
+
+  a,
+  a:not(.button):link {
+    color: var(${S.pT.Color.TextLink});
+  }
+
+  a:not(.button):hover {
+    color: var(${S.pT.Color.TextLink});
+  }
+`,(0,t.Ay)(d.A).withConfig({displayName:"DekClamp"})`
+  ${({breakpoint:e})=>e&&t.AH`
+      ${(0,n.H4)(s.LO[e])} {
+        button {
+          display: none;
+        }
+      }
+      @media (min-width: ${s.LO.lg}) {
+        grid-column: 3 / span 8;
+      }
+      text-align: center;
+      ${(0,n.L7)(`${u.VS.md}px`)} {
+        width: 100%;
+      }
+    `}
+`,(0,t.Ay)("div").withConfig({displayName:"Dek"})``,(0,t.Ay)(c.A).withConfig({displayName:"PodcastDetailPageWrapper"})`
+  ${({theme:e})=>t.AH`
+      ${"inverted"===e&&t.AH`
+        ${$.zY} {
+          padding-top: ${(0,n.Kq)(1.5)};
+        }
+        ${M.s6} {
+          display: none;
+        }
+      `}
+    `}
+  ${({theme:e})=>(0,i.j)(e||"main-background")}
+  .ad__slot--hero .cns-ads-stage {
+    ${({shouldHidePaddingBottom:e})=>!e&&"padding-bottom: 0;"}
+  }
+  ${l.vY} {
+    &::before {
+      display: block;
+      ${({shouldHidePadding:e})=>!e&&`height: ${(0,n.Kq)(1,"px")};`}
+      content: '';
+    }
+  }
+
+  .ad-container.ad-container-reduced-margin {
+    .ad--mid-content {
+      @media (min-width: ${s.LO.md}) {
+        margin-bottom: ${(0,n.Kq)(2)};
+        padding: 0 0 0 0;
+      }
+    }
+  }
+
+  .ad-container {
+    .ad--mid-content {
+      @media (min-width: ${s.LO.md}) {
+        margin-bottom: ${(0,n.Kq)(2)};
+        padding: 0 0 0 0;
+      }
+    }
+  }
+
+  .ad-container.ad-container-reduced-margin {
+    .ad--mid-content-with-padding {
+      @media (min-width: ${s.LO.md}) {
+        padding: 0 0 ${(0,n.Kq)(2)} 0;
+      }
+    }
+  }
+
+  .cns-ads-slot-type-footer {
+    padding: 0;
+  }
+  ${({hasBackground:e,theme:a})=>e&&a&&(0,i.j)(a,"page-background")}
+`,(0,t.Ay)("div").withConfig({displayName:"PodcastDetailPageRecircWrapper"})`
+  --grid-margin: ${(0,n.Kq)(6)};
+  padding-top: calc(1 * var(--grid-margin));
+  padding-right: calc(1 * var(--grid-margin));
+  padding-left: calc(1 * var(--grid-margin));
+
+  ${C.np} {
+    @media (max-width: calc(${s.LO.md} - 1px)) {
+      display: grid;
+    }
+
+    a {
+      max-width: ${(0,n.Kq)(25)};
+      @media (max-width: calc(${s.LO.md} - 1px)) {
+        grid-column: 3/5;
+        max-width: ${(0,n.Kq)(22.5)};
+      }
+    }
+  }
+
+  ${b.tP} {
+    align-self: baseline;
+    max-width: 100%;
+    @media (max-width: calc(${s.LO.md} - 1px)) {
+      display: grid;
+    }
+  }
+
+  ${k.fh} {
+    @media (max-width: calc(${s.LO.md} - 1px)) {
+      grid-column: 3/5;
+      width: ${(0,n.Kq)(19.375)};
+      height: ${(0,n.Kq)(19.375)};
+    }
+  }
+
+  ${b.Tr} {
+    padding: 0;
+    @media (max-width: calc(${s.LO.md} - 1px)) {
+      text-align: center;
+    }
+
+    ${B.zM} {
+      color: var(${S.pT.Color.TextRubric});
+      ${({theme:e})=>(0,n.Gg)(e,"typography.definitions.globalEditorial.context-primary")};
+    }
+  }
+  ${b.oW} {
+    @media (max-width: calc(${s.LO.md} - 1px)) {
+      display: none;
+    }
+  }
+  ${b.zP} {
+    @media (max-width: calc(${s.LO.md} - 1px)) {
+      margin-bottom: ${(0,n.Kq)(.5)};
+      padding-top: ${(0,n.Kq)(2.5)};
+      max-width: 100%;
+    }
+  }
+`,(0,t.Ay)(h.A.PodcastRecirc).withConfig({displayName:"PodcastDetailPageRecircItem"})`
+  ${b.hU} {
+    &::after {
+      border-bottom: 0;
+    }
+  }
+  > ${E.E} {
+    grid-column: 1 / -1;
+    @media (min-width: ${s.LO.lg}) {
+      grid-column: 3 / span 8;
+    }
+  }
+`;const N=(0,t.Ay)(g.A).withConfig({displayName:"PodcastDetailPageSummaryRiver"})`
+  .grid {
+    row-gap: 0.25rem;
+  }
+  ${(0,n.H4)(s.LO.lg)} {
+    .grid {
+      row-gap: 0.75rem;
+    }
+    ${y.yj}:first-child ${p.Ik}::before {
+      grid-column: 1/-5;
+    }
+    && ${p.Ik} {
+      .grid-layout__content {
+        grid-column: 1/-4;
+      }
+    }
+    ${p.Ik} {
+      grid-template-columns: repeat(12, 1fr);
+
+      .summary-item--layout-placement-side-by-side-desktop-only {
+        grid-template-columns: repeat(9, 1fr);
+
+        .summary-item__content {
+          grid-column: 4/-1;
+        }
+
+        .summary-item__asset-container {
+          grid-column: 1/-7;
+          align-self: baseline;
+        }
+      }
+    }
+    ${b.hU} {
+      ${v.Y} {
+        ${({theme:e})=>(0,n.Gg)(e,"typography.definitions.discovery.hed-core-primary")};
+      }
+    }
+    ${y.UI} {
+      ${(0,w.aU)("padding")};
+      margin-bottom: 0;
+      padding: ${(0,n.Kq)(8)} ${(0,n.Kq)(6)}
+        ${(0,n.Kq)(8)} ${(0,n.Kq)(6)};
+    }
+  }
+`;(0,t.Ay)(A.A.NoMargins).withConfig({displayName:"PodcastDetailPageGrid"})`
+  > ${E.E} {
+    grid-column: 1 / -1;
+    @media (min-width: ${s.LO.lg}) {
+      grid-column: 3 / span 8;
+    }
+    @media (max-width: ${s.LO.lg}) {
+      margin-top: ${(0,n.Kq)(4)};
+    }
+  }
+`,(0,t.Ay)(m.v).withConfig({displayName:"PodcastRecircContextualHeader"}).attrs(e=>({as:"div",typeIdentity:"typography.definitions.globalEditorial.context-primary",...e}))`
+  padding-bottom: ${(0,n.Kq)(2.5)};
+  text-align: center;
+  @media (min-width: ${s.LO.md}) {
+    display: none;
+  }
+`}}]);

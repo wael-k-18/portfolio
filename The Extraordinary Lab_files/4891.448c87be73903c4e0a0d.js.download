@@ -1,0 +1,911 @@
+"use strict";(globalThis.webpackChunkverso=globalThis.webpackChunkverso||[]).push([[4307,4891],{24300(e,t,n){n.d(t,{A:()=>E,O:()=>A});var o=n(96540),i=n(5556),a=n.n(i),r=n(62193),s=n.n(r),l=n(45135),d=n(6442),c=n(26800),m=n(39311),u=n(73275),g=n(60711),p=n(22914),h=n(22509),b=n(92867),w=n(62930),f=n(22761),y=n(89957),v=n(85554),C=n(16631),I=n(75454),k=n(86504);const A="createCommentReaction",S="pinned-comment",_=({commentingUrl:e,contentTitle:t,documentType:n,reviewShareAsset:i,enableRatedReviewShare:a=!1,defaultReplyLimit:r,entityId:l,handleUsernameChange:u,id:_,initialReviewLimit:E,likeActionErrorMessage:L,replyLimit:x,commentsOrderBy:T,repliesOrderBy:R,reviewLimit:N,reviewerBadges:$,reviewModalProps:U,reviewNoteTags:M,setCommentCount:B,setIsCommentLoading:D,shouldEnableRatings:O,shouldEnableReply:F,shouldEnableTags:q,shouldEnableUpvotes:K,shouldUseAlternateColorToken:P,shouldUsePrimaryColorForBadges:H,shouldUseTagsInvertedTheme:j,shouldUseFullOpacity:z,shouldShowCircularRatings:G,ratingPlacement:V,shouldUseDarkPinnedTheme:Y,shouldUseSoftRoundedEdges:W,showMessageBannerHandler:Q,showMoreButtonLabel:X,showUpvoteLabel:J,signInHed:Z,signInHedSpanTag:ee,signInMessage:te,siteUserName:ne,unlikeActionErrorMessage:oe,upvoteIcon:ie,upvoteIconFilled:ae,user:re={},usernameSignInDek:se,communityLogo:le,shouldEnableCommentsImageUpload:de,useVoteLabels:ce=!1,shouldEnableRepliesImageUpload:me,shouldShowLocation:ue,spectraUrl:ge,shouldShowQaSection:pe,enableRepliesMarketRestriction:he,repliesMarketRestrictedTooltip:be,shouldTruncateComments:we,truncateLines:fe,isSubscribed:ye,subscriptionUrl:ve,subscriptionModalProps:Ce})=>{const{formatMessage:Ie}=(0,d.A)(),[ke,Ae]=(0,o.useState)(!1),[Se,_e]=(0,o.useState)(!1),[Ee,Le]=(0,o.useState)(),[xe,Te]=(0,o.useState)(),[Re,Ne]=(0,o.useState)([]),[$e,Ue]=(0,o.useState)([]),[Me,Be]=(0,o.useState)([]),[De,Oe]=(0,o.useState)({}),Fe=(({enableRatedReviewShare:e,reviewShareAsset:t,user:n})=>Boolean(e&&t?.name&&t?.handle&&t?.profileImage&&n.isAuthenticated&&n.amguuid))({enableRatedReviewShare:a,reviewShareAsset:i,user:re}),{isLoading:qe,reviews:Ke,page:Pe,setPage:He,featuredReviews:je,qaReviews:ze,qaPage:Ge,setQaPage:Ve,commentTagLabel:Ye}=(0,v.QO)({commentingUrl:e,commentsOrderBy:T,defaultReplyLimit:r,entityId:l,initialReviewLimit:E,shouldShowQaSection:pe,setCommentCount:B,setIsCommentLoading:D,repliesOrderBy:R,includeViewerOwnership:Fe});(0,o.useEffect)(()=>{const e=(0,m.AA)(Ke,Ie,M).map(e=>({...e,isFeatured:!1}));Ne(e);const t=(0,m.AA)(je,Ie,M).map(e=>({...e,isFeatured:!0}));Ue(t);const n=(0,m.AA)(ze,Ie,M).map(e=>({...e,isFeatured:!0}));Be(n)},[Ke,je,Ie,M,ze]);const We=(0,o.useMemo)(()=>[...Re,...$e,...Me],[Re,$e,Me]);(0,v.AI)(We,Oe);const Qe=(0,o.useCallback)(async({item:t,skipSubscriptionModal:n=!1})=>{const o="COMMUNITY_LIKE_CLICK_NOTE",i=t.isFeatured||!1,a={type:"login",source_type:o,...(0,I.i3)(i)},r=(0,I.An)(i),s={action:A,commentId:t.commentId,commentRevisionId:t.revisionId,featured:r,source:o},l=(0,v.$D)({href:window.location.href,hashValue:v.M$.LIKE_COMMENT,queryParams:s});if(!n&&(0,k.r)(ye,ve))return void(0,k.p)({subscriptionUrl:ve,modalConfig:Ce,redirectURL:l,action:v.M$.LIKE_COMMENT});if(!re.isAuthenticated)return void h.Rf({dangerousHed:Z,dangerousHedSpanTag:ee,dangerousDek:te,redirectURL:l,analyticsType:"comment reaction",shouldHideIllustration:!0,source:o,snowplowData:a});const{commentId:d,revisionId:c}=t;Oe(e=>(0,v.P$)({reactions:e,id:d}));const{viewerActionPresence:m}=De[d]||{},u=m?"removeCommentReaction":A,w={commentID:d,commentRevisionID:c,clientMutationId:"0"},f=u===A,y={operationName:u,query:f?p.bp:p.nn,variables:{input:w}};try{await(0,g.nz)(e,y)}catch(e){Oe(e=>(0,v.P$)({reactions:e,id:d}));const t=f?L||Ie(b.A.likeActionErrorMessage):oe||Ie(b.A.unlikeActionErrorMessage);Q(t)}},[re,De,e,Z,ee,te,Ie,Q,L,oe,ye,ve,Ce]),Xe=($e?.length||0)+(Me?.length||0);(0,y.ol)(`.${S}`,void 0,e=>{e&&Xe&&(0,I.AS)(Xe,"community_pinned","pinned_comments")},[Xe]),(0,o.useEffect)(()=>{if(!window.location||!re.isAuthenticated||s()(De))return;const{action:e,commentId:t,commentRevisionId:n}=(0,v.TS)({searchParams:window.location.search});if(e!==A)return;const o=De[t];if(o&&t&&n){const{viewerActionPresence:e}=o;!e&&Qe({item:{commentId:t,revisionId:n},skipSubscriptionModal:!0}),window.history.replaceState({},"",(0,v.iz)({href:window.location.href,paramsToRemove:["action","commentId","commentRevisionId"]}))}},[re.isAuthenticated,Qe,De]);if(qe)return o.createElement(f.ey,null,o.createElement(w.jl,null));if(!(Re.length||$e.length||Me.length||Ee))return null;const Je={commentingUrl:e,commentReactionHandler:Qe,handleUsernameChange:u,repliesOrderBy:R,replyLimit:x,reviewerBadges:$,reviewModalProps:U,shouldEnableRatings:O,shouldEnableReply:F,shouldEnableTags:q,shouldEnableUpvotes:K,shouldUseAlternateColorToken:P,shouldUsePrimaryColorForBadges:H,shouldUseTagsInvertedTheme:j,shouldUseFullOpacity:z,shouldShowCircularRatings:G,ratingPlacement:V,showMessageBannerHandler:Q,showUpvoteLabel:J,signInHed:Z,signInHedSpanTag:ee,signInMessage:te,siteUserName:ne,updateUserReactions:e=>{Oe(t=>e.reduce(v.a8,{...t}))},upvoteIcon:ie,upvoteIconFilled:ae,user:re,usernameSignInDek:se,userReactions:De,contentTitle:t,documentType:n,reviewShareAsset:i,shouldEnableCommentsImageUpload:de,shouldEnableRepliesImageUpload:me,shouldShowLocation:ue,spectraUrl:ge,useVoteLabels:ce,enableRepliesMarketRestriction:he,repliesMarketRestrictedTooltip:be,shouldTruncateComments:we,truncateLines:fe,isSubscribed:ye,subscriptionUrl:ve,modalConfig:Ce};return o.createElement(o.Fragment,null,!!$e?.length&&o.createElement(C.fm,{className:S,shouldUseFullOpacity:z,shouldUseDarkPinnedTheme:Y,shouldUseSoftRoundedEdges:W},o.createElement(C.W6,{shouldUseFullOpacity:z,shouldUseDarkPinnedTheme:Y,shouldUseSoftRoundedEdges:W},o.createElement(C.oE,{shouldUseAlternateColorToken:P,shouldUseInvertedColor:Y},Ye?.FEATURED||Ie(b.A.pinnedReviewLabel)),le&&o.createElement(C.tG,{...le})),o.createElement(c.A,{...Je,id:`${_}-featured`,items:$e})),pe&&!!Me?.length&&o.createElement(C.fm,{shouldUseSoftRoundedEdges:W,className:S,shouldUseFullOpacity:z,shouldUseDarkPinnedTheme:Y},o.createElement(C.W6,{shouldUseSoftRoundedEdges:W,shouldUseFullOpacity:z,shouldUseDarkPinnedTheme:Y},o.createElement(C.oE,{shouldUseAlternateColorToken:P,shouldUseInvertedColor:Y},Ye?.QA||Ie(b.A.qaReviewLabel)),le&&o.createElement(C.tG,{...le})),o.createElement(c.A,{...Je,id:`${_}-qa`,items:Me,isLoading:Se,hasErrored:!!xe,hasNextPage:Ge.hasNextPage,handleShowMore:async()=>{_e(!0),Te();const t=Ge.endCursor;try{const{reviews:n,page:o}=await(0,g.Jn)({entityId:l,after:t,commentingUrl:e,repliesOrderBy:R,reviewLimit:N,includeViewerOwnership:Fe});Ve(o);const i=(0,m.AA)(n,Ie,M).map(e=>({...e,isFeatured:!0}));Be([...Me,...i])}catch(e){Te(!0)}_e(!1)},showMoreButtonLabel:X})),o.createElement(c.A,{...Je,id:_,items:Re,isLoading:ke,hasErrored:!!Ee,hasNextPage:Pe.hasNextPage,handleShowMore:async()=>{Ae(!0),Le();const t=Pe.endCursor;try{const{reviews:n,page:o}=await(0,g.SW)({entityId:l,after:t,commentingUrl:e,commentsOrderBy:T,repliesOrderBy:R,reviewLimit:N,includeViewerOwnership:Fe});He(o);const i=(0,m.AA)(n,Ie,M);Ne([...Re,...i])}catch(e){Le(!0)}Ae(!1)},showMoreButtonLabel:X}))};_.propTypes={commentingUrl:a().string.isRequired,commentsOrderBy:a().string,communityLogo:a().shape(u.A.propTypes),contentTitle:a().string,documentType:a().string,reviewShareAsset:a().object,enableRatedReviewShare:a().bool,defaultReplyLimit:a().number,entityId:a().string.isRequired,handleUsernameChange:a().func,id:a().string,initialReviewLimit:a().number,likeActionErrorMessage:a().string,ratingPlacement:a().oneOf(["ReviewMetaGrid","ReviewListMetaInfo"]),repliesOrderBy:a().string,replyLimit:a().number,reviewerBadges:a().arrayOf(a().shape({role:a().string,badge:a().string})),reviewLimit:a().number,reviewModalProps:a().object,reviewNoteTags:a().array,setCommentCount:a().func.isRequired,setIsCommentLoading:a().func.isRequired,shouldEnableCommentsImageUpload:a().bool,shouldShowLocation:a().bool,shouldEnableRatings:a().bool,shouldEnableRepliesImageUpload:a().bool,shouldEnableReply:a().bool,shouldEnableTags:a().bool,shouldEnableUpvotes:a().bool,shouldShowCircularRatings:a().bool,shouldUseAlternateColorToken:a().bool,shouldUsePrimaryColorForBadges:a().bool,shouldUseTagsInvertedTheme:a().bool,shouldUseDarkPinnedTheme:a().bool,shouldUseSoftRoundedEdges:a().bool,shouldUseFullOpacity:a().bool,showMessageBannerHandler:a().func,showMoreButtonLabel:a().string,shouldShowQaSection:a().bool,shouldTruncateComments:a().bool,showUpvoteLabel:a().bool,signInHed:a().string,signInHedSpanTag:a().string,signInMessage:a().string,siteUserName:a().string,spectraUrl:a().string,truncateLines:a().number,unlikeActionErrorMessage:a().string,upvoteIcon:a().string,upvoteIconFilled:a().string,useVoteLabels:a().bool,user:a().shape({amguuid:a().string,isAuthenticated:a().bool.isRequired}).isRequired,usernameSignInDek:a().string,enableRepliesMarketRestriction:a().bool,repliesMarketRestrictedTooltip:a().string,isSubscribed:a().bool,subscriptionUrl:a().string,subscriptionModalProps:a().object};const E=(0,l.Ng)(null,{setCommentCount:e=>({type:"SET_KEY",key:"comments.commentCount",value:e}),setIsCommentLoading:e=>({type:"SET_KEY",key:"comments.isCommentLoading",value:e})})(_)},92543(e,t,n){n.d(t,{u:()=>wt});var o=n(13465),i=n(57744),a=n(5556),r=n.n(a),s=n(96540),l=n(6442);const d=n(16075),{GraphQLClient:c}=n(96497),{getCookie:m}=n(56892),u=n(53788).A,{oidcCookies:g}=u,p=(e,t)=>{const n=m(g.access),o=new c(e),{query:i,variables:a}=t,r={"Access-Control-Request-Method":"POST","Access-Control-Request-Headers":"Content-Type","Content-Type":"application/json","User-Agent":"verso-client",Authorization:`Bearer ${n}`};return o.request(i,a,r)};var h=n(31989),b=n(62282),w=n(38080),f=n(16631),y=n(11025),v=n(53499),C=n(89957),I=n(86659),k=n(24300),A=n(14307);var S=n(25965),_=n(15343),E=n(99244),L=n(72267);const x=(0,L.YK)({defaultcommunityReviewText:{id:"ReviewNotesForm.defaultcommunityReviewText",defaultMessage:"Ask a question or leave a helpful tip, suggestion or opinion that is relevant and respectful for the community.",description:"Appears when the form is minimised or maximised and enableCommunityExperience is true"},nonLoggedInErrorMessage:{id:"ReviewForm.nonLoggedInErrorMessage",defaultMessage:"Sign in or create an account to add comment.",description:"Message to display non logged in users"},textFieldLabel:{id:"ReviewNotesForm.textFieldLabel",defaultMessage:"Your Review",description:"The label for the main review text field"},addNoteLabel:{id:"ReviewNotesForm.addNoteLabel",defaultMessage:"Add comment",description:"The label for Add Comment submit button"},cancelNoteLabel:{id:"ReviewNotesForm.cancelNoteLabel",defaultMessage:"Discard",description:"The label for cancel button"},reviewerInfoFieldLabel:{id:"ReviewNotesForm.ReviewerInfoFieldLabel",defaultMessage:"Commenting as:",description:"The label for the reviewer name field"},reviewerRatingLabel:{id:"ReviewNotesForm.ReviewerRatingLabel",defaultMessage:"Rate this",description:"The label for the reviewer rating field"},reviewerFieldInfoIconText:{id:"ReviewNotesForm.reviewerFieldInfoIconText",defaultMessage:"Your username appears next to your comments and replies. Change it anytime in your Account.",description:"information text for user to change their user name"},reviewerFieldWithLocationInfoIconText:{id:"ReviewNotesForm.reviewerFieldWithLocationInfoIconText",defaultMessage:"Your username and location appear next to your comments and replies. Change them anytime in your Account.",description:"information text for user to change their user name and location when both exist"},locationFieldInfoIconText:{id:"ReviewNotesForm.locationFieldInfoIconText",defaultMessage:"Your location appears next to your comments and replies. Change it anytime in your Account.",description:"information text for user to change their location"},reviewerStoryScoreIconButtonLabel:{id:"ReviewNotesForm.reviewerStoryScoreIconButtonLabel",defaultMessage:"user score message",description:"Label for reviewer score message icon"},ratingFieldInfoIconText:{id:"ReviewNotesForm.ratingFieldInfoIconText",defaultMessage:"You can add a score to an album or track only once, but you can still leave a comment or review afterward.",description:"information text for user about rating limitations"},reviewerInfoIconButtonLabel:{id:"ReviewNotesForm.reviewerInfoIconButtonLabel",defaultMessage:"user name update message",description:"Label for reviewer user name update message icon"},reviewTagsLabel:{id:"ReviewNotesForm.reviewTagsLabel",defaultMessage:"TAG YOUR COMMENT (OPTIONAL)",description:"Label for adding tags"},reviewTags:{id:"FilterComponent.reviewTags",defaultMessage:"{reviewTag}",description:"Value for the tag"},invalidReviewLength:{id:"ReviewNotesForm.invalidReviewNoteLength",defaultMessage:"Enter {min} characters or more to add a comment.",description:"Error message for invalid review comment length"},requiredField:{id:"ReviewNotesForm.requiredField",defaultMessage:"Select a star rating to add a comment",description:"Error message for required field"},invalidNumericRatingRange:{id:"ReviewNotesForm.invalidNumericRatingRange",defaultMessage:"Rating must be between 0 and 10",description:"Error message for numeric rating out of range"},numericRatingPlaceholder:{id:"ReviewNotesForm.numericRatingPlaceholder",defaultMessage:"Enter a number between 0 and 10",description:"Placeholder text for numeric rating input field"},maxCharLimitMet:{id:"ReviewNotesForm.maxCharLimitMet",defaultMessage:"_MAX_ character limit met",description:"Warning message for max review comment length"},remainingMaxCharLimit:{id:"ReviewNotesForm.remainingMaxCharLimit",defaultMessage:"_COUNT_ of _MAX_ character limit remaining",description:"Warning message for invalid review comment length"},buttonLabel:{id:"ReviewNotesForm.buttonLabel",defaultMessage:"Sign in or create account",description:"Text for the sign in or create account button"},AddNoteFailedToastMessage:{id:"ReviewNotes.AddNoteFailedToastMessage",defaultMessage:"Unable to add your comment. Please try again.",description:"Failure message to show on comment save"},countryDropdownLabel:{id:"ReviewNotesForm.countryDropdownLabel",defaultMessage:"Location",description:"Label for country dropdown"},countryDropdownPlaceholder:{id:"ReviewNotesForm.countryDropdownPlaceholder",defaultMessage:"Select location",description:"Placeholder text for country dropdown"},requiredCountryField:{id:"ReviewNotesForm.requiredCountryField",defaultMessage:"Please Select location to add a comment",description:"Error message for required country dropdown field"},reviewerStoryScoreFieldLabel:{id:"ReviewNotesForm.ReviewerStoryScoreFieldLabel",defaultMessage:"Score Added:",description:"The label for the reviewer story score field"},reviewerStoryScoreInfoText:{id:"ReviewNotesForm.reviewerStoryScoreInfoText",defaultMessage:"You've already rated this album, but you can still leave a review.",description:"information text for showing the score he already added"},subscribeText:{id:"ReviewNotesForm.subscribeText",defaultMessage:"Subscribe",description:"Text for the subscribe link"},subscriptionLockActionText:{id:"ReviewNotesForm.subscriptionLockActionText",defaultMessage:"to add comments",description:"Text that appears after the Subscribe link"}});var T=n(61057),R=n(57886),N=n(40381),$=n(48346),U=n(90637),M=n(63208),B=n(38267),D=n(76955),O=n(26865),F=n(96472),q=n(12301),K=n(97927),P=n(60434),H=n(72081),j=n(14952),z=n(18161),G=n(73730),V=n(44741),Y=n(79499);const W=(0,B.Ay)(H.A.MultiLine).withConfig({displayName:"ReviewNoteTextField"})`
+  margin-bottom: 0;
+
+  textarea:disabled {
+    background-color: transparent;
+  }
+`,Q=B.Ay.div.withConfig({displayName:"ReviewNoteFormWrapper"})``,X=B.Ay.div.withConfig({displayName:"ReviewNoteSectionContainer"})`
+  border: 1px solid;
+  ${({theme:e})=>(0,O._o)(e,"border-color","colors.interactive.base.light")};
+  padding: ${(0,O.Kq)(3)};
+
+  ${({showTextFieldSoftRoundedEdges:e})=>e&&B.AH`
+      border-radius: 8px;
+    `};
+
+  ${P.vT} {
+    margin-top: 0;
+    padding: ${(0,O.Kq)(2)} ${(0,O.Kq)(1.5)};
+    ${({showTextFieldSoftRoundedEdges:e})=>e&&B.AH`
+        border-radius: 8px;
+      `};
+    ${({theme:e,hasError:t})=>t?(0,O._o)(e,"border-color","colors.interactive.base.brand-secondary"):(0,O._o)(e,"border-color","colors.interactive.base.black")};
+  }
+
+  ${P.vB} {
+    ${({hasWarning:e})=>e&&`margin-bottom: ${(0,O.Kq)(1)};`}
+  }
+
+  ${P.vT}
+
+  [disabled] {
+    ${({theme:e})=>(0,O._o)(e,"background","colors.interactive.base.white")};
+    ${({theme:e})=>(0,O._o)(e,"border-color","colors.interactive.base.light")};
+    ${({theme:e})=>(0,O._o)(e,"color","colors.consumption.body.standard.subhed")};
+  }
+
+  ${P.vT}::placeholder {
+    ${({theme:e})=>(0,O._o)(e,"color","colors.interactive.base.light")};
+  }
+`,J=B.Ay.div.withConfig({displayName:"ReviewNoteUserInfoWrapper"})``,Z=B.Ay.div.withConfig({displayName:"ReviewNoteUserInfo"})`
+  margin-bottom: ${(0,O.Kq)(4)};
+`,ee=B.Ay.div.withConfig({displayName:"ReviewNoteRatingWrapper"})`
+  margin-top: ${(0,O.Kq)(1)};
+  margin-bottom: ${(0,O.Kq)(4)};
+
+  ${P.tw} {
+    ${({showTextFieldSoftRoundedEdges:e})=>e&&B.AH`
+        border-radius: 8px;
+      `}
+  }
+`,te=B.Ay.span.withConfig({displayName:"ReviewerInfoLabel"})`
+  ${({theme:e})=>(0,O._o)(e,"color","colors.consumption.body.standard.body-deemphasized")};
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,ne=B.Ay.span.withConfig({displayName:"ReviewerRatingLabel"})`
+  ${({theme:e})=>(0,O._o)(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,oe=B.Ay.span.withConfig({displayName:"ReviewerInfo"})`
+  ${({theme:e})=>(0,O._o)(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.globalEditorial.accreditation-core")};
+  padding-left: ${(0,O.Kq)(.5)};
+`,ie=B.Ay.span.withConfig({displayName:"ReviewTagsInfoLabel"})`
+  ${({theme:e})=>(0,O._o)(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,ae=B.Ay.div.withConfig({displayName:"ReviewerInfoIconButtonWrapper"})`
+  display: inline;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    ${({theme:e})=>(0,O._o)(e,"fill","colors.consumption.lead.special.context-tertiary")};
+  }
+
+  .review-note-info-button {
+    float: inline-end;
+    margin: 0;
+    margin-top: 2px;
+    border: 0;
+    background-color: ${({theme:e})=>(0,O.HK)(e,"colors.interactive.base.white")};
+    padding: 0;
+    padding-left: 12px;
+
+    &:hover,
+    &:focus {
+      border: 0;
+      background: none;
+    }
+  }
+`,re=B.Ay.div.withConfig({displayName:"ReviewNotesToggleChipListWrapper"})`
+  ${z.f} {
+    ${(0,O.Gg)("typography.definitions.foundation.link-utility")}
+
+    &[aria-checked='false'] {
+      ${({shouldUseInteractiveBrandColor:e,shouldUseFullOpacity:t})=>{if(e){const e=t?1:.1;return B.AH`
+            background-color: rgba(
+              ${(0,O.HK)("colors.interactive.social.primary-hover",{rgbOnly:!0})},
+              ${e}
+            );
+          `}return`${(0,O._o)("color","colors.interactive.base.black")}`}}
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px ${(0,O.HK)("colors.interactive.base.black")}
+        inset;
+    }
+
+    ${(0,O.L7)(F.LO.md)} {
+      &:focus,
+      &:hover {
+        box-shadow: none;
+      }
+    }
+
+    &:disabled {
+      box-shadow: none;
+    }
+  }
+  ${j.OO} {
+    padding-bottom: 8px;
+    padding-left: 0;
+  }
+`,se=(0,B.Ay)(D.vm).withConfig({displayName:"ReviewerInfoText"})`
+  position: absolute;
+  left: calc(25% - 10px);
+  float: inline-end;
+  z-index: -1;
+  border-radius: 8px;
+  box-shadow: 0 0 20px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 17px 22px;
+  width: 80%;
+  box-sizing: border-box;
+
+  ${({theme:e})=>(0,O._o)(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.utility.input-core")};
+
+  ${(0,O.H4)(F.LO.sm)} {
+    padding: 12px 13px;
+  }
+  ${(0,O.H4)(F.LO.md)} {
+    padding: 17px 22px;
+  }
+`,le=(0,B.Ay)(D.vm).withConfig({displayName:"ReviewerStoryScoreText"})`
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.utility.assistive-text")};
+  margin-top: ${(0,O.Kq)(2)};
+  margin-bottom: ${(0,O.Kq)(3)};
+  color: ${(0,O.HK)("colors.interactive.base.border")};
+`,de=B.Ay.span.withConfig({displayName:"ReviewerStoryScoreLabel"})`
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.globalEditorial.accreditation-core")};
+  text-transform: uppercase;
+  color: ${(0,O.HK)("colors.consumption.body.standard.body-deemphasized")};
+`,ce=(0,B.Ay)(D.vm).withConfig({displayName:"CommunityGuidelinesInfo"})`
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.utility.label")};
+  margin-top: ${(0,O.Kq)(2)};
+  color: ${(0,O.HK)("colors.consumption.body.standard.body-deemphasized")};
+`,me=B.Ay.span.withConfig({displayName:"ReviewerStoryScoreValue"})`
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.utility.input-core")};
+  margin-left: ${(0,O.Kq)(1)};
+  color: ${(0,O.HK)("colors.consumption.body.standard.body")};
+`,ue=B.Ay.div.withConfig({displayName:"AlertArrow"})`
+  position: absolute;
+  top: auto;
+  bottom: 100%;
+  left: calc(98% - 11px);
+  border-width: 0 10px 13px;
+  border-style: solid;
+  border-color: rgb(254 254 254) transparent;
+`,ge=B.Ay.div.withConfig({displayName:"ReviewerInfoAlertToolTip"})`
+  position: relative;
+  top: 8px;
+  z-index: 2;
+  background-color: ${(0,O.HK)("colors.background.white")};
+
+  ${(0,O.H4)(F.LO.sm)} {
+    ${se} {
+      left: calc(8% - 4px);
+      width: 100%;
+    }
+    ${ue} {
+      left: calc(98% - 14px);
+      border-width: 0 8px 12px;
+    }
+  }
+
+  ${(0,O.H4)(F.LO.md)} {
+    ${se} {
+      left: calc(25% - 10px);
+      width: 80%;
+    }
+    ${ue} {
+      left: calc(98% - 12px);
+      border-width: 0 10px 13px;
+    }
+  }
+
+  ${(0,O.H4)(F.LO.lg)} {
+    ${se} {
+      left: calc(7% - 10px);
+      width: 100%;
+    }
+    ${ue} {
+      left: calc(98% - 14px);
+      border-width: 0 10px 13px;
+    }
+  }
+
+  ${(0,O.H4)(F.LO.xl)} {
+    ${se} {
+      left: calc(25% - 10px);
+      width: 80%;
+    }
+    ${ue} {
+      left: calc(98% - 11px);
+      border-width: 0 10px 13px;
+    }
+  }
+
+  ${(0,O.H4)(F.LO.xxl)} {
+    ${se} {
+      left: calc(34% - 10px);
+      width: 70%;
+    }
+    ${ue} {
+      left: calc(98% - 8px);
+      border-width: 0 10px 13px;
+    }
+  }
+`,pe=(0,B.Ay)(q.A).withConfig({displayName:"RatingFormRating"})`
+  align-items: start;
+  padding: ${(0,O.Kq)()} 0 ${(0,O.Kq)()};
+  ${K.Ou} {
+    transform: scale(1.78);
+    margin: 0 ${(0,O.Kq)(1.25)};
+  }
+`,he=B.Ay.div.withConfig({displayName:"ReviewNotesFormActions"})`
+  ${(0,O.H4)(F.LO.lg)} {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 32px;
+  }
+  ${(0,O.L7)(F.LO.md)} {
+    display: flex;
+    flex-direction: column;
+  }
+`,be=B.Ay.div.withConfig({displayName:"ReviewNotesDivider"})`
+  margin-top: ${(0,O.Kq)(2)};
+  border-bottom: 1px solid;
+  ${(0,O._o)("border-color","colors.consumption.body.standard.divider")};
+`,we=(0,B.Ay)(G.A.Primary).withConfig({displayName:"ReviewFormSubmitButton"})`
+  ${(0,O.Gg)("typography.definitions.utility.button-core")}
+  ${({theme:e})=>(0,O._o)(e,"color","colors.interactive.base.brand-primary")};
+  margin-top: 0.5rem;
+  margin-bottom: 20px;
+  padding: 15px 9px;
+  width: 100%;
+  max-width: 100%;
+  text-decoration: underline;
+`,fe=(0,B.Ay)(G.A.Primary).withConfig({displayName:"ReviewFormSubmitButton"})`
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 20px;
+  padding: 15px 9px;
+  width: 100%;
+  max-width: 100%;
+  height: unset;
+  text-align: center;
+
+  &:active::before {
+    top: 0;
+    left: 0;
+  }
+`,ye=(0,B.Ay)(P.HG).withConfig({displayName:"ReviewFormTextFieldErrorText"})``,ve=(0,B.Ay)(D.sH).withConfig({displayName:"ReviewNotesFormSignin"})``,Ce=B.Ay.div.withConfig({displayName:"ReviewNotesFormMinimised"})`
+  position: relative;
+
+  input.text-field__control {
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    textarea.text-field__control {
+      padding: ${(0,O.Kq)(2)};
+    }
+  }
+  @media (min-width: 768px) {
+    textarea.text-field__control {
+      padding: ${(0,O.Kq)(2)} ${(0,O.Kq)(3)};
+    }
+  }
+
+  textarea.text-field__control {
+    cursor: pointer;
+    overflow: auto;
+    overflow-y: hidden;
+
+    &::placeholder {
+      ${({theme:e})=>(0,O._o)(e,"color","colors.interactive.base.light")};
+    }
+  }
+
+  ${ve} {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: transparent;
+  }
+`,Ie=B.Ay.div.withConfig({displayName:"ReviewNotesImageUploadWrapper"})`
+  ${V.ef} {
+    ${(0,O.L7)(F.LO.lg)} {
+      margin-top: ${(0,O.Kq)(2)};
+      margin-bottom: ${(0,O.Kq)(.5)};
+    }
+
+    ${(0,O.H4)(F.LO.lg)} {
+      margin-top: ${(0,O.Kq)(3)};
+      margin-bottom: ${(0,O.Kq)(1.25)};
+    }
+  }
+`,ke=(0,B.Ay)(Y.Ay.Searchable).withConfig({displayName:"ReviewNotesLocationDropdown"})`
+  margin-top: ${(0,O.Kq)(1)};
+  margin-bottom: ${(0,O.Kq)(2)};
+
+  .dropdown__control,
+  .dropdown__value-container {
+    border-radius: ${(0,O.Kq)()};
+  }
+
+  .dropdown__menu {
+    z-index: ${F.KV.persistentTopLayer};
+  }
+`,Ae=B.Ay.div.withConfig({displayName:"ReviewNotesSubscriptionLock"})`
+  display: flex;
+  align-items: center;
+  gap: ${(0,O.Kq)(1)};
+  border: 1px solid;
+  ${({theme:e})=>(0,O._o)(e,"border-color","colors.interactive.base.light")};
+  border-radius: 999px;
+  cursor: pointer;
+  padding: ${(0,O.Kq)(1)} ${(0,O.Kq)(2)};
+  width: 100%;
+
+  .lock-background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: ${(0,O.Kq)(1)};
+    background: ${({theme:e})=>(0,O.HK)(e,"colors.background.light")};
+    width: ${(0,O.Kq)(4)};
+    height: ${(0,O.Kq)(4)};
+  }
+
+  &:hover {
+    ${({theme:e})=>(0,O._o)(e,"border-color","colors.interactive.base.dark")};
+  }
+`,Se=B.Ay.span.withConfig({displayName:"ReviewNotesSubscriptionText"})`
+  ${({theme:e})=>(0,O.Gg)(e,"typography.definitions.utility.input-core")};
+  ${({theme:e})=>(0,O._o)(e,"color","colors.interactive.base.dark")};
+`,_e=B.Ay.a.withConfig({displayName:"ReviewNotesSubscriptionLink"})`
+  ${({theme:e})=>(0,O._o)(e,"color","colors.interactive.social.primary")};
+  text-decoration: underline;
+`;var Ee=n(87098);const Le=(e,t)=>n=>{n.preventDefault(),n.stopPropagation(),e(!t)};var xe=n(75454),Te=n(85554);const Re=({ariaLabel:e,children:t,onMinimise:n,usernameSignInDek:o,trackAddNoteEvent:i,handleUsernameChange:a,siteUserName:r})=>{const l={type:"impression",label:"Create Username",subject:"username_modal",source_type:"community_comment"};return s.createElement(Ce,{role:"button",tabIndex:"0",onClick:e=>{i(),(e=>{r?n(e,r):void 0!==r&&((0,A.lV)(l),(0,T.Rf)({dangerousDek:o,successCallback:t=>{a(t),n(e,t)},source:"community_comment"}))})(e)},onKeyPress:n,"aria-label":e},t)};Re.propTypes={ariaLabel:r().string.isRequired,children:r().node.isRequired,handleUsernameChange:r().func.isRequired,onMinimise:r().func.isRequired,siteUserName:r().string,trackAddNoteEvent:r().func,usernameSignInDek:r().string};const Ne=e=>{const{className:t,configuredComponentRef:n,addNoteFailedToastMessage:o,addNoteLabel:i,communityGuidelinesInfo:a,shouldEnableTags:r,reviewNoteTags:d=[],reviewerRatingLabel:c,shouldUseInteractiveBrandColor:m,validations:{min:u=5,max:g=3e3,remainingChar:p=100,errorMessage:h={}}={},usernameSignInDek:b,modalProps:w={},minimisedReviewNotesText:f,nonLoggedInErrorMessage:y,isMinimised:I=!0,reviewerInfoText:k,reviewerLocationInfoText:L,locationInfoText:T,signInURL:B,textFieldHeightPx:D,userId:O,handleUsernameChange:F,onSubmitHandler:q,reviewerInfoFieldLabel:K,reviewTagsLabel:P,siteUserName:j,siteUserLocation:z,showSavedRecipeNotes:V,shouldEnableOptionalRating:Y,shouldEnableCommentsImageUpload:ve,shouldEnableRatings:Ce,showMessageBannerHandler:Ne,shouldUseFullOpacity:$e,userStoryRating:Ue,showTextFieldBoxShadow:Me,showTextFieldRoundedEdges:Be,showTextFieldSoftRoundedEdges:De,shouldUseNumericRatingInput:Oe,shouldEnableLocationDropdown:Fe,isSubscribed:qe=!0,subscriptionUrl:Ke="/subscribe",subscriptionLockActionText:Pe,shouldShowRatingInfoAlert:He,shouldShowLocationInfoAlert:je,shouldEnableMultipleRatings:ze,shouldTruncateComments:Ge}=e,Ve=Fe&&!z,Ye=Fe&&z;s.useEffect(()=>{window.Kendra.TRACK_COMPONENT.broadcast(v.G.RENDER,{name:"ReviewNotesForm"})},[]);const We=D?Math.round(D/16):12,Qe=(0,l.A)(),{minimised:Xe,setMinimised:Je,isSignedIn:Ze,signInError:et,setSignInError:tt,isSubmitting:nt,setIsSubmitting:ot,formData:it,setFormData:at,errors:rt,setErrors:st,warningMessage:lt,setWarningMessage:dt,shouldHideReviewerInfoAlert:ct,setShouldHideReviewerInfoAlert:mt,shouldHideRatingInfoAlert:ut,setShouldHideRatingInfoAlert:gt,shouldHideLocationDropdownInfoAlert:pt,setShouldHideLocationDropdownInfoAlert:ht,shouldHideReviewerStoryScoreAlert:bt,setShouldHideReviewerStoryScoreAlert:wt,tags:ft,setTags:yt,isReviewNoteModalOpen:vt,setIsReviewNoteModalOpen:Ct,isImageUploading:It,setIsImageUploading:kt}=((e,t,n,o,i)=>{const[a,r]=s.useState(e),[l,d]=s.useState(!1),[c,m]=s.useState(!1),[u,g]=(0,s.useState)(!1),[p,h]=(0,s.useState)(((e,t)=>({reviewNote:"",toggleChip:[],...e&&{rating:null},...t&&{location:null}}))(o,i)),[b,w]=(0,s.useState)({}),[f,y]=(0,s.useState)(""),[v,C]=(0,s.useState)(!0),[I,k]=(0,s.useState)(!0),[A,S]=(0,s.useState)(!0),[_,E]=(0,s.useState)(!0),[L,x]=(0,s.useState)(n||[]),[T,R]=(0,s.useState)(!1),[N,$]=(0,s.useState)(!1);return(0,s.useEffect)(()=>{d(!!t)},[t]),{minimised:a,setMinimised:r,isSignedIn:l,signInError:c,setSignInError:m,isSubmitting:u,setIsSubmitting:g,formData:p,setFormData:h,errors:b,setErrors:w,warningMessage:f,setWarningMessage:y,shouldHideReviewerInfoAlert:v,setShouldHideReviewerInfoAlert:C,shouldHideRatingInfoAlert:I,setShouldHideRatingInfoAlert:k,shouldHideLocationDropdownInfoAlert:A,setShouldHideLocationDropdownInfoAlert:S,shouldHideReviewerStoryScoreAlert:_,setShouldHideReviewerStoryScoreAlert:E,tags:L,setTags:x,isReviewNoteModalOpen:T,setIsReviewNoteModalOpen:R,isImageUploading:N,setIsImageUploading:$}})(I,O,d,Ce,Ve),At=e=>((e,t,n,o,i,a=!1)=>({reviewNote:[{test:n=>n?a?n.length>=o:n.length>=o&&n.length<=i:e&&t,error:"invalidReviewLength"}],rating:[{test:o=>{if(null==o||""===o)return e&&t;const i=Number(o);return!isNaN(i)&&(n?i>=0&&i<=10:i>=1&&i<=5)},error:n?"invalidNumericRatingRange":"requiredField"}]}))(Y,Ce,e,u,g,Ge),St=f||Qe.formatMessage(x.defaultcommunityReviewText),_t=e=>{const t=ft.map(t=>t.slug===e?{...t,active:!t.active}:t);return yt(e=>(((e,t)=>{const n=e.filter(e=>e.active);if(0===n.length)return;if(!t.some((t,n)=>!t.active&&e[n].active))return;const o=1===n.length?n[0].description:"",i=n.map(({label:e})=>({name:e.toLowerCase(),index:0,total_index:1}));(0,A.Uw)({type:"select",label:o,subject:"community_comment",features_list:i},{skipDuplicateEvent:!1})})(t,e),t)),t},Et=e=>{st(t=>{const{[e]:n,...o}=t;return o})},Lt=(e,t,n=!1)=>{const o=At(n)[e];if(!o)return null;if(Y&&Ce&&("rating"===e?null==t:!t))return Et(e),null;for(const n of o)if(!n.test(t))return st(t=>({...t,[e]:n.error})),n.error;return Et(e),null},xt=()=>{const e=it.reviewNote?.trim().length>=u;if(!Ce)return e;const t=null!==it.rating&&void 0!==it.rating&&((e,t)=>{if(null==e||""===e)return!1;const n=Number(e);return!isNaN(n)&&(t?n>=0&&n<=10:n>=1&&n<=5)})(it.rating,Oe);return e||t},Tt=e=>(t,n)=>{let o;switch(e){case"reviewNote":o=t.target.value.trim(),i=o,Ge||(i.length>=g?dt(Qe.formatMessage(x.maxCharLimitMet).replace("_MAX_",g)):g-i.length<=p?dt(Qe.formatMessage(x.remainingMaxCharLimit).replace("_COUNT_",g-i.length).replace("_MAX_",g)):dt(""));break;case"toggleChip":o=_t(t);break;case"rating":{const e=void 0!==n?n:t?.target?.value??t;o=null===e||""===e?null:Number(e);break}case"location":o=t?.value;break;default:o=t}var i;at({...it,[e]:o}),"reviewNote"===e&&o.length<u||Lt(e,o,Oe)},Rt=()=>{{const e={type:"attempt",subject:"community_comment"};(0,A.Uw)(e,{skipDuplicateEvent:!1})}},Nt=(0,s.useRef)(null),$t=(0,s.useRef)(null),Ut=(0,s.useRef)(null),Mt=(0,s.useRef)(null),Bt=(0,s.useRef)(null),Dt=s.useRef(null),Ot=(e,t)=>{e.preventDefault(),t&&Je(!1),V(!1)};(0,Ee.j)(Nt,()=>mt(!0)),(0,Ee.j)($t,()=>ht(!0)),(0,Ee.j)(Ut,()=>gt(!0)),(0,Ee.j)(Bt,()=>wt(!0)),(0,Ee.j)(Mt,e=>{Nt.current&&!Nt.current.contains(e.target)&&mt(!0),Mt.current&&Mt.current.id!==e.target?.firstChild.id&&tt(!1)});const Ft=Le(mt,ct),qt=Le(gt,ut),Kt=Le(ht,pt),Pt=()=>{Object.values(it).some(e=>(!Array.isArray(e)||0!==e.length)&&(0===e||Boolean(e)))?Ct(!0):(Je(!0),st({})),jt()},{discardLabel:Ht="Yes, discard it"}=w||{},jt=()=>{{const e={type:"discard",label:Ht.toUpperCase(),subject:(0,A.ZY)(Vt)};(0,A.Uw)(e,{skipDuplicateEvent:!1})}},zt=()=>{Dt.current.value="",yt(d),at({reviewNote:"",toggleChip:[],...Ce&&{rating:null},...Ve&&{location:null}}),st({}),Je(!0),Ct(!1),dt("")},Gt=()=>{if(!Y)return!1;const e=it.reviewNote?.trim().length>0,t=null!==it.rating&&void 0!==it.rating;return!(e||t)},Vt=i||Qe.formatMessage(x.addNoteLabel),Yt=async()=>{ot(!0);const e=(e=>{const t=Object.entries(e).reduce((e,[t,n])=>{const o=Lt(t,n,Oe);return o&&(e[t]=o),e},{});return Y&&Ce&&!xt()&&(e.reviewNote?.trim()||(t.reviewNote="invalidReviewLength"),null==e.rating&&(t.rating="requiredField")),t})(it);if(0===Object.keys(e).length){const e={...it,userId:O};null!=await q(e,Vt)?(zt(),V(!0)):Ne&&Ne(o||Qe.formatMessage(x.AddNoteFailedToastMessage))}ot(!1)},Wt=()=>{zt(),jt()},Qt=(e,t)=>{const n=e[t];if(!n)return"";const o=h[n];return o?o.replace("_MIN_",u):Qe.formatMessage(x[n],{min:u||5})},Xt=()=>s.createElement(s.Fragment,null,j&&s.createElement(J,null,s.createElement(te,null,K||Qe.formatMessage(x.reviewerInfoFieldLabel)),s.createElement(oe,null,j),s.createElement(ae,{ref:Nt},s.createElement(G.A.Utility,{isIconButton:!0,ButtonIcon:S.A,className:"review-note-info-button",onClickHandler:e=>Ft(e),inputKind:"button",role:"button",label:Qe.formatMessage(x.reviewerInfoIconButtonLabel)}),!ct&&s.createElement(ge,null,s.createElement(ue,null),s.createElement(se,null,z?L??Qe.formatMessage(x.reviewerFieldWithLocationInfoIconText):k??Qe.formatMessage(x.reviewerFieldInfoIconText))))),Ye&&s.createElement(J,null,s.createElement(te,null,Qe.formatMessage(x.countryDropdownLabel),":"),s.createElement(oe,null,(0,U.J)(z)))),Jt=()=>s.createElement(s.Fragment,null,s.createElement(J,null,s.createElement(de,null,Qe.formatMessage(x.reviewerStoryScoreFieldLabel)),s.createElement(me,null,Ue),s.createElement(ae,{ref:Bt},s.createElement(G.A.Utility,{isIconButton:!0,ButtonIcon:S.A,className:"review-note-info-button",onClickHandler:e=>(e=>{e.preventDefault(),wt(!bt)})(e),inputKind:"button",role:"button",label:Qe.formatMessage(x.reviewerStoryScoreIconButtonLabel)}),!bt&&s.createElement(ge,null,s.createElement(ue,null),s.createElement(se,null,Qe.formatMessage(x.ratingFieldInfoIconText))))),s.createElement(be,null),s.createElement(le,null,Qe.formatMessage(x.reviewerStoryScoreInfoText))),Zt=Qt(rt,"reviewNote"),en=lt.length>0,tn=e=>{e?.data?.[0]?.filePath&&at(t=>({...t,images:[{id:e?.data?.[0]?.filePath,url:e?.data?.[0]?.encodedURI}]}))},nn=e=>{kt(e)},on=Pe||Qe.formatMessage(x.subscriptionLockActionText),an=s.useMemo(()=>({label:`${Qe.formatMessage(x.subscribeText)} ${on}`,subject:"community_subscribe",source:(0,xe.el)(Ke)}),[on,Ke,Qe]);(0,C.ol)(`.${Te.i7.SUBSCRIPTION_LOCK}`,void 0,(e,t)=>{e&&!qe&&((0,xe.cj)(an,"impression"),t())},[Ke,qe,an]);const rn=()=>s.createElement(ee,{showTextFieldSoftRoundedEdges:De},s.createElement(J,null,s.createElement(ne,null,c??Qe.formatMessage(x.reviewerRatingLabel)),s.createElement(ae,{ref:Ut},He&&s.createElement(G.A.Utility,{isIconButton:!0,ButtonIcon:S.A,className:"review-note-info-button",onClickHandler:e=>qt(e),inputKind:"button",role:"button",label:Qe.formatMessage(x.reviewerInfoIconButtonLabel)}),!ut&&s.createElement(ge,null,s.createElement(ue,null),s.createElement(se,null,Qe.formatMessage(x.ratingFieldInfoIconText))))),Oe?s.createElement(H.A,{name:"rating",formName:"rating",placeholder:"0.0",isNumericInput:!0,onInputChange:Tt("rating"),isDisabled:nt,hasRoundedEdges:Be,errorPosition:"hideError",hideLabel:!0}):s.createElement(pe,{averageRatingCount:it.rating,isRatingDisabled:!1,onChange:Tt("rating"),shouldShowOutline:!1}),((e,t)=>Object.keys(e).length>0&&s.createElement(ye,null,Qt(e,t)))(rt,"rating"));return s.createElement(Q,{ref:n,className:t,"data-testid":"ReviewNotesForm"},Ze&&(Xe?qe?s.createElement(Re,{ariaLabel:St,onMinimise:Ot,signInURL:B,isSignedIn:Ze,trackAddNoteEvent:Rt,handleUsernameChange:F,siteUserName:j,usernameSignInDek:b},s.createElement(W,{name:"isMinimised",formName:"isMinimised",label:Qe.formatMessage(x.textFieldLabel),placeholder:St,hasDynamicTextArea:!0,hasBoxShadow:Me,hasRoundedEdges:Be,tabIndex:"-1","aria-hidden":!0,customHeightMultiplier:We,hideLabel:!0,isInvalid:et,inputRef:Mt,isDisabled:et}),et&&s.createElement(ye,null,y||Qe.formatMessage(x.nonLoggedInErrorMessage))):s.createElement(Ae,{className:Te.i7.SUBSCRIPTION_LOCK},s.createElement("div",{className:"lock-background"},s.createElement(M.A,null)),s.createElement(Se,null,s.createElement(_e,{href:Ke,target:"_blank",rel:"noopener noreferrer",onClick:()=>(0,xe.cj)(an,"click")},Qe.formatMessage(x.subscribeText))," ",on)):s.createElement(X,{hasError:!!Zt,hasWarning:en,showTextFieldSoftRoundedEdges:De},null!=Ue&&Jt(),s.createElement(H.A.MultiLine,{name:"reviewNoteText",placeholder:St,hideLabel:!0,label:Qe.formatMessage(x.textFieldLabel),formName:"reviewNoteText",hasAutoFocus:!0,hasRoundedEdges:Be,inputRef:Dt,errorText:Zt,onInputChange:Tt("reviewNote"),max:Ge?1/0:g,errorPosition:"belowTextField",shouldDisableTypingAtMaxChar:!0,isDisabled:nt}),en&&s.createElement(ye,null,lt),ve&&s.createElement(Ie,null,s.createElement(N.A,{onFileChange:tn,onUploadStatusChange:nn,id:"review-note-image-upload",product:"commenting"})),r&&s.createElement(s.Fragment,null,s.createElement(ie,null,P||Qe.formatMessage(x.reviewTagsLabel)),s.createElement(re,{shouldUseInteractiveBrandColor:m,shouldUseFullOpacity:$e},s.createElement(E.A,null,ft&&0!==ft.length?ft.map(({slug:e,active:t,description:n})=>s.createElement(_.A,{key:e,isChecked:t,onChange:()=>Tt("toggleChip")(e),shouldUrlRedirect:!1,isDisabled:nt},Qe.formatMessage(x.reviewTags,{reviewTag:n}))):null))),((e,t,n)=>!(!e||!t&&null!=n))(Ce,ze,Ue)&&rn(),Ve&&s.createElement(s.Fragment,null,s.createElement(J,null,s.createElement(ie,null,Qe.formatMessage(x.countryDropdownLabel)),s.createElement(ae,{ref:$t},je&&s.createElement(G.A.Utility,{isIconButton:!0,ButtonIcon:S.A,className:"review-note-info-button",onClickHandler:e=>Kt(e),inputKind:"button",role:"button",label:Qe.formatMessage(x.reviewerInfoIconButtonLabel)}),!pt&&s.createElement(ge,null,s.createElement(ue,null),s.createElement(se,null,T??Qe.formatMessage(x.locationFieldInfoIconText))))),s.createElement(ke,{assistiveLabel:"",options:$.A,onInputChange:Tt("location"),placeholderText:Qe.formatMessage(x.countryDropdownPlaceholder),isDisabled:nt,isClearable:!0,hideLabel:!0})),Xt(),s.createElement(Z,null,s.createElement(be,null),a&&s.createElement(ce,{dangerouslySetInnerHTML:{__html:a}})),s.createElement(R.A,{confirmButtonCallback:Wt,modalProps:w,onClose:()=>Ct(!1),isVisible:vt}),s.createElement(he,{"data-testid":"ReviewNotesFormActions"},s.createElement(fe,{isDisabled:nt||It||Object.keys(rt).length>0||Gt(),inputKind:"button",label:Vt,onClickHandler:Yt}),s.createElement(we,{isDisabled:nt,btnStyle:"text",inputKind:"link",type:"button",label:Qe.formatMessage(x.cancelNoteLabel),onClickHandler:Pt})))))};Ne.propTypes={configuredComponentRef:r().func,addNoteFailedToastMessage:r().string,addNoteLabel:r().string,className:r().string,communityGuidelinesInfo:r().string,handleUsernameChange:r().func,isMinimised:r().bool,isSubscribed:r().bool,locationInfoText:r().string,minimisedReviewNotesText:r().string,modalProps:r().object,nonLoggedInErrorMessage:r().string,onSubmitHandler:r().func,reviewerInfoFieldLabel:r().string,reviewerInfoText:r().string,reviewerLocationInfoText:r().string,reviewerRatingLabel:r().string,reviewNoteTags:r().array,reviewTagsLabel:r().string,shouldEnableCommentsImageUpload:r().bool,shouldEnableLocationDropdown:r().bool,shouldEnableMultipleRatings:r().bool,shouldEnableOptionalRating:r().bool,shouldEnableRatings:r().bool,shouldEnableTags:r().bool,shouldTruncateComments:r().bool,shouldShowLocationInfoAlert:r().bool,shouldShowRatingInfoAlert:r().bool,shouldUseFullOpacity:r().bool,shouldUseInteractiveBrandColor:r().bool,shouldUseNumericRatingInput:r().bool,showMessageBannerHandler:r().func,showSavedRecipeNotes:r().func,showTextFieldBoxShadow:r().bool,showTextFieldRoundedEdges:r().bool,showTextFieldSoftRoundedEdges:r().bool,signInURL:r().string,siteUserLocation:r().string,siteUserName:r().string,subscriptionUrl:r().string,subscriptionLockActionText:r().string,textFieldHeightPx:r().number,usernameSignInDek:r().string,userId:r().string,userStoryRating:r().number,validations:r().shape({errorMessage:r().shape({requiredField:r().string,requiredCountryField:r().string,invalidReviewLength:r().string}),max:r().number,min:r().number,remainingChar:r().number})};const $e=e=>s.createElement(Ne,{...e}),Ue=(0,o.y)($e,"ReviewNotesForm");var Me=n(60711);const Be=({commentingUrl:e,contentId:t,contentTitle:n="",documentType:o="",handleUsernameChange:i,handleLocationUpdate:a,hed:r,organizationId:l,ratingScale:d,reviewerInfoText:c,reviewerLocationInfoText:m,locationInfoText:u,reviewNoteTags:g,shouldEnableCommentsImageUpload:p,shouldEnableLocationDropdown:h,shouldEnableMultipleComments:b,shouldEnableMultipleRatings:w,shouldEnableOptionalRating:f,shouldEnableRatings:y,shouldEnableTags:v,showMessageBannerHandler:C,showSavedRecipeNotes:I,signInURL:k,siteUserName:S,siteUserLocation:_,tenantID:E,userId:L,usernameSignInDek:x,shouldUseFullOpacity:T,isSubscribed:R=!0,subscriptionUrl:N="/subscribe",subscriptionLockActionText:$,userStoryRating:U,shouldTruncateComments:M=!1})=>{const[B,D]=(0,s.useState)("");(0,s.useEffect)(()=>{const e=window.location.origin+window.location.pathname;D(e)},[]);const O=(e,t,n,o)=>{{const i={type:"submit",label:o||"add note",rating:t,subject:(0,A.ZY)(o),features_list:n};e&&(i.error=e),(0,A.Uw)(i,{skipDuplicateEvent:!1})}};return s.createElement(Ue,{shouldUseFullOpacity:T,handleUsernameChange:i,onSubmitHandler:async(i,s)=>{let c,m;const u={hed:r,storyLink:B},{reviewNote:g,rating:p,userId:h,toggleChip:f,images:y,location:v}=i||{},C=f?.filter(e=>e.slug&&e.active)||[],I=C.map(e=>e.slug),k=C.map(e=>({name:e.label.toLowerCase(),index:0,total_index:1})),A={review:{storyID:t,siteID:l,body:g,meta:JSON.stringify(u),rating:p,ratingScale:d,reviewTags:I,tenantID:E,...v&&v.trim()&&{location:v},...y&&y.length>0&&{images:y}},clientMutationId:"0",enableMultipleRatings:w,enableMultipleComments:b},S=h;try{await(0,Me._u)({id:t,title:n,documentType:o,organizationId:l,commentingUrl:e,console}),c=await(0,Me.kD)(A,S,e,console),c&&v&&a&&a(v),O(null,p,k,s)}catch(e){m=e.message||"",O(m,p,k,s)}return c},reviewerInfoText:c,reviewerLocationInfoText:m,locationInfoText:u,reviewNoteTags:g,shouldEnableOptionalRating:f,shouldEnableRatings:y,shouldEnableTags:v,shouldEnableCommentsImageUpload:p,shouldEnableLocationDropdown:h,showMessageBannerHandler:C,showSavedRecipeNotes:I,signInURL:k,siteUserName:S,siteUserLocation:_,userId:L,usernameSignInDek:x,isSubscribed:R,subscriptionUrl:N,subscriptionLockActionText:$,userStoryRating:U,shouldEnableMultipleRatings:w,shouldTruncateComments:M})};Be.propTypes={commentingUrl:r().string,contentId:r().string,contentTitle:r().string,documentType:r().string,handleLocationUpdate:r().func,handleUsernameChange:r().func.isRequired,hed:r().string,isSubscribed:r().bool,locationInfoText:r().string,organizationId:r().string,ratingScale:r().number,reviewerInfoText:r().string,reviewerLocationInfoText:r().string,reviewNoteTags:r().array,shouldEnableCommentsImageUpload:r().bool,shouldEnableLocationDropdown:r().bool,shouldEnableMultipleComments:r().bool,shouldEnableMultipleRatings:r().bool,shouldEnableOptionalRating:r().bool,shouldEnableRatings:r().bool,shouldEnableTags:r().bool,shouldTruncateComments:r().bool,shouldUseFullOpacity:r().bool,showMessageBannerHandler:r().func,showSavedRecipeNotes:r().func.isRequired,signInURL:r().string,siteUserLocation:r().string,siteUserName:r().string,subscriptionUrl:r().string,subscriptionLockActionText:r().string,tenantID:r().string,userId:r().string,usernameSignInDek:r().string,userStoryRating:r().number};const De=Be;var Oe=n(45135);const Fe=(0,L.YK)({hed:{id:"UserNameModal.Hed",defaultMessage:"Create username",description:"UserNameModal component hed text"},dek:{id:"UserNameModal.Dek",defaultMessage:"Your username will appear next to any comments and replies you add.",description:"UserNameModal component description text"},submitButtonLabel:{id:"UserNameModal.SubmitButtonLabel",defaultMessage:"Save Username",description:"UserNameModal component submit button label"},submitButtonLabelComment:{id:"UserNameModal.SubmitButtonLabelComment",defaultMessage:"Save and add comment",description:"UserNameModal component submit button label for comment"},submitButtonLabelReply:{id:"UserNameModal.SubmitButtonLabelReply",defaultMessage:"Save and add reply",description:"UserNameModal component submit button label for reply"},closeButtonLabel:{id:"UserNameModal.CloseButtonLabel",defaultMessage:"Close User Name",description:"UserNameModal component close button label"},lengthError:{id:"UserNameModal.lengthError",defaultMessage:"Usernames must be between 2 and 23 characters.",description:"UserNameModal component length error"},specialCharError:{id:"UserNameModal.specialCharError",defaultMessage:"Usernames can only include letters, numbers and underscores (_).",description:"UserNameModal component special chars validation error"},alreadyTakenError:{id:"UserNameModal.alreadyTakenError",defaultMessage:"This username is already taken",description:"UserName already taken error"},userNameModalAssistiveText:{id:"UserNameModal.UserNameModalAssistiveText",defaultMessage:"Usernames must be between 2 and 23 characters and can only include letters, numbers and underscores (_).",description:"UserNameModal Assistive Text"},errorMessage:{id:"UserNameModal.ErrorMessage",defaultMessage:"Unable to save username. Please try again.",description:"UserNameModal default error message"},successMessage:{id:"UserNameModal.SuccessMessage",defaultMessage:"Username saved",description:"UserNameModal success message"}});var qe=n(76399),Ke=n(20312),Pe=n.n(Ke);const He=(0,B.Ay)(D.vm).withConfig({displayName:"UserNameModalHed"}).attrs(e=>({as:"div",colorToken:"colors.discover.body.white.heading",topSpacing:1,typeIdentity:"typography.definitions.consumptionEditorial.display-small",...e}))`
+  padding-top: ${(0,O.Kq)(2.5)};
+  padding-bottom: ${(0,O.Kq)(2.5)};
+  text-align: center;
+`,je=B.Ay.p.withConfig({displayName:"UserNameModalDek"})`
+  ${(0,O.Gg)("typography.definitions.consumptionEditorial.body-core")}
+  margin: 0;
+  text-align: center;
+  color: ${(0,O.HK)("colors.consumption.body.standard.body")};
+`,ze=(0,B.Ay)(G.A.Utility).withConfig({displayName:"UserNameModalCloseButton"})`
+  position: absolute;
+  top: ${(0,O.Kq)(1)};
+  right: ${(0,O.Kq)(1)};
+  padding: 0;
+  fill: ${(0,O.HK)("colors.discovery.body.light.context-tertiary")};
+
+  .icon-close {
+    padding: 8px;
+  }
+
+  &,
+  &:focus,
+  &:hover {
+    border: 0;
+    background-color: transparent;
+  }
+`,Ge=(0,B.Ay)(G.A.Primary).withConfig({displayName:"UserNameModalSubmit"})`
+  margin-top: 0;
+  padding: 0;
+`,Ve=B.Ay.div.withConfig({displayName:"UserNameModalButtons"})`
+  display: flex;
+  justify-content: center;
+  margin-top: ${(0,O.Kq)(4)};
+  @media (max-width: ${F.LO.md}) {
+    margin-top: ${(0,O.Kq)(3)};
+  }
+  width: 100%;
+
+  ${Ge} {
+    padding: 0;
+    width: 100%;
+  }
+`;function Ye({className:e,...t}){const n=`${e}__content`,o=`${e}__overlay`;return s.createElement(Pe(),{ref:t.configuredComponentRef,portalClassName:e,className:n,overlayClassName:o,...t})}Ye.propTypes={className:r().string,configuredComponentRef:r().func};const We=(0,B.Ay)(Ye).withConfig({displayName:"UserNameModalBaseWrapper"})`
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: ${F.KV.interstitialLayer};
+
+    background-color: rgba(
+      ${(0,O.HK)("colors.background.black",{rgbOnly:!0})},
+      0
+    );
+
+    &.ReactModal__Overlay--after-open {
+      transition: background-color 750ms;
+      opacity: 1;
+      background-color: rgba(
+        ${(0,O.HK)("colors.background.black",{rgbOnly:!0})},
+        0.4
+      );
+    }
+
+    &.ReactModal__Overlay--after-close {
+      transition: background-color 750ms;
+      background-color: rgba(
+        ${(0,O.HK)("colors.background.black",{rgbOnly:!0})},
+        0
+      );
+    }
+  }
+
+  &__content {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    border-radius: 8px;
+    background-color: ${(0,O.HK)("colors.background.white")};
+    padding-top: ${(0,O.Kq)(12)};
+    padding-right: ${(0,O.Kq)(6)};
+    padding-bottom: ${(0,O.Kq)(7)};
+    padding-left: ${(0,O.Kq)(6)};
+    width: ${(0,O.Kq)(57)};
+    min-height: ${(0,O.Kq)(62)};
+    overflow-y: auto;
+    @media (max-width: ${F.LO.md}) {
+      width: 90%;
+    }
+  }
+`,Qe=(0,B.Ay)(H.A.SingleLine).withConfig({displayName:"UserNameModalTextFieldWrapper"})`
+  ${P.tw} {
+    margin-top: ${(0,O.Kq)(6)};
+    ${(0,O.Gg)("typography.definitions.globalEditorial.accreditation-feature")};
+    ${(0,O._o)("color","colors.interactive.base.body")};
+    @media (max-width: ${F.LO.md}) {
+      margin-top: ${(0,O.Kq)(4)};
+    }
+  }
+`,Xe=({className:e,configuredComponentRef:t,dangerousDek:n,dangerousHed:o,isVisible:i=!1,maxLength:a=23,minLength:r=2,organizationId:c,showMessageBannerHandler:m,submitButtonLabel:u,successCallback:g,userApiUrl:h,userId:b,source:w,isFeatured:f,usernameModalConf:y})=>{s.useEffect(()=>{window.Kendra.TRACK_COMPONENT.broadcast(v.G.RENDER,{name:"UserNameModal"})},[]);const{formatMessage:C}=(0,l.A)(),[I,k]=(0,s.useState)(""),[S,_]=(0,s.useState)(""),E={lengthError:C(Fe.lengthError),specialCharError:C(Fe.specialCharError)};return s.createElement(We,{configuredComponentRef:t,className:e,isOpen:i},s.createElement(ze,{isIconButton:!0,ariaLabel:C(Fe.closeButtonLabel),label:C(Fe.closeButtonLabel),role:"button",onClickHandler:()=>{(0,T.hY)(),(0,A.lV)({type:"exit",subject:"username_modal",source_type:w,...(0,xe.i3)(f)}),k(null)},ButtonIcon:qe.A}),s.createElement(He,null,o||C(Fe.hed)),s.createElement(je,{dangerouslySetInnerHTML:{__html:n||C(Fe.dek)}}),s.createElement(Qe,{className:"user-name-modal",hasAutoFocus:!0,shouldUseUppercase:!0,name:"username",placeholder:"YOUR_USERNAME",type:"text",onInputChange:e=>{let{value:t}=e.target;t.length>a&&(t=t.slice(0,a),e.target.value=t),_(t)},errorText:I,isInvalid:!!I,formName:"username",errorPosition:"belowTextField",hideLabel:!0,label:C(Fe.hed),assistiveSubtext:C(Fe.userNameModalAssistiveText)}),s.createElement(Ve,null,s.createElement(Ge,{label:u||("community_comment"===w?y?.submitButtonLabel?y.submitButtonLabel:C(Fe.submitButtonLabelComment):C("community_reply"===w?Fe.submitButtonLabelReply:Fe.submitButtonLabel)),inputKind:"submit","data-testid":"UserNameModalSubmit",onClickHandler:async()=>{let e;const t=((e,t)=>{const{minLength:n,maxLength:o}=t,i=d.string().min(n).max(o).required(),a=d.string().regex(/^[a-zA-Z0-9_]+$/).required();return i.validate(e).error?"lengthError":a.validate(e).error?"specialCharError":null})(S,{minLength:r,maxLength:a});if(t){return void k(E[t]??"")}let n;try{n=await(async(e,t)=>{const{name:n,location:o,organizationId:i,userId:a,url:r,action:s}=e,l={operationName:"UPDATE"===s?"updateSiteUsername":"createSiteUsername",query:"UPDATE"===s?"\n  mutation updateSiteUsername($input: UpdateSiteUsernameInput!) {\n    updateSiteUsername(input: $input) {\n      siteUsername {\n        name\n        siteID\n        location\n      }\n    }\n  }\n":"\n  mutation createUsername($input: CreateSiteUsernameInput!) {\n    createSiteUsername(input: $input) {\n      siteUsername {\n        name\n        siteID\n        location\n      }\n    }\n  }\n",variables:{input:{siteUsername:{name:n,siteID:i,authorID:a,location:o},clientMutationId:"0"}}};try{const e=await p(r,l);return e&&e["UPDATE"===s?"updateSiteUsername":"createSiteUsername"]?.siteUsername?.name}catch(e){let n;throw(null===e.response?.data&&"DUPLICATE_USERNAME"===e.response?.errors[0]?.extensions?.code||"InternalDevelopmentError: Duplicate Brand Username"===e.response?.errors[0]?.message)&&(n="already_taken"),t.warn(`Error making GQL request in createNewUsername: ${e?.response?.errors[0]?.message}`),new Error(n)}})({name:S,organizationId:c,userId:b,url:h},console),_(n),k(null),m&&m(C(Fe.successMessage)),(0,T.hY)(),g&&g(n)}catch(t){"already_taken"===t?.message?(k(C(Fe.alreadyTakenError)),e=t?.message):(m&&m(C(Fe.errorMessage)),(0,T.hY)(),e=Fe.errorMessage.defaultMessage)}const o={type:"submit",label:"SAVE USERNAME",subject:"username_modal",source_type:w,error:e,...(0,xe.i3)(f)};(0,A.lV)(o)}})))};Xe.propTypes={configuredComponentRef:r().func,className:r().string,dangerousDek:r().string,dangerousHed:r().string,isFeatured:r().bool,isVisible:r().bool,maxLength:r().number,minLength:r().number,organizationId:r().string.isRequired,showMessageBannerHandler:r().func,source:r().string,submitButtonLabel:r().string,successCallback:r().func,userApiUrl:r().string.isRequired,userId:r().string.isRequired,usernameModalConf:r().object};const Je=(0,o.y)(Xe,"UserNameModal"),Ze=(0,Oe.Ng)(e=>{const{userNameModalConfig:t}=e;return{...t}})(Je);var et=n(92867),tt=n(22761),nt=n(50624),ot=n(78372);const it=({dek:e,hed:t,isBookmarkingEnabled:n,subContentDek:o,showCommentSavedMessage:i,showSignInButton:a,signInURL:r,commentMessageBannerIcon:d,contentTitle:c,hideDivider:m,image:u,copilotID:g,messageBannerTheme:p,shouldUseSeparateCTAs:h=!1,subscriptionUrl:b="/subscribe"})=>{const{formatMessage:w}=(0,l.A)(),{openCollectionsDrawer:f}=(0,nt.NJ)(),y=(e,t)=>{const n={type:"login",label:t,subject:"community",placement:"interstitial",state:"focused",paywall_source:e};(0,A.ZL)(n)};return(0,C.ol)(`.${Te.i7.SUBSCRIBE_BUTTON}`,void 0,(e,t)=>{a&&h&&e&&((0,xe.cj)({source:(0,xe.el)(b),subject:"community_subscribe",label:w(et.A.subscribeButtonLabel)},"impression"),t())},[b,a,h]),s.createElement(tt.M1,{hasSideBorder:i,hideDivider:m},d&&s.createElement(tt.Jq,{className:"comment-message-banner-icon",dangerouslySetInnerHTML:{__html:d}}),s.createElement(tt.vw,null,t),e&&s.createElement(tt.yt,{dangerouslySetInnerHTML:{__html:e}}),i&&s.createElement(tt.yt,{dangerouslySetInnerHTML:{__html:o}}),a&&h&&s.createElement(tt.WN,null,s.createElement(G.A.Primary,{href:b,inputKind:"link",label:w(et.A.subscribeButtonLabel),target:"_blank",rel:"nofollow noreferrer",onClickHandler:e=>{(0,xe.cj)({label:e.target.innerText,subject:"community_subscribe",source:(0,xe.el)(b)},"click")},className:Te.i7.SUBSCRIBE_BUTTON}),s.createElement(tt.L4,null,w(et.A.alreadySubscriberLabel),s.createElement(tt.VV,{href:r,onClick:e=>{y("COMMUNITY_LOGIN",e.target.innerText)}},w(et.A.signInLabel)))),a&&!h&&s.createElement(G.A.Primary,{href:r,inputKind:"link",label:w(et.A.signInButtonLabel),target:"_self",rel:"nofollow noreferrer",onClickHandler:e=>{y("COMMUNITY_LOGIN",e.target.innerText)}}),i&&n&&s.createElement(tt.N,{"data-testid":"message-banner-bookmark-wrapper"},s.createElement(ot.c,{link:{label:w(et.A.saveStory),url:"#",network:"bookmark",behavior:"bookmark"},theme:"standard",type:"standard",isUrlBookmark:!0,isBookmarkButton:!0,openCollectionsDrawer:f,contentTitle:c,image:u,copilotID:g,messageBannerTheme:p})))};it.propTypes={commentMessageBannerIcon:r().string,copilotID:r().string,contentTitle:r().string,dek:r().string,hed:r().string,hideDivider:r().bool,image:r().object,isBookmarkingEnabled:r().bool,messageBannerTheme:r().oneOf(["standard","inverted"]),shouldUseSeparateCTAs:r().bool,showCommentSavedMessage:r().bool,showSignInButton:r().bool,signInURL:r().string,subContentDek:r().string,subscriptionUrl:r().string},it.displayName="CommentingMessageBanner";const at=it;var rt=n(7285),st=n(26048),lt=n(74657);const dt=({listenerRating:e,musicRating:t,totalRatings:n=0,minRatingThreshold:o=5,isSubscribed:i=!0,scoreSubscriptionUrl:a=""})=>{const{formatMessage:r}=(0,l.A)(),{rating:d,message:c}=(()=>{const t=Number(n)||0;return i?0===t?{rating:"-",message:r(lt.A.noListenerScoreYet)}:t<o?{rating:"-",message:r(lt.A.listenerScoreAvailableAfter,{count:o})}:{rating:e||0,message:null}:{rating:e||0,message:r(lt.A.subscribeToSee,{subscribe:s.createElement("a",{href:"/subscribe",className:"subscribe-link"},r({id:"ScoreComparison.subscribe",defaultMessage:"Subscribe"}))})}})();return s.createElement(f.ZZ,null,s.createElement(f.w0,null,s.createElement(f.Xo,{align:"flex-end"},s.createElement(f.Nc,null,s.createElement(st.A,{enableBlur:!0,rating:t?.score||0,isBestNewMusic:t?.isBestNewMusic,isBestNewReissue:t?.isBestNewReissue,size:"sm",shouldTrackImpression:!0,trackingSubject:"score_comparison",scoreSubscriptionUrl:a,trackingClassName:"score-box-comparison"}),s.createElement(f.Bs,null,r(lt.A.pitchforkScoreLabel)))),s.createElement(f.CH,null),s.createElement(f.Xo,{align:"flex-start"},s.createElement(f.Nc,null,s.createElement(rt.A,{enableBlur:!0,rating:d,size:"lg"}),s.createElement(f.Bs,null,r(lt.A.listenerScoreLabel))))),c&&(i?s.createElement(f.pV,null,c):s.createElement(f.GM,null,s.createElement(M.A,null),c)))};dt.propTypes={isSubscribed:r().bool,listenerRating:r().number,minRatingThreshold:r().number,musicRating:r().object,scoreSubscriptionUrl:r().string,totalRatings:r().oneOfType([r().number,r().string])};const ct=dt;var mt=n(92945);const ut="ReviewListTitle",gt="commenting-collapsed-button",pt=[{active:!1,description:"Includes a tip",label:"Tip",slug:"TIP"},{active:!1,description:"Includes a question",label:"Question",slug:"QUESTION"}],ht=({brandName:e,closeCommentStreamMessage:t,commentCount:n,commentingRestrictedTo:o,commentingUrl:i,communityExperience:{commentsOrderBy:a,repliesOrderBy:r,disableCommentStream:d,enableMultipleComments:c,enableMultipleRatings:m,enableOptionalRatings:u,enableRatings:g,enableReplies:A,enableTags:S,enableCommentsImageUpload:_,enableRepliesImageUpload:E,enableUpvotes:L,hasHideCommunityFunctionalTag:x,expandCommentsOnLoadFunctionalTag:T,noCommentsYetIcon:R,joinCommunityIcon:N,commentSubmittedIcon:$,commentsClosedIcon:U,enableRepliesRestriction:M,enableArtistQA:B,enableRatedReviewShare:D=!1},communityUrl:O="/info/community-guidelines",configuredComponentRef:q,ContentWrapper:K=I.A.ContentWithAdRailNarrow,contentTitle:P,documentType:H="",defaultReplyLimit:j=1,hideMessageBannerDivider:z,hed:G,id:V,image:Y,imageUpload:{spectraUrl:W}={},isCommentLoading:Q=!0,initialReviewLimit:X=7,messageBannerTheme:J,likeActionErrorMessage:Z,communityLogo:ee,noCommentsMsgConf:te,organizationId:ne,ratingScale:oe=5,replyLimit:ie=10,reviewerBadges:ae,reviewerInfoText:re,reviewerLocationInfoText:se,locationInfoText:le,reviewLimit:de=10,reviewShareAsset:ce,reviewModalProps:me,reviewNotesFormSignInURL:ue,reviewNoteTags:ge=pt,reviewsSectionTitle:pe,isBookmarkingEnabled:he,savedCommentConf:be,shouldEnableLocationDropdown:we=!1,shouldShowUserScore:fe=!1,shouldUseAlternateColorToken:ye=!1,shouldUsePrimaryColorForBadges:ve=!1,shouldUseTagsInvertedTheme:Ce=!1,shouldUseFullOpacity:Ie=!1,shouldShowCircularRatings:ke=!1,ratingPlacement:Ae,shouldUseDarkPinnedTheme:Se=!1,shouldUseSoftRoundedEdges:_e=!1,showMoreButtonLabel:Ee,repliesMarketRestrictedTooltip:Le,signInHed:Re,signInHedSpanTag:Ne,signInMessage:$e,signUpMessageBannerHed:Ue,subscriptionModalProps:Me,tenantID:Be,unlikeActionErrorMessage:Oe,upvoteIcon:Fe,upvoteIconFilled:qe,showUpvoteLabel:Ke=!1,useVoteLabels:Pe=!1,user:He,usernameModalConf:je,showScoreComparison:ze,musicRating:Ge,rating:Ve,reviewsCount:Ye,subscriptionUrl:We="/subscribe",minListenerScoreThreshold:Qe=5,shouldUseTwoDigitCommentCount:Xe=!1,shouldUseSeparateCTAs:Je=!1,shouldHideReviewFeedbackAside:nt=!1,reviewSectionSubtext:ot,reviewSectionSubtextUrl:it="/info/scoring-guidelines",shouldTruncateComments:rt=!1,truncateLines:st=5,subscriptionLockActionText:lt,isMultiReview:dt=!1,scoreSubscriptionUrl:ht="",shouldCollapseByDefault:bt=!1})=>{s.useEffect(()=>{window.Kendra.TRACK_COMPONENT.broadcast(v.G.RENDER,{name:"Commenting"})},[]);const[wt,ft]=(0,s.useState)(),[yt,vt]=(0,s.useState)(),[Ct,It]=(0,s.useState)(!1),[kt,At]=(0,s.useState)(null),[St,_t]=(0,s.useState)(!1),[Et,Lt]=(0,s.useState)(!0),[xt,Tt]=(0,s.useState)(We),[Rt,Nt]=(0,s.useState)(We),$t=bt&&!T,[Ut,Mt]=(0,s.useState)($t),Bt=(0,s.useRef)(!1);(0,s.useEffect)(()=>{$t?$t&&!Bt.current&&Mt(!0):Mt(!1)},[$t]),(0,Te.xf)(F.h2);const{header:Dt,description:Ot,showSignInButton:Ft,subContent:qt,commentMessageBannerIcon:Kt,isNoCommentsScenario:Pt}=(0,Te.eK)({noCommentsMsgConf:te,disableCommentStream:d,closeCommentStreamMessage:t,showCommentSavedMessage:St,communityUrl:O,isCommentLoading:Q,commentCount:n,user:He,signUpMessageBannerHed:Ue,brandName:e,savedCommentConf:be,noCommentsYetIcon:R,joinCommunityIcon:N,commentSubmittedIcon:$,commentsClosedIcon:U}),{userRating:Ht}=(0,Te.Xp)({shouldShowUserScore:fe,commentingUrl:i,user:He,storyID:V}),jt=He.isAuthenticated&&He.amguuid&&ne,zt=(0,Te.bS)(o),Gt=(0,Te.vD)({enableRepliesRestriction:M}),Vt=A&&!Gt;(0,s.useEffect)(()=>{jt&&async function(){try{const e=await(async(e,t,n)=>{if(!n)return;const o={operationName:"getSiteUsername",query:"\n  query getSiteUsername($authorID: String!, $siteID: String) {\n    siteUsername(authorID: $authorID, siteID: $siteID) {\n      id\n      name\n      tenantID\n      authorID\n      location\n    }\n  }\n",variables:{authorID:e,siteID:t}};let i,a;try{const e=await p(n,o);if(0===e?.siteUsername?.length)i=null,a=null;else{const t=e&&e.siteUsername[0];i=t?.name,a=t?.location}}catch(e){}return{username:i,location:a}})(He.amguuid,ne,i);ft(e?.username),vt(e?.location)}catch(e){throw e}}()},[jt,i,He.amguuid,ne]),(0,C.ol)(`.${ut}`,void 0,e=>{e&&n&&(0,xe.AS)(n,"community")},[n]),(0,C.ol)(`.${gt}`,void 0,e=>{e&&$t&&Ut&&(0,xe.O1)(n||0)},[n,Ut,$t]);const{formatMessage:Yt}=(0,l.A)(),{subscribeUrl:Wt="",interactionSubscribeUrl:Qt=""}=(0,mt.P)("listener.review.gated"),Xt=!!Wt;if((0,s.useEffect)(()=>{Xt&&(Lt(!1),Wt&&Tt(Wt),Qt&&Nt(Qt))},[Xt,Wt,Qt]),x)return null;if(!zt)return null;const Jt=e=>{ft(e)},Zt=e=>{At(e),It(!0),setTimeout(()=>{It(!1)},3e3)},en=Boolean($t&&Ut&&(Q||n));return s.createElement(K,null,s.createElement(tt.tL,{ref:q,className:F.h2,id:F.h2,isCollapsed:en,"data-journey-hook":"page-footer","data-nosnippet":"true"},en&&s.createElement(tt.G$,{className:gt},s.createElement(tt.xe,null,s.createElement(tt.Gt,null,(0,Te.YL)(n,pe,"",Xe)),s.createElement(tt._E,{href:"#main-content",onClick:e=>{e.preventDefault(),document.getElementById("main-content")?.focus({preventScroll:!0}),window.scrollTo({top:0,behavior:"smooth"})}},Yt(et.A.collapsedCommentsBackToTopLabel),s.createElement(tt.tn,{"aria-hidden":"true"}))),s.createElement(tt.AJ,{label:Yt(et.A.collapsedCommentsCtaLabel),onClickHandler:()=>{Bt.current=!0,(0,xe.$z)(n||0),Mt(!1),(0,xe.MQ)(n||0)},shouldEnableClickTracking:!1,shouldUseFullWidth:!0})),s.createElement(f.op,{hasSubtext:!!ot},s.createElement(f.FM,{className:ut},(0,Te.YL)(n,pe,"",Xe)),s.createElement(f.hh,{href:"#main-content"},Yt(et.A.utilityLabel),s.createElement(f.sh,null))),ot&&s.createElement(f.qJ,null,ot," ",s.createElement(f.Mc,{href:it},Yt(et.A.guidelinesLinkText))),ze&&!dt&&s.createElement(ct,{listenerRating:Ve,musicRating:Ge,totalRatings:Ye,minRatingThreshold:Qe,scoreSubscriptionUrl:ht}),He.isAuthenticated&&s.createElement(Ze,{organizationId:ne,userId:He.amguuid,userApiUrl:i,showMessageBannerHandler:Zt,usernameModalConf:je}),(Dt||Ot)&&s.createElement(at,{hed:Dt,dek:Ot,showSignInButton:Ft,signInURL:ue,isBookmarkingEnabled:he,subContentDek:qt,showCommentSavedMessage:St,commentMessageBannerIcon:Kt,hideDivider:z&&Pt,shouldUseSeparateCTAs:Je,subscriptionUrl:xt,contentTitle:P,image:Y,copilotID:V,messageBannerTheme:J}),!d&&s.createElement(De,{commentingUrl:i,contentId:V,handleUsernameChange:Jt,handleLocationUpdate:e=>{vt(e)},hed:G,organizationId:ne,ratingScale:oe,reviewerInfoText:re,reviewerLocationInfoText:se,locationInfoText:le,reviewNoteTags:ge,shouldEnableMultipleComments:c,shouldEnableMultipleRatings:m,shouldEnableOptionalRating:u,shouldEnableRatings:g,shouldEnableTags:S,shouldEnableCommentsImageUpload:_,shouldEnableLocationDropdown:we,showMessageBannerHandler:Zt,showSavedRecipeNotes:e=>{_t(e)},signInURL:ue,siteUserName:wt,siteUserLocation:yt,tenantID:Be,userId:He.isAuthenticated?He.amguuid:null,usernameSignInDek:je?.dek,contentTitle:G,documentType:H,shouldUseFullOpacity:Ie,isSubscribed:Et,subscriptionUrl:xt,subscriptionLockActionText:lt,userStoryRating:Ht,shouldTruncateComments:rt}),s.createElement(k.A,{shouldUseAlternateColorToken:ye,shouldUsePrimaryColorForBadges:ve,shouldUseTagsInvertedTheme:Ce,shouldUseFullOpacity:Ie,shouldShowCircularRatings:ke,ratingPlacement:Ae,shouldUseDarkPinnedTheme:Se,shouldUseSoftRoundedEdges:_e,commentingUrl:i,defaultReplyLimit:j,entityId:V,handleUsernameChange:Jt,id:"reviews",initialReviewLimit:X,likeActionErrorMessage:Z,replyLimit:ie,commentsOrderBy:a,repliesOrderBy:r,reviewerBadges:ae,reviewLimit:de,shouldEnableRatings:g,shouldEnableReply:Vt,communityLogo:ee,useVoteLabels:Pe,shouldEnableTags:S,shouldEnableUpvotes:L,upvoteIcon:Fe,upvoteIconFilled:qe,showUpvoteLabel:Ke,showMessageBannerHandler:Zt,showMoreButtonLabel:Ee,repliesMarketRestrictedTooltip:Le,signInHed:Re||Yt(et.A.signInModalHed),signInHedSpanTag:Ne||Yt(et.A.signInModalHedSpanTag,{brandName:e}),signInMessage:$e||Yt(et.A.signInModalMessage),reviewModalProps:me||{hed:Yt(et.A.replyDiscardModalHed)},reviewNoteTags:ge,siteUserName:wt,unlikeActionErrorMessage:Oe,user:He,usernameSignInDek:je?.dek,organizationId:ne,contentTitle:G,documentType:H,reviewShareAsset:ce,enableRatedReviewShare:D,shouldEnableCommentsImageUpload:_,shouldEnableRepliesImageUpload:E,shouldShowLocation:we,spectraUrl:W,shouldShowQaSection:B,enableRepliesMarketRestriction:Gt,shouldTruncateComments:rt,truncateLines:st,isSubscribed:Et,subscriptionUrl:Rt,subscriptionModalProps:Me})),!$t&&!nt&&s.createElement(y.A,null,s.createElement("aside",{"data-testid":"ReviewFeedbackAside"},s.createElement(w.Z,{group:"ads"},s.createElement(h.A,{position:"rail"})))),Ct&&s.createElement(b.A,{contentAlign:"center",isFixed:!0,position:"top-centre",shouldShowCloseButton:!0,isDisclaimer:!0,delayDuration:3e3},s.createElement("p",null,kt)))};ht.propTypes={configuredComponentRef:r().func,brandName:r().string,closeCommentStreamMessage:r().string,commentCount:r().number,commentingRestrictedTo:r().arrayOf(r().string),commentingUrl:r().string.isRequired,communityExperience:r().shape({commentsOrderBy:r().string,repliesOrderBy:r().string,disableCommentStream:r().bool,enableMultipleComments:r().bool,enableMultipleRatings:r().bool,enableOptionalRatings:r().bool,enableRatings:r().bool,enableReplies:r().bool,enableTags:r().bool,enableCommentsImageUpload:r().bool,enableRepliesImageUpload:r().bool,enableUpvotes:r().bool,enableLocationDropdown:r().bool,hasHideCommunityFunctionalTag:r().bool,expandCommentsOnLoadFunctionalTag:r().bool,noCommentsYetIcon:r().string,joinCommunityIcon:r().string,commentSubmittedIcon:r().string,commentsClosedIcon:r().string,enableRepliesRestriction:r().bool,enableArtistQA:r().bool,enableRatedReviewShare:r().bool}),communityLogo:r().object,communityUrl:r().string,ContentWrapper:r().elementType,contentTitle:r().string,documentType:r().string,defaultReplyLimit:r().number,hideMessageBannerDivider:r().bool,hed:r().string.isRequired,id:r().string.isRequired,image:r().object,imageUpload:r().shape({spectraUrl:r().string}),initialReviewLimit:r().number,messageBannerTheme:r().oneOf(["standard","inverted"]),isBookmarkingEnabled:r().bool,isCommentLoading:r().bool,isMultiReview:r().bool,shouldUseSeparateCTAs:r().bool,likeActionErrorMessage:r().string,locationInfoText:r().string,minListenerScoreThreshold:r().number,musicRating:r().object,noCommentsMsgConf:r().object,organizationId:r().string.isRequired,rating:r().number,ratingPlacement:r().oneOf(["ReviewMetaGrid","ReviewListMetaInfo"]),ratingScale:r().number,replyLimit:r().number,reviewerBadges:r().arrayOf(r().shape({role:r().string,badge:r().string})),reviewerInfoText:r().string,reviewerLocationInfoText:r().string,reviewLimit:r().number,reviewShareAsset:r().object,reviewModalProps:r().object,reviewNotesFormSignInURL:r().string,reviewNoteTags:r().arrayOf(r().shape({active:r().bool,description:r().string,label:r().string,slug:r().string})),reviewsCount:r().number,reviewsSectionTitle:r().string,savedCommentConf:r().object,shouldCollapseByDefault:r().bool,shouldEnableLocationDropdown:r().bool,shouldShowCircularRatings:r().bool,shouldShowUserScore:r().bool,shouldUseAlternateColorToken:r().bool,shouldUsePrimaryColorForBadges:r().bool,shouldUseTagsInvertedTheme:r().bool,shouldUseDarkPinnedTheme:r().bool,shouldUseSoftRoundedEdges:r().bool,shouldUseFullOpacity:r().bool,shouldHideReviewFeedbackAside:r().bool,shouldUseTwoDigitCommentCount:r().bool,showMoreButtonLabel:r().string,repliesMarketRestrictedTooltip:r().string,showScoreComparison:r().bool,shouldTruncateComments:r().bool,scoreSubscriptionUrl:r().string,subscriptionModalProps:r().object,subscriptionUrl:r().string,subscriptionLockActionText:r().string,showUpvoteLabel:r().bool,signInHed:r().string,signInHedSpanTag:r().string,signInMessage:r().string,signUpMessageBannerHed:r().string,tenantID:r().string.isRequired,truncateLines:r().number,unlikeActionErrorMessage:r().string,upvoteIcon:r().string,upvoteIconFilled:r().string,useVoteLabels:r().bool,user:r().shape({isAuthenticated:r().bool.isRequired,amguuid:r().string}).isRequired,usernameModalConf:r().object,reviewSectionSubtext:r().string,reviewSectionSubtextUrl:r().string};const bt=(0,i.M3)(ht,{keysToPluck:["communityExperience","brandName","user","communityLogo","imageUpload"],keysToSpread:["commentAttributes","comments","recaptcha"]}),wt=(0,o.y)(bt,"Commenting")},75454(e,t,n){n.d(t,{$z:()=>r,AS:()=>i,An:()=>d,MQ:()=>s,O1:()=>a,cj:()=>c,el:()=>m,i3:()=>l});var o=n(14307);const i=(e,t,n)=>{const i={type:"impression",label:"Comments",subject:t,features_list:[{name:"comments",total_index:e}]};n&&(i.placement=n),(0,o.Uw)(i)},a=e=>{(0,o.Uw)({type:"impression",label:"Show comments",subject:"community",features_list:[{name:"comments",total_index:e}],placement:"collapsed_comments"})},r=e=>{(0,o.Uw)({type:"click",label:"Show comments",subject:"community",features_list:[{name:"comments",total_index:e}],placement:"collapsed_comments"},{skipDuplicateEvent:!1})},s=e=>{(0,o.Uw)({type:"expand",label:"Comments",subject:"community",features_list:[{name:"comments",total_index:e}],placement:"collapsed_comments"},{skipDuplicateEvent:!1})},l=e=>e?{placement:"pinned_comments"}:{},d=e=>e?"true":"false",c=(e,t="click")=>{const n={type:t,label:e.label,subject:e.subject,paywall_source:e.source,placement:e.placement,state:e.state,is_exceeded:e.is_exceeded};(0,o.ZL)(n)},m=e=>{try{return new URL(e,window.location.origin).searchParams.get("source")}catch{return null}}},85554(e,t,n){n.d(t,{$D:()=>_,AI:()=>U,Ew:()=>I,HX:()=>C,M$:()=>v,P$:()=>T,QO:()=>p,TS:()=>L,Xp:()=>h,Xq:()=>M,YL:()=>g,a8:()=>N,bS:()=>f,eK:()=>b,i7:()=>B,iz:()=>x,vD:()=>y,xf:()=>E,zx:()=>D});var o=n(6765),i=n(96540),a=n(6442),r=n(53788),s=n(60711),l=n(56892),d=n(67198),c=n(92867),m=n(24494),u=n(26022);const g=(e,t,n="",o=!1)=>{const i=t||"Comments";if(!e&&!n)return i;return`${i}${e&&e>0?` (${a=e,o&&a<10?`0${a}`:a})`:` ${n}`}`;var a},p=({commentingUrl:e,defaultReplyLimit:t,entityId:n,initialReviewLimit:o,shouldShowQaSection:a,setCommentCount:r,setIsCommentLoading:l,commentsOrderBy:d,repliesOrderBy:c,includeViewerOwnership:m=!1})=>{const[u,g]=(0,i.useState)(!0),[p,h]=(0,i.useState)([]),[b,w]=(0,i.useState)([]),[f,y]=(0,i.useState)([]),[v,C]=(0,i.useState)(null),[I,k]=(0,i.useState)({hasNextPage:!1,endCursor:""}),[A,S]=(0,i.useState)({hasNextPage:!1,endCursor:""});return(0,i.useEffect)(()=>{e&&async function(){try{const i=(0,s.Pb)(n,e,console),l=(0,s.SW)({entityId:n,commentingUrl:e,commentsOrderBy:d,repliesOrderBy:c,reviewLimit:o,replyLimit:t,includeViewerOwnership:m}),u=(0,s.$u)({entityId:n,commentingUrl:e,repliesOrderBy:c,includeViewerOwnership:m}),g=a?(0,s.Jn)({entityId:n,commentingUrl:e,repliesOrderBy:c,includeViewerOwnership:m}):Promise.resolve(null),[p,b,f,v]=await Promise.all([i,l,u,g]);if(p?.commentsCount&&r(p.commentsCount),p?.commentTagLabel&&C(p.commentTagLabel),f?.reviews&&w(f.reviews),a){if(v?.reviews&&v.page){const{reviews:e}=v;y(e),S(v.page)}}else b?.reviews&&b.page&&(h(b.reviews),k(b.page))}catch(e){}g(!1),l(!1)}()},[e,d,c,m,n,t,o,a,r,l,g,k,h]),{isLoading:u,reviews:p,page:I,setPage:k,featuredReviews:b,qaReviews:f,qaPage:A,setQaPage:S,commentTagLabel:v}},h=({shouldShowUserScore:e,commentingUrl:t,user:n,storyID:o})=>{const a=n.isAuthenticated&&n.amguuid,[r,l]=(0,i.useState)(null);return(0,i.useEffect)(()=>{!async function(){if(!e)return;if(!a)return;const n=await(0,s.O_)(o,t,console);n&&l(n.userStoryRating?.rating)}()},[a,o,t,e]),{userRating:r}},b=({noCommentsMsgConf:e={},disableCommentStream:t,closeCommentStreamMessage:n,showCommentSavedMessage:o,communityUrl:i,isCommentLoading:r,commentCount:s,user:l,signUpMessageBannerHed:d,brandName:m,savedCommentConf:u={},noCommentsYetIcon:g,joinCommunityIcon:p,commentSubmittedIcon:h,commentsClosedIcon:b})=>{const{formatMessage:w}=(0,a.A)(),f=!(l.isAuthenticated&&l.amguuid);if(t)return{header:n||w(c.A.closeCommentStreamMessage),description:"",showSignInButton:!1,subContent:"",commentMessageBannerIcon:b};if(o){const{title:e=w(c.A.SavedCommentMsgTitle),dek:t=w(c.A.SavedCommentDek),dekTrail:n=w(c.A.SavedCommentDekTrail),subContent:o=w(c.A.SavedCommentSubContent)}=u;return{header:e,description:`${t}<br />${`<a href="${i}" class="community-link">${w(c.A.CommunityGuidelines)}</a>`} ${n}`,subContent:o,showSignInButton:!1,commentMessageBannerIcon:h}}if(!r&&!s){const{hed:t=w(c.A.emptyCommentMsgHed),dek:n=w(c.A.emptyCommentMsgDek),signOutDek:o=w(c.A.signOutEmptyCommentMsgDek)}=e;return{header:t,description:f?o:n,showSignInButton:f,subContent:"",commentMessageBannerIcon:g,isNoCommentsScenario:!0}}return!r&&f?{header:d||w(c.A.signUpMessageBannerHed,{brandName:m}),showSignInButton:!0,description:"",subContent:"",commentMessageBannerIcon:p}:{header:"",description:"",showSignInButton:!1,subContent:""}},w=(e,t)=>{if(!t)return!1;const n=(e=>{const t=(0,o.A)(e),n=t?.fct||{};return Object.values(n).flat()})(t);if(!n?.length)return!1;return n.some(t=>e.includes(t))},f=e=>{if(!e?.length)return!0;const t=(0,l.getCookie)(r.A.accessCookie);if(!t)return!1;return w(e,t)},y=({enableRepliesRestriction:e})=>{const t=((0,l.getCookie)("CN_geo_country_code")||"").toLowerCase();return e&&m.A.includes(t)},v={LEAVE_RATING:"leave-a-rating",LEAVE_REPLY:"leave-a-reply",LIKE_COMMENT:"like-a-comment",LIKE_REPLY:"like-a-reply",REPLY_TO_REPLY:"reply-to-reply"},C={[v.LIKE_COMMENT]:"community_like",[v.LIKE_REPLY]:"community_like",[v.LEAVE_REPLY]:"community_reply",[v.REPLY_TO_REPLY]:"community_reply",[v.LEAVE_RATING]:"community_rating"},I=()=>{const[e,t]=(0,i.useState)(null),n=(0,i.useRef)(null),o=(0,i.useCallback)(e=>{t(t=>t===e?null:e)},[]),a=(0,i.useCallback)(()=>{t(null)},[]);return(0,u.A)(n,a),{activeId:e,tooltipRef:n,toggleForId:o,close:a}},k=({pathname:e,search:t,hash:n})=>`${e}${t}${n}`,A=({href:e,hashValue:t})=>{const n=new URL(e);return t&&(n.hash=t),n},S=({href:e,queryParams:t})=>{const n=new URL(e),o=new URLSearchParams(t);for(const[e,t]of o)n.searchParams.set(e,t);return n},_=({href:e,hashValue:t,queryParams:n})=>{const o=A({href:e,hashValue:t}),i=S({href:o.href,queryParams:n});return k(i)},E=e=>{const[t,n]=(0,i.useState)({height:0,isStable:!1}),[o,a]=(0,i.useState)(null),r=()=>{const e=window.document.body.scrollHeight;n(t=>({height:e,isStable:t.height===e}))};(0,i.useEffect)(()=>{if(e&&(({hash:e})=>!!e&&Object.values(v).some(t=>e.includes(t)))(window.location))return!o&&a(window.setInterval(r,750)),t.isStable&&((0,d.A)(`.${e}`),window.clearInterval(o),window.history.replaceState(null,"",(({url:e})=>e.split("#")[0])({url:_(window.location)}))),()=>{window.clearInterval(o)}},[e,t.isStable,o])},L=({searchParams:e})=>Object.fromEntries(new URLSearchParams(e)),x=({href:e,paramsToRemove:t})=>{const n=new URL(e);return t.forEach(e=>n.searchParams.delete(e)),k(n)},T=({reactions:e,id:t})=>{const n=e[t]||{},{viewerActionPresence:o=!1,reactionCount:i=0}=n;return{...e,[t]:{reactionCount:o?i-1:i+1,viewerActionPresence:!o}}},R=({reactions:e,id:t,reactionCount:n,viewerActionPresence:o})=>(e[t]||(e[t]={reactionCount:n,viewerActionPresence:o}),e),N=(e,{id:t,actionCounts:n,viewerActionPresence:o})=>(R({reactions:e,id:t,reactionCount:n?.reaction?.total||0,viewerActionPresence:o?.reaction}),e),$=(e,{commentId:t,reactionCount:n,viewerActionPresence:o,replies:i})=>(R({reactions:e,id:t,reactionCount:n,viewerActionPresence:o}),i?.length>0&&i.forEach(t=>{N(e,t)}),e),U=(e,t)=>{(0,i.useEffect)(()=>{e.length&&t(t=>e.reduce($,{...t}))},[e,t])},M=e=>{if(null==e)return 0;const t=Number(e);return isNaN(t)?e:10===t?"10":t.toFixed(1)},B={COMMENTING_SECTION:"CommentingMainContent",PINNED_COMMENT:"pinned-comment",SUBSCRIBE_BUTTON:"SubscribeButton",SUBSCRIBE_TO_SEE_BUTTON:"SubscribeToSeeButton",SUBSCRIBE_MODAL:"SubscribeModal",SUBSCRIPTION_LOCK:"SubscriptionLock"},D=({shouldShowActivityLabel:e,commentAttributes:t={},user:n={},storyID:o,contentType:a,reviewType:r})=>{const l=n?.isAuthenticated&&n?.amguuid,[d,c]=(0,i.useState)(null),[m,u]=(0,i.useState)(!1),{commentingUrl:g,organizationId:p}=t,h="review"===a&&["albums","tracks"].includes(r)||"article"===a;return(0,i.useEffect)(()=>{if(!(e&&l&&h&&g&&p&&o))return c(null),void u(!1);!async function(){u(!0);try{const e=await(0,s.M3)({storyID:o,userID:n.amguuid,siteID:p,commentingUrl:g,contentType:a});c(e?.activityType??null)}catch(e){c(null)}finally{u(!1)}}()},[e,l,h,o,n?.amguuid,p,g,a]),{activityType:d,isLoading:m}}},92945(e,t,n){n.d(t,{P:()=>i});var o=n(96540);const i=e=>{const[t,n]=(0,o.useState)({});return(0,o.useEffect)(()=>{window.jBus&&window.jBus.whenAnEventOccurs({id:e,callback:({payload:e})=>{n({...e})}})},[e]),{...t}}},61057(e,t,n){let o;n.d(t,{Rf:()=>r,f1:()=>i,hY:()=>s});const i=e=>{o=e},a=(e,t={})=>{o&&o({type:"MERGE_KEY",key:"userNameModalConfig",value:{...t,isVisible:e}})},r=e=>{a(!0,e)},s=()=>{a(!1)}},97504(e,t,n){n.d(t,{Ay:()=>nt,F0:()=>he.A,p:()=>g.A,pd:()=>j.A});var o=n(38299),i=n(42368),a=n(42361),r=n(58037),s=n(4498),l=n(42096),d=n(75421),c=n(54337),m=n(43706),u=n(20215),g=n(66718),p=n(59257),h=n(3540),b=n(64510),w=n(76196),f=n(39733),y=n(87986),v=n(56430),C=n(16619),I=n(32586),k=n(30616),A=n(87241),S=n(34577),_=n(70195),E=n(29165),L=n(5198),x=n(71039),T=n(49140),R=n(88852),N=n(3686),$=n(84050),U=n(67818),M=n(39792),B=n(26676),D=n(73137),O=n(15514),F=n(96774),q=n(34890),K=n(77818),P=n(28153),H=n(83558),j=n(33528),z=n(708),G=n(47424),V=n(36737),Y=n(68165),W=n(80636),Q=n(41876),X=n(12550),J=n(56148),Z=n(87468),ee=n(79301),te=n(63397),ne=n(49498),oe=n(60836),ie=n(88845),ae=n(90906),re=n(86173),se=n(21516),le=n(87574),de=n(42710),ce=n(80890),me=n(39083),ue=n(74723),ge=n(11936),pe=n(87444),he=n(23150),be=n(54280),we=n(3330),fe=n(7967),ye=n(97195),ve=n(45191),Ce=n(45530),Ie=n(64577),ke=n(3653),Ae=n(94416),Se=n(90506),_e=n(16119),Ee=n(10934),Le=n(10312),xe=n(84502),Te=n(9105),Re=n(7507),Ne=n(73234),$e=n(97475),Ue=n(74561),Me=n(82728),Be=n(10033),De=n(28304),Oe=n(43438),Fe=n(47774),qe=n(48767),Ke=n(30920),Pe=n(63579),He=n(21318),je=n(35788),ze=n(81058),Ge=n(37819),Ve=n(48848),Ye=n(75937),We=n(74921),Qe=n(36108),Xe=n(75088),Je=n(46222),Ze=n(87924),et=n(94342),tt=n(57961);const nt={Account:o.A,AgeGate:i.A,Arrow:a.A,ArrowOut:r.A,Article:s.A,BadgeArtist:l.A,BadgeDayOne:d.A,BadgeStaff:c.A,Bookmark:m.A,BookmarkActivated:u.A,BookmarkNew:g.A,BlueSky:p.A,CartFilled:h.A,CartOutlined:b.A,Check:w.A,ChevronRight:f.A,ChevronFill:I.A,ChevronLeft:y.A,ChevronUp:v.A,ChevronDown:C.A,Close:k.A,Collapse:A.A,Comment:S.A,CopyLink:_.A,DownloadCloud:E.A,DownloadWeb:L.A,Dot:x.A,Email:T.A,EmailFilled:R.A,Enlarge:N.A,Expand:$.A,Facebook:U.A,Filmstrip:M.A,Filter:B.A,Flipboard:D.A,GoogleNews:O.A,Gallery:F.A,Grid:q.A,Headphone:K.A,SlimHeadphone:P.A,Information:H.A,Instagram:j.A,LargeChevron:z.A,LeftChevron:G.A,Like:V.A,LikeFilled:Y.A,Line:W.A,LinkedIn:Q.A,LocationPin:X.A,OK:J.A,Paperclip:Z.A,List:ne.A,Lock:te.A,Maximize:oe.A,Menu:ie.A,NativeShare:ae.A,Newsletter:re.A,NewsletterArrow:se.A,Pause:le.A,PhotoStack:de.A,Pinterest:ce.A,PitchforkUpvote:me.A,PitchforkUpvoteFilled:ue.A,Play:ge.A,Passkey:pe.A,PlayCNE:he.A,PlaylistIcon:be.A,PlayOutlined:we.A,Print:fe.A,PrivacyOT:ye.A,RatingFilled:ve.A,RatingHalf:Ce.A,RatingOutlined:Ie.A,Replay:ke.A,Loader:ee.A,Rss:Ae.A,Search:Se.A,Share:_e.A,Shopping:Ee.A,Snapchat:Le.A,Spotify:xe.A,SplitView:Te.A,SocialHandle:Re.A,Stays:Ne.A,Subscribe:$e.A,Telegram:Ue.A,Timestamp:Me.A,Tiktok:De.A,Threads:Be.A,Triangle:Oe.A,TriangleDown:Fe.A,TriangleUp:qe.A,Tumblr:Ke.A,Twitter:Pe.A,VerificationBadge:He.A,Vero:je.A,Viber:ze.A,Video:Ge.A,VolumeHigh:Ve.A,VolumeMute:Ye.A,VK:We.A,WeChat:Qe.A,Weibo:Xe.A,WebLink:Je.A,Whatsapp:Ze.A,YandexZen:et.A,YouTube:tt.A}},16631(e,t,n){n.d(t,{Bs:()=>Y,By:()=>C,CH:()=>G,El:()=>K,Es:()=>$,FM:()=>w,GM:()=>Q,Ig:()=>F,Mc:()=>b,Nc:()=>V,Pu:()=>L,Q7:()=>P,R9:()=>M,RF:()=>g,TD:()=>u,Vs:()=>q,W6:()=>A,Wx:()=>E,Xo:()=>z,Xt:()=>R,Yl:()=>v,ZZ:()=>H,an:()=>I,d0:()=>X,eI:()=>O,fm:()=>k,hh:()=>h,iA:()=>D,iT:()=>x,o:()=>B,oE:()=>S,op:()=>f,ow:()=>T,pV:()=>W,qJ:()=>y,sJ:()=>U,sh:()=>p,tG:()=>_,vX:()=>N,w0:()=>j});var o=n(38267),i=n(76955),a=n(26865),r=n(96472),s=n(43438),l=n(73275),d=n(73730),c=n(18161),m=n(97927);const u=(0,o.Ay)(d.A.Primary).withConfig({displayName:"ReviewListButton"})`
+  align-self: center;
+  margin-top: ${(0,a.Kq)(4)};
+  margin-bottom: ${(0,a.Kq)(4)};
+`,g=o.Ay.ul.withConfig({displayName:"ReviewListItems"})`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`,p=(0,o.Ay)(s.A).withConfig({displayName:"ReviewListCarat"})`
+  margin-left: ${(0,a.Kq)(1)};
+  width: ${(0,a.Kq)(1)};
+  height: ${(0,a.Kq)(1)};
+  ${({theme:e})=>(0,a._o)(e,"fill","colors.interactive.base.black")};
+
+  path {
+    transform: rotate(180deg);
+    transform-origin: center;
+  }
+`,h=(0,o.Ay)(i.sH).withConfig({displayName:"ReviewListUtilityLink"}).attrs(e=>({colorToken:"colors.interactive.base.black",typeIdentity:"typography.definitions.utility.button-bulletin",...e}))``,b=(0,o.Ay)(i.sH).withConfig({displayName:"ReviewListGuidelinesLink"}).attrs(e=>({colorStaticLinkToken:"colors.consumption.body.standard.body-deemphasized",typeToken:"typography.definitions.utility.label",...e}))``,w=(0,o.Ay)(i.vm).withConfig({displayName:"ReviewListTitle"}).attrs(e=>({as:"h2",colorToken:"colors.consumption.body.standard.subhed",typeIdentity:"typography.definitions.consumptionEditorial.subhed-aux-primary",...e}))``,f=o.Ay.div.withConfig({displayName:"ReviewListTitleWrapper"})`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: ${(0,a.Kq)(4)} 0 0;
+  padding-bottom: ${({hasSubtext:e})=>e?(0,a.Kq)(1):(0,a.Kq)(4)};
+`,y=o.Ay.div.withConfig({displayName:"ReviewListSubtext"})`
+  display: block;
+  ${(0,a.H4)(r.LO.lg)} {
+    margin-top: ${(0,a.Kq)(1)};
+  }
+  margin-bottom: ${(0,a.Kq)(3)};
+
+  ${({theme:e})=>(0,a._o)(e,"color","colors.consumption.body.standard.body-deemphasized")};
+  ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.utility.label")};
+`,v=o.Ay.div.withConfig({displayName:"ReviewListWrapper"})`
+  display: flex;
+  flex-direction: column;
+  outline: none;
+  ${(0,a.L7)(r.LO.md)} {
+    margin-left: calc(-1 * var(--grid-margin));
+    padding-right: var(--grid-margin);
+    padding-left: var(--grid-margin);
+    /* Full bleed effect */
+    width: calc(100% + (2 * var(--grid-margin)));
+  }
+`,C=(0,o.Ay)(i.vm).withConfig({displayName:"ReviewListError"})`
+  margin: ${(0,a.Kq)(4)} 0;
+  text-align: center;
+`,I=o.Ay.li.withConfig({displayName:"ReviewItem"})`
+  margin-top: ${(0,a.Kq)(3)};
+  border-width: 1px 0 0;
+  border-style: solid;
+  ${({theme:e})=>(0,a._o)(e,"border-color","colors.consumption.body.standard.divider")};
+  padding-top: ${(0,a.Kq)(3)};
+
+  &:first-child {
+    margin-top: ${(0,a.Kq)(4)};
+    border-top: 0;
+    padding-top: 0;
+    ${(0,a.L7)(r.LO.md)} {
+      margin-top: ${(0,a.Kq)(3)};
+    }
+  }
+
+  .pinned-comment + & {
+    margin-top: ${(0,a.Kq)(3)};
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: ${(0,a.Kq)(3)};
+    ${(0,a.L7)(r.LO.md)} {
+      margin-bottom: ${(0,a.Kq)(3)};
+    }
+  }
+
+  ${c.f} {
+    ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.foundation.link-utility")};
+
+    background-color: rgba(
+      ${(0,a.HK)("colors.background.brand",{rgbOnly:!0})},
+      ${({shouldUseFullOpacity:e})=>e?1:.2}
+    );
+    ${({theme:e})=>(0,a._o)(e,"color","colors.interactive.base.black")};
+
+    &:not(:first-of-type) {
+      margin-left: ${(0,a.Kq)(1)};
+    }
+
+    &[aria-checked='true'] {
+      transition: none;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+      cursor: unset;
+      text-decoration: none;
+    }
+
+    ${({shouldUseTagsInvertedTheme:e,theme:t})=>e&&`\n      ${(0,a._o)(t,"background-color","colors.interactive.base.black")};\n      ${(0,a._o)(t,"color","colors.interactive.base.white")};\n    `}
+  }
+  ${m.Ft} {
+    padding: 0;
+  }
+`,k=o.Ay.div.withConfig({displayName:"PinnedCommentContainer"})`
+  ${g} {
+    padding: 0 ${(0,a.Kq)(3)};
+  }
+  margin-top: ${(0,a.Kq)(4)};
+  border: 1px solid;
+  border-color: ${({shouldUseDarkPinnedTheme:e})=>(0,a.HK)(e?"colors.background.black":"colors.background.brand")};
+  width: 100%;
+
+  ${({shouldUseSoftRoundedEdges:e})=>e&&`\n    border-radius: ${(0,a.Kq)(1)};\n  `}
+
+  ${I} {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: ${(0,a.Kq)(3)} 0;
+  }
+`,A=o.Ay.div.withConfig({displayName:"PinnedContainerHeading"})`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(
+    ${({shouldUseDarkPinnedTheme:e})=>(0,a.HK)(e?"colors.background.black":"colors.background.brand",{rgbOnly:!0})},
+    ${({shouldUseFullOpacity:e})=>e?1:.1}
+  );
+  ${({shouldUseSoftRoundedEdges:e})=>e&&`\n    border-radius: ${(0,a.Kq)(.75)} ${(0,a.Kq)(.75)} 0 0;\n  `}
+
+  padding: 10px;
+  width: 100%;
+  height: ${(0,a.Kq)(4.25)};
+`,S=o.Ay.div.withConfig({displayName:"PinnedTextLabel"})`
+  ${(0,a.Gg)("typography.definitions.foundation.meta-secondary")}
+  ${({shouldUseAlternateColorToken:e,shouldUseInvertedColor:t})=>e?(0,a._o)("color","colors.interactive.social.primary"):(0,a._o)("color",t?"colors.background.white":"colors.background.brand")};
+  transform: translateY(1px);
+  margin-right: 5px;
+`,_=(0,o.Ay)(l.A).withConfig({displayName:"CommunityBrandLogoImage"})`
+  img {
+    height: 16px;
+    vertical-align: middle;
+  }
+`,E=(0,o.Ay)(i.vm).withConfig({displayName:"ReviewerUserName"})`
+  ${({theme:e})=>(0,a._o)(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.globalEditorial.accreditation-core")};
+`,L=(0,o.Ay)(i.vm).withConfig({displayName:"ReviewListTimeStamp"})`
+  ${({theme:e})=>(0,a._o)(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.foundation.meta-secondary")};
+`,x=(0,o.Ay)(i.vm).withConfig({displayName:"ReviewText"})`
+  word-wrap: break-word;
+  white-space: pre-wrap;
+
+  a {
+    overflow-wrap: break-word;
+  }
+  ${({theme:e})=>(0,a._o)(e,"color","colors.consumption.body.standard.body")};
+  ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.consumptionEditorial.body-core")};
+`,T=o.Ay.img.withConfig({displayName:"ReviewImage"})`
+  cursor: pointer;
+  width: ${(0,a.Kq)(20.5)};
+  max-width: 100%;
+  height: ${(0,a.Kq)(20.5)};
+  object-fit: cover;
+
+  ${(0,a.H4)(r.LO.md)} {
+    width: ${(0,a.Kq)(15)};
+    height: ${(0,a.Kq)(15)};
+  }
+`,R=(0,o.Ay)(i.vm).withConfig({displayName:"ReviewListRatingStars"})`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &&& {
+    ${m.By} {
+      left: 0;
+
+      path {
+        ${({theme:e})=>(0,a._o)(e,"fill","colors.consumption.body.special.accent")};
+      }
+    }
+    ${m.Ou} {
+      width: ${(0,a.Kq)(2.5)};
+    }
+    ${m.wb} {
+      &:disabled + ${m.KX} {
+        cursor: unset;
+      }
+    }
+  }
+`,N=(0,o.Ay)(i.vm).withConfig({displayName:"ReviewLikeCount"})`
+  padding-right: ${(0,a.Kq)(2)};
+  ${({theme:e})=>(0,a._o)(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.foundation.link-secondary")};
+`,$=o.Ay.hr.withConfig({displayName:"ReviewListDivider"})`
+  border: none;
+  border-top: 1px solid
+    ${({theme:e})=>(0,a.HK)(e,"colors.consumption.lead.standard.divider")};
+  width: 100%;
+`,U=o.Ay.ul.withConfig({displayName:"ReviewListMetaInfo"})`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: ${(0,a.Kq)(4)}, ${(0,a.Kq)(4)};
+  padding: 0;
+  list-style: none;
+
+  &:first-child {
+    margin-bottom: 10px;
+    ${(0,a.L7)(r.LO.md)} {
+      margin-bottom: ${(0,a.Kq)(1)};
+    }
+  }
+
+  &:not(:first-child) {
+    margin-bottom: ${(0,a.Kq)(1.5)};
+    ${(0,a.L7)(r.LO.md)} {
+      margin-bottom: ${(0,a.Kq)(2)};
+    }
+  }
+
+  &:last-child {
+    margin-top: ${(0,a.Kq)(1.5)};
+    margin-bottom: ${(0,a.Kq)(1)};
+    ${(0,a.L7)(r.LO.md)} {
+      margin-top: ${(0,a.Kq)(2)};
+      margin-bottom: 0;
+    }
+  }
+
+  .icon-dots {
+    padding-right: 6px;
+    padding-left: 6px;
+
+    ${({theme:e})=>(0,a._o)(e,"fill","colors.interactive.base.dark")};
+
+    ${(0,a.L7)(r.LO.md)} {
+      padding-right: ${(0,a.Kq)(.5)};
+      padding-left: ${(0,a.Kq)(.5)};
+    }
+  }
+
+  .icon-like,
+  .icon-like-filled,
+  .icon-comment {
+    margin-top: 3px;
+    cursor: pointer;
+    width: ${(0,a.Kq)(4)};
+    height: 18px;
+
+    path {
+      ${({theme:e})=>(0,a._o)(e,"fill","colors.interactive.base.dark")};
+      ${({theme:e})=>(0,a._o)(e,"stroke","colors.interactive.base.dark")};
+    }
+
+    &:hover path {
+      ${({theme:e})=>(0,a._o)(e,"fill","colors.interactive.base.black")};
+      ${({theme:e})=>(0,a._o)(e,"stroke","colors.interactive.base.black")};
+    }
+  }
+
+  .icon-p4k-upvote,
+  .icon-p4k-upvote-filled {
+    margin-right: ${(0,a.Kq)(.5)};
+    cursor: pointer;
+    width: auto;
+    height: auto;
+
+    &:hover path[fill='#757575'] {
+      ${({theme:e})=>(0,a._o)(e,"fill","colors.interactive.base.brand-secondary")};
+    }
+  }
+
+  ${({applyRowGap:e})=>e&&`\n    row-gap: ${(0,a.Kq)(1)};\n  `}
+`,M=o.Ay.div.withConfig({displayName:"ReviewListMetaInfoItem"})`
+  display: flex;
+  align-items: center;
+
+  &:empty + &:empty + & > .icon-dots:first-child {
+    display: none;
+  }
+`,B=(0,o.Ay)(d.A.Utility).withConfig({displayName:"ReviewListReactionButton"})`
+  padding: 0;
+
+  &,
+  &:focus,
+  &:hover {
+    border: 0;
+    background-color: transparent;
+  }
+`,D=o.Ay.div.withConfig({displayName:"ReviewMetaGrid"})`
+  display: grid;
+  grid-template-columns: ${({badgeValue:e})=>e?"repeat(1, max-content)":"repeat(2, max-content)"};
+  align-items: center;
+  column-gap: ${(0,a.Kq)(1.25)};
+  margin-bottom: ${(0,a.Kq)(1.25)};
+  justify-items: start;
+`,O=o.Ay.div.withConfig({displayName:"UserBadgeWrapper"})`
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  align-items: center;
+  column-gap: ${({badgeValue:e})=>e?(0,a.Kq)(1.25):"0"};
+`,F=o.Ay.div.withConfig({displayName:"BadgesToggleChipListWrapper"})`
+  margin-left: ${(0,a.Kq)()};
+
+  &&& {
+    ${c.f} {
+      align-self: center;
+      margin-bottom: ${({isReply:e})=>e?(0,a.Kq)(1):"0"};
+      margin-left: ${({isReply:e})=>e?"0":(0,a.Kq)(1.25)};
+      ${({theme:e})=>(0,a._o)(e,"background-color","colors.background.light")};
+      ${({theme:e})=>(0,a._o)(e,"color","colors.background.dark")};
+      ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.foundation.meta-primary")};
+      padding: 8px 16px;
+      height: 40px;
+      box-sizing: border-box;
+      text-transform: none;
+    }
+  }
+`,q=o.Ay.div.withConfig({displayName:"CircularRatingCircle"})`
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border: ${({size:e})=>"sm"===e?"2px":(0,a.Kq)(.375)}
+    solid ${(0,a.HK)("colors.interactive.base.black")};
+  border-radius: 50%;
+  background-color: transparent;
+  width: ${({size:e})=>"sm"===e?(0,a.Kq)(5):(0,a.Kq)(9.25)};
+  height: ${({size:e})=>"sm"===e?(0,a.Kq)(5):(0,a.Kq)(9.25)};
+
+  &::before {
+    position: absolute;
+    top: ${({size:e})=>"sm"===e?"-6px":(0,a.Kq)(.375)};
+    right: ${({size:e})=>"sm"===e?"-6px":(0,a.Kq)(.375)};
+    bottom: ${({size:e})=>"sm"===e?"-6px":(0,a.Kq)(.375)};
+    left: ${({size:e})=>"sm"===e?"-6px":(0,a.Kq)(.375)};
+    border: ${({size:e})=>"sm"===e?"2px":(0,a.Kq)(.375)}
+      solid ${(0,a.HK)("colors.interactive.base.black")};
+    border-radius: 50%;
+    content: '';
+  }
+`,K=(0,o.Ay)(i.vm).withConfig({displayName:"CircularRatingNumber"}).attrs(e=>({typeIdentity:"typography.definitions.discovery.hed-bulletin-primary",...e}))`
+  color: ${(0,a.HK)("colors.interactive.base.black")};
+
+  ${({size:e})=>"lg"===e&&"\n    font-size: 24px;\n  "}
+`,P=o.Ay.div.withConfig({displayName:"CircularRatingWrapper"})`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.blurred ${K} {
+    filter: blur(10px);
+  }
+`,H=o.Ay.div.withConfig({displayName:"ScoreComparisonWrapper"})`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: ${(0,a.Kq)(3)};
+`,j=o.Ay.div.withConfig({displayName:"ScoreComparisonCard"})`
+  display: flex;
+  align-items: flex-end;
+  border: 1px solid
+    ${({theme:e})=>(0,a.HK)(e,"colors.background.black")};
+  border-radius: 8px;
+  width: 100%;
+  height: 140px;
+  gap: ${(0,a.Kq)(5.5)};
+
+  ${(0,a.H4)(r.LO.md)} {
+    gap: ${(0,a.Kq)(7)};
+  }
+`,z=o.Ay.div.withConfig({displayName:"ScoreColumn"})`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: ${({align:e})=>e||"center"};
+  justify-content: flex-end;
+  padding-top: ${(0,a.Kq)(1.375)};
+  padding-bottom: ${(0,a.Kq)(2)};
+  height: 140px;
+`,G=o.Ay.div.withConfig({displayName:"ScoreDivider"})`
+  margin: auto;
+  background-color: #999;
+  width: 1px;
+  height: 113px;
+`,V=o.Ay.div.withConfig({displayName:"ScoreItemWrapper"})`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`,Y=o.Ay.div.withConfig({displayName:"ScoreLabel"})`
+  margin-top: ${(0,a.Kq)(1)};
+  text-align: center;
+  color: #2b2b2b;
+  font-size: 12px;
+  ${(0,a.Gg)("typography.definitions.globalEditorial.accreditation-core")};
+`,W=o.Ay.div.withConfig({displayName:"ScoreComparisonMessage"})`
+  margin-top: 8px;
+  border-bottom: 1px solid;
+  padding-bottom: 8px;
+  width: 100%;
+  ${({theme:e})=>(0,a._o)(e,"border-color","colors.consumption.body.standard.divider")};
+  text-align: center;
+  ${(0,a.L7)(r.LO.md)} {
+    text-align: left;
+  }
+  ${({theme:e})=>(0,a._o)(e,"color","colors.consumption.body.standard.body-deemphasized")};
+  ${(0,a.Gg)("typography.definitions.utility.label")};
+`,Q=o.Ay.div.withConfig({displayName:"ScoreComparisonSubscriptionMessage"})`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: ${(0,a.Kq)(.5)};
+  margin-top: 8px;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  padding-bottom: 8px;
+  width: 100%;
+  ${({theme:e})=>(0,a._o)(e,"border-color","colors.consumption.body.standard.divider")};
+  text-align: center;
+  text-decoration: none;
+  ${(0,a.Gg)("typography.definitions.utility.label")};
+  ${({theme:e})=>(0,a._o)(e,"color","colors.consumption.body.standard.body-deemphasized")};
+
+  .subscribe-link {
+    text-decoration: underline;
+    color: inherit;
+    font-weight: bold;
+
+    &:hover {
+      ${({theme:e})=>(0,a._o)(e,"color","colors.consumption.body.standard.link-hover")};
+      text-decoration: none;
+    }
+  }
+`,X=o.Ay.span.withConfig({displayName:"ReviewerLocation"})`
+  ${({theme:e})=>(0,a._o)(e,"color","colors.interactive.base.dark")};
+  ${({theme:e})=>(0,a.Gg)(e,"typography.definitions.foundation.meta-primary")};
+`},21735(e,t,n){n.d(t,{A:()=>v});var o=n(96540),i=n(5556),a=n.n(i),r=n(54370),s=n(53499),l=n(70920),d=n(64663),c=n(37210),m=n(72362),u=n(37978),g=n(58120);const{useContext:p,useEffect:h,useRef:b,useState:w}=o,f=()=>{if(!document.getElementById("tiktok-embed")){const e=document.createElement("script");e.id="tiktok-embed",e.src="https://www.tiktok.com/embed.js",document.body.appendChild(e)}},y=({attributes:e,className:t,tiktokUrl:n})=>{o.useEffect(()=>{window.Kendra.TRACK_COMPONENT.broadcast(s.G.RENDER,{name:"TiktokEmbed"})},[]);const i=b(),a=p(d.c$),[y]=(0,l.A)(),[v,C]=w(!1),I=(e=>new URL(e).pathname.split("/").filter(e=>e.length>0).pop())(n),[k]=w((0,m.ox)()),A=e=>{let t=e.target;t?.addEventListener("load",()=>{setTimeout(()=>{t=e.target,t.style.minHeight=`${t.offsetHeight+1}px`},1e3)})};return h(()=>{C(a.targeting)},[a.targeting]),h(()=>{const e=i.current,t=e.querySelector("blockquote");return t&&!t.hasAttribute("id")&&f(),k&&e.addEventListener("DOMNodeInserted",e=>A(e)),v&&f(),()=>{k&&e.removeEventListener("DOMNodeInserted",e=>A(e))}},[k,i,v,I]),o.createElement(g.l,{className:t,ref:(0,r.P)(i,y)},v?o.createElement(g.H,{...e,className:"tiktok-embed","data-video-id":I,cite:n},o.createElement("section",null)):o.createElement(c.A,{hasConsent:a.targeting,url:n,consentBannerHeader:u.A.consentBannerHeader}))};y.propTypes={attributes:a().object,className:a().string,tiktokUrl:a().string.isRequired},y.displayName="TiktokEmbed";const v=y},14307(e,t,n){n.d(t,{Cu:()=>H,D3:()=>x,Ec:()=>ee,Ef:()=>J,Eg:()=>R,Ev:()=>ge,F$:()=>fe,F0:()=>ae,Hh:()=>Ie,JE:()=>_,JL:()=>ue,Mm:()=>L,P2:()=>z,QD:()=>B,QQ:()=>N,Sp:()=>pe,UP:()=>_e,Uw:()=>Le,ZL:()=>de,ZY:()=>Re,Zs:()=>M,aW:()=>E,ce:()=>Ee,d6:()=>Ce,iJ:()=>me,ip:()=>Ae,iu:()=>Te,iw:()=>te,kg:()=>ve,lV:()=>xe,nd:()=>ie,oQ:()=>T,pu:()=>se,qt:()=>ye,r_:()=>he,rp:()=>re,tM:()=>Se,up:()=>ne,yP:()=>ce});var o=n(5922),i=n(21396),a=n(29484),r=n(13446),s=n(34854),l=n(49974),d=n(84410),c=n(70099),m=n(3624),u=n(7883),g=n(79694),p=n(56475),h=n(10702),b=n(6765),w=n(88055),f=n.n(w),y=n(2404),v=n.n(y),C=n(86663),I=n(14961),k=n(56892),A=n(60663);const S=(e=null)=>{const t=C.parse(e||(0,k.getCookie)("OptanonConsent"));if(!t||!t.groups)return null;const n=t.groups.split(",").filter(e=>e.endsWith(":1")).map(e=>e.split(":")[0]);return n.length?n.join(","):null};function _(e,t="production",n=[]){window.snowplowInitQueue.push(()=>{e?window.snowplowCN("disableAnonymousTracking",{stateStorageStrategy:"cookieAndLocalStorage"}):(window.snowplowCN("clearUserData",{preserveSession:!0,preserveUser:!0}),window.snowplowCN("enableAnonymousTracking",{options:{withServerAnonymisation:!0,withSessionTracking:!0},stateStorageStrategy:"localStorage"}))})}const E=(e=null)=>window.Fides?(0,s.$c)():S(e),L=()=>{const e=(0,k.getCookie)("CN_access")||(0,k.getCookie)("CN_token_access");let t={};if(e){const n=(0,b.A)(e),o=window?.dataLayer[0]?.content?.brandSlug?.replace(/-/g,""),i=n?.fct&&n?.fct["org-access"]?.filter(e=>{const t=e?.split(":")[0];return-1!==o?.indexOf(t.split(".")[0])});t={subscriptions:n?.fct&&n?.fct["org-access"]||[],brand_subscription:i||[]}}return t};function x(e){let t=e;for(;t&&"A"!==t.tagName;)t=t.parentElement;return t}const T=({aliasUrl:e,className:t="",href:n,id:o="",target:i="_self",textContent:a})=>{if("undefined"==typeof document)return null;const r=document.createElement("a");return r.href=n||window.location.href,r.id=o,r.className=t,r.textContent=a,r.target=i,r.alias_url=e,r},R=(0,k.getCookie)("CN_xid"),N=(0,k.getCookie)("amg_user_partner"),$=(0,A.Y)(()=>window.localStorage),U=["C0001","C0002","C0003","C0004","C0005","C0009"],M=["amazon","amzn","cna.st","skimresources"],B=["wired","houseandgarden","glamour-uk","vogue-uk","gq-uk","conde-nast-traveller-uk","tatler","woi","ad-de","cnt-de","glamour-de","gq-de","vogue-de","ad-es","conde-nast-traveler-espana","glamour-es","gq-espana","vanity-fair-es","vogue-es","ad-it","gq-italia","la-cucina-italiana-italy","vanity-fair-it","vogue-it","wired-it","ad-mx","glamour-mx","gq-mx","vogue-mx","gq-jp","vogue-jp","wired-jp","gq-tw","vogue-tw"];function D(){const e=window?.document?.querySelectorAll(".external-link"),t=[];return e.forEach(e=>{const n=e.getAttribute("href");n&&M.some(e=>n.includes(e))&&t.push(e.innerText)}),t}const O=(e="",t=[])=>t.some(t=>e.includes(t)),F=[],q=[];let K;const P=e=>{const t=e?.match("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$");return null!==t},H=(e,t)=>{if(!e)return null;if(t)try{const{hash:t}=new URL(e);if(!t)return"";return new URLSearchParams(t.slice(1)).get("str")||""}catch{return""}const[,n]=e.split("#");return n&&n.split("_").pop()||null},j=e=>e.filter(e=>U.includes(e)),z=()=>{const e=E();if(e){const t=e.split(",");return j(t)}if(window.OnetrustActiveGroups){const e=window.OnetrustActiveGroups?.split(",")?.slice(1,-1);return j(e)}return[null]};function G(e=null){const t=E()?.split(",")||window.OnetrustActiveGroups?.split(",")?.slice(1,-1);let n=null;if(Array.isArray(t)&&t.includes("C0004")){const t=(0,k.getCookie)("CN_token_id");let o=null;if(t)try{const e=JSON.parse(window.atob(t.split(".")[1]||"")),n=e?.email;o=n?(0,i.SHA256)(n).toString():null}catch(e){}const a=C.parse(window.location.search.toLowerCase());n=o||a?.hashc||a?.uid||function(e=null){let t=null,n=!1;const o=e||l.ir.readIDMSession();for(const e of o?.result||[])for(const o of e.idSets||[])for(const e of o.ids||[])if(e.type===I.id_mapper.IdType.email_sha256){if(n)return null;t=e.value,n=!0}return t}(e)||null}return n}const V=()=>{let e=[];const t=window?.dataLayer;return t&&t[0]?.experiments&&Array.isArray(t[0]?.experiments)&&(e=t[0]?.experiments),e?.map(e=>e.status===d.mK.EDGE_ASSIGNMENT||e.status===d.mK.CLIENT_ASSIGNMENT?{experiment_id:e.experiment_id||null,feature_id:e.feature_id||null,variation:e.variation||null,variation_name:e.variation_name||null}:{})},Y=({type:e})=>{ve({type:e,subject:"fides"},null,{skipDuplicateEvent:!1})},W=e=>{const t=e[0].content,n=e[0].site,i=e[0].syndication,a=e[0].page,l=new URLSearchParams(window.location.search),d=window.location?.pathname?.split("/"),h=new Date,b=new Date(t.publishDate),w=Math.ceil((h-b)/864e5),f=(e=>{const[,t]=e,n=(new Date).getTimezoneOffset()/60,o=new URLSearchParams(window.location.search).get("mbid"),i=P(t.amguuid)?t.amguuid:null,a=(0,k.getCookie)("CN_xid"),r=P(a)?a:null,s=new Date,l=document.getElementById("onetrust-pc-btn-handler"),d=l&&window.getComputedStyle(l,":after"),c=d?.getPropertyValue("content"),m=C.parse(window.location.search.toLowerCase())?.cndid||null;return{schema:"iglu:com.condenast/user/jsonschema/11-0-4",data:{xid:r,amg_id:i,is_logged_in:null!==i,bucket:parseInt($.getItem("usr_bkt_eva"),10),browser:window.navigator.appName,browser_version:window.navigator.appVersion,time_zone_offset:parseInt(n,10)||0,monthly_visit_no:window.dataLayer[0]?.user?.monthlyVisits||0,monthly_content_count:window.dataLayer[0]?.user?.contentVisits||0,onetrust_active_groups:z(),mdw_id:m,local_visit_hour:s.getHours(),mbid:o,consent_banner_variant:window.Fides?"fides":c?.toString()||null,fingerprint_visitor_id:null,email_sha256:G(),...L()}}})(e),y=((e,t,n={})=>{return{schema:"iglu:com.condenast/page/jsonschema/6-0-2",data:{functional_tags:e.functionalTags,has_buy_button:"true"===e.hasBuyButtons,path_level_1:t[1]||"",path_level_2:t[2]||"",path_level_3:t[3]||"",path_level_4:t[4]||"",tab_active:"visible"===window.document.visibilityState,canonical_url:document.querySelector("link[rel='canonical']")?.getAttribute("href")||null,clean_url:window.location.origin+window.location.pathname,full_url:(o=n.trackingParams,`${window.location.origin+window.location.pathname}${window.location.search||(o?`?${o}`:"")}`)}};var o})(t,d,a),v=((e,t,n,o)=>({schema:"iglu:com.condenast/content/jsonschema/2-0-1",data:{no_of_article_revisions:parseInt(e.noOfRevisions,10)||null,editor_name:e.editorNames,author_name:e.authorNames,content_id:e.contentId,content_len:parseInt(e.contentLength,10)||null,content_title:e.contentTitle,content_source:e.contentSource,author_id:e.authorIds,date_publish:"null"!==e.publishDate?e.publishDate:null,date_last_modified:e.modifiedDate,onsite_keywords:e.tags,content_template:window.location.href.includes("sponsored")?"native":"standard",content_language:e.contentLang,gallery_name:e.galleryName,gallery_img_tot:parseInt(e.totalGalleryImages,10)||null,word_count:parseInt(e.wordCount,10)||null,content_type:e.contentType,content_template_type:e.templateType,date_display:"null"!==t?t:null,content_primary_tag:e.primaryTag||null,content_is_commerce:e.isCommerceContent||null,content_time_since_publish:o,content_flag:e.contentFlag,content_publish_hour:n.getHours(),content_publish_weekday:n.getDay().toString(),content_publish_month:n.getMonth().toString(),content_page_type_properties:e.pageTypeProperties,has_affiliate_links:e.hasAffiliateLinks,affiliate_links_count:e.affiliateLinksCount}}))(t,h,b,w),I={schema:"iglu:com.condenast/site/jsonschema/2-0-1",data:{org_id:n.orgId,org_app_id:n.orgAppId,site_app_version:n.appVersion,site_env:n.env,site_section:t.section,site_subsection:t.subsection,site_subsection_2:t.subsection2,site_data_source:t.dataSource}},A={schema:"iglu:com.condenast/syndication/jsonschema/3-0-1",data:{is_syndication_content:"true"===i.content,syndication_original_source:i.originalSource,syndication_url:a.syndicatorUrl,syndication_original_content_lang:i.originalContentLanguage}},S={schema:"iglu:com.condenast/referrer/jsonschema/2-0-1",data:{refr_domain:document.referrer||""}},E={schema:"iglu:com.condenast/session/jsonschema/2-0-2",data:{dmdid:(0,k.getCookie)("dmd-sid"),fingerprint_incognito_mode:null}},x={schema:"iglu:com.condenast/campaign/jsonschema/4-0-1",data:{mkt_id:l.get("utm_id"),mkt_mailing:l.get("utm_mailing"),mkt_social_type:l.get("utm_social-type"),mkt_test:l.get("utm_test"),mkt_brand:l.get("utm_brand"),emailsource:l.get("esrc"),itm_source:l.get("itm_source"),itm_medium:l.get("itm_medium"),itm_campaign:l.get("itm_campaign"),itm_content:l.get("itm_content")}},T={schema:"iglu:com.condenast/experiments/jsonschema/3-0-0",data:{experiments_list:V()}};let R="fides";if(!window.Fides){const e=document.getElementById("onetrust-pc-btn-handler"),t=e?window.getComputedStyle(e,"::after")?.content:null;R=t&&"none"!==t?t.replace(/^["']|["']$/g,""):null}const N=z(),U={schema:"iglu:com.condenast/consent/jsonschema/1-0-0",data:{categories:N&&N.length>0&&!N.includes(null)?N.join(","):null,banner_variant:R}},M=[y,f,v,I,A,S,E,x,T,U];(0,o.nk)(M);const B=()=>{const e=z();f&&f.data&&(f.data.onetrust_active_groups=e,f.data.email_sha256=G(),(e=>{const t=(0,k.getCookie)("CN_xid");e.data.xid=P(t)?t:null})(f),window.Fides&&(f.data.consent_banner_variant="fides")),U&&U.data&&(U.data.categories=e&&e.length>0&&!e.includes(null)?e.join(","):null,window.Fides&&(U.data.banner_variant="fides")),window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[f,U]),(0,o.nk)([f,U])})};window.addEventListener("OneTrustGroupsUpdated",B),(e=>{K?.off(),K=void 0,window.Kendra?.XID?.on&&(K=window.Kendra.XID.on(p.b.SET,e))})(B);let D=!1;const O=()=>{D||(Y({type:"ready"}),D=!0)};window?.Fides?.initialized?(Y({type:"initialized"}),_((0,s.Nf)(),n?.env,[t?.brandSlug]),B()):window.addEventListener("FidesInitialized",()=>{Y({type:"initialized"}),_((0,s.Nf)(),n?.env,[t?.brandSlug]),B()}),window.addEventListener("FidesUpdated",()=>{Y({type:"updated"}),_((0,s.Nf)(),n?.env,[t?.brandSlug]),B()}),window.addEventListener("FidesUIShown",()=>{Y({type:"uishown"})}),(window?.dataLayer??[]).some(e=>"FidesReady"===e?.event)&&O(),window.addEventListener("FidesReady",O),window.addEventListener("FidesModalClosed",()=>{Y({type:"modalclosed"})}),window.Kendra.IDENTITY_MAPPER.on(g.h.IDM_RESULTS_EVENT,e=>{f?.data&&!f.data.email_sha256&&(f.data.email_sha256=G(e),window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[f]),(0,o.nk)([f])}))},{emitLast:!0}),window.Kendra.GROWTHBOOK.on(m.U.EXPERIMENTS_ASSIGNMENTS_PROCESSED,()=>{window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[T]),T.data={experiments_list:V()},(0,o.nk)([T])})}),window.Kendra.USER_CONTEXT.on(c.Y.UPDATED,()=>{f&&f.data&&(f.data.monthly_visit_no=window.dataLayer[0]?.user?.monthlyVisits||0,f.data.monthly_content_count=window.dataLayer[0]?.user?.contentVisits||0,window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[f]),(0,o.nk)([f])}))}),window.Kendra.USER_CONTEXT.on(c.Y.ONE_TRUST_LOADED,()=>{if(f&&f.data){const e=document.getElementById("onetrust-pc-btn-handler"),t=e&&window.getComputedStyle(e,":after"),n=t?.getPropertyValue("content")?.replace(/"/g,"");n&&(f.data.consent_banner_variant=n,window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[f]),(0,o.nk)([f])}))}}),window.cnBus.on(r.ok,({incognito:e,visitorId:t})=>{window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[E,f]),E.data.fingerprint_incognito_mode=e,f.data.fingerprint_visitor_id=t,(0,o.nk)([E,f])})});const F=e=>{"true"!==e&&"false"!==e||window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[f]),f.data.is_subscriber="true"===e,(0,o.nk)([f])})};(()=>{if(!window.cnBus.history)return;const e=window.cnBus.history("journey.entitlement.status.*");if(!Array.isArray(e)||!e.length)return;const t=e.at(-1),n=Array.isArray(t)?t?.[0]:void 0;F(n?.split(".").pop())})(),window.cnBus.on("journey.entitlement.status.*",(e,{topic:t})=>F(t?.split(".").pop())),window.Kendra.USER_CONTEXT.on(c.Y.EMAIL_SHA_UPDATED,({emailSHA:e})=>{f&&f.data&&(f.data.email_sha256=e,window.snowplowInitQueue.push(()=>{window.snowplowCN("removeGlobalContexts",[f]),(0,o.nk)([f])}))}),window.Kendra.BOT_SIGNALS.on(u.m.BOT_SIGNALS_RECEIVED,e=>{window.snowplowInitQueue.push(()=>{le(e)})}),window.Kendra.BOT_SIGNALS.on(u.m.BOT_SIGNALS_ERROR,e=>{window.snowplowInitQueue.push(()=>{le(e,e.errorInfo)})})},Q=(e,t)=>{let n,o;const[i]=window.document.getElementsByTagName("header"),[a]=window.document.getElementsByTagName("footer");let r=e?.className?e?.className.toString():null;n=i&&i.contains(e)?"top":a&&a.contains(e)?"bottom":"middle","img"===e?.tagName.toLowerCase()&&(o=e?.alt),"svg"===e?.tagName.toLowerCase()&&(r=e?.className?.animVal.toString());const s=window.location.origin;let l="";e?.href&&(l=new URL(e?.href));const d=l.origin===s,c=e&&e.getAttribute("data-offer-url");if(e){const i=O(function(e){if(!e)return"";try{return new URL(e).origin}catch{return""}}(e.href),M);return X(t,e,n,o,c,l,d,i,r)}return null},X=(e,t,n,o,i,a,r,s,l)=>({schema:"iglu:com.condenast/click_info/jsonschema/2-0-4",data:{action_id:e?.toString(),click_url:t.href?.toString(),click_id:t.id?.toString()||null,click_class:l,click_text:t.textContent?.toString().replace(/Arrow/g,""),click_type:t.tagName?.toString(),click_target:t.target?.toString(),img_alt:o?.toString(),data_offer_url:i&&i.toString(),img_source:t.src?.toString(),placement:n,is_external:!!a&&!r,object_type:l?.split(" ").slice(-1)[0]||null,is_affiliate:s,offer_id:t.id?.toString()||null,alias_url:t?.alias_url?.toString()}}),J=e=>{const t=(0,o.DE)(e),n=t?._spData??t?._spCookieValue??null,i=n?.split(".");return i?.[5]||null},Z=(e,t)=>{const n=J("local")||J("cookie"),o=`${e}.${t}`;return n?`${o}.${n}`:o},ee=(e=null)=>{if(window.Fides)return(0,s.Nf)();const t=C.parse(e||(0,k.getCookie)("OptanonConsent")||"").groups||"";return/0004:1/.test(t)},te=()=>{const e=U.reduce((e,t)=>(e[t]=!1,e),{});try{const t=z();return!t||t.includes(null)?e:U.reduce((e,n)=>(e[n]=t.includes(n),e),{})}catch(t){return e}},ne=(e,t,n,i,r=[])=>{const s=te(),l=n?.[0]?.site?.env;if(!s.C0004&&!s.C0009&&("staging"===l||B.includes(t)))return;window.__snowplowAlreadyInitialized=!0;const d={appId:t,contexts:{clientHints:!0,performanceNavigationTiming:!0,webVitals:!0},anonymousTracking:{withSessionTracking:!0,withServerAnonymisation:!0},stateStorageStrategy:"localStorage",discoverRootDomain:!0,cookieSameSite:"https:"===window.location.protocol?"None":"Lax",cookieSecure:"https:"===window.location.protocol,eventMethod:"post",postPath:"/com.condenast/yv8"},c=ee()?{anonymousTracking:!1,stateStorageStrategy:"cookieAndLocalStorage"}:{};(0,o.Po)(e,{...d,...c},i),window.__pendingDisplayAdEvent&&((0,o.YH)(window.__pendingDisplayAdEvent),delete window.__pendingDisplayAdEvent),window.snowplowInitQueue.push(()=>{const e={pageTitle:()=>({beforeTrack:e=>{e.add("page",window?.document?.title),e.build()}})};("staging"===l||B.includes(t))&&window.snowplowCN("addPlugin",o.Jj,"consentChecker",[{consentCallback:()=>te()}]),window.snowplowCN("addPlugin",e,"pageTitle")}),window.snowplowInitQueue.length>0&&document.body.addEventListener("click",e=>{const t=e.target.closest('a[href*="/auth/initiate"]'),n=(()=>{const e=(0,k.getCookieFromPrefix)("_sp_id."),t=e?.split(".");return t&&t[0]||null})(),o=Date.now(),i=E()?.split(",")||window.OnetrustActiveGroups?.split(",")?.slice(1,-1),s=x(e?.target),l=s&&r.length&&r.some(e=>s?.hostname.endsWith(e));t&&t.href?.includes("/auth/initiate")&&oe(t.href,n,i)?t.href=(0,a.OE)(t.href,{_sp:Z(n,o)}):s&&l&&oe(s.href,n,i)&&(s.href=(0,a.OE)(s.href,{_sp:`${n}.${o}`}))}),W(n),(0,o.s8)({minimumVisitLength:5,heartbeatDelay:10}),(0,o.bi)(),(0,o.oe)()},oe=(e,t,n)=>!e?.includes("_sp")&&t&&n.includes("C0004"),ie=(e,t)=>{(0,o.YH)({event:{schema:"iglu:com.condenast/page_error_event/jsonschema/4-0-0",data:{type:e.toString(),error:t}}})},ae=(e,t,n,i)=>{(0,o.YH)({event:{schema:"iglu:com.condenast/non_url_click_event/jsonschema/3-0-0",data:{label:e,next_url:t,type:n,subject:i}}})},re=e=>{(0,o.YH)({event:{schema:"iglu:com.condenast/cookies_action_event/jsonschema/3-0-0",data:{type:"click",label:e}},context:[{schema:"iglu:com.condenast/click_info/jsonschema/2-0-0",data:{click_text:e}}]})},se=e=>{(0,o.YH)({event:{schema:"iglu:com.condenast/newsletter_event/jsonschema/5-0-0",data:e}})},le=(e,t=null)=>{let n;n=t?[{schema:"iglu:com.condenast/error_info/jsonschema/1-0-1",data:t}]:(e=>{const t=[],n="iglu:com.condenast/bot_detection/jsonschema/1-0-0",o="cloudflare";return Array.isArray(e.botDetectionIds)&&e.botDetectionIds.length>0&&t.push({schema:n,data:{name:"bot_detection_ids",value:e.botDetectionIds.join(","),source_name:o}}),void 0!==e.botScore&&e.botScore!==h.JM&&t.push({schema:n,data:{name:"bot_score",value:String(e.botScore),source_name:o}}),e.botVerifiedCategory&&"empty"!==e.botVerifiedCategory&&t.push({schema:n,data:{name:"bot_verified_category",value:e.botVerifiedCategory,source_name:o}}),void 0!==e.botVerified&&t.push({schema:n,data:{name:"bot_verified",value:e.botVerified?"yes":"no",source_name:o}}),t})(e),(0,o.YH)({event:{schema:"iglu:com.condenast/system_event/jsonschema/1-0-0",data:{type:t?"error":"complete",subject:"bot_detection"}},context:n})},de=(e,t)=>{const n={schema:"iglu:com.condenast/messaging_unit_event/jsonschema/3-0-3",data:e},i=[];t&&i.push({schema:"iglu:com.condenast/product/jsonschema/2-0-4",data:t}),(0,o.YH)({event:n,context:i})},ce=({subject:e,subjectId:t,subjectName:n,noOfItems:o,sourceName:i,sourceId:a,isFromBookmark:r,isDefault:s,isAutoSelected:l}={})=>{var d;return{save_location:[(d={subject:e,subject_id:t,subject_name:n,no_of_items:o,source_name:i,source_id:a,is_from_bookmark:r,is_default:s,is_auto_selected:l},Object.fromEntries(Object.entries(d).filter(([,e])=>void 0!==e)))]}},me="All Saved Products",ue=(e,t=me)=>(e??"").trim()||t,ge=(e,t,n={})=>{const{context:o="save"}=n,i="bookmarked-click"===o,a=null!=e||!!t&&""!==t.trim(),r=(({normalizedCollectionName:e,options:t,isBookmarkedClickContext:n,isFromBoardPage:o})=>n?o?{subjectName:e}:{}:"subjectName"in t?void 0!==t.subjectName?{subjectName:t.subjectName}:{}:{subjectName:e})({normalizedCollectionName:ue(t),options:n,isBookmarkedClickContext:i,isFromBoardPage:a}),s=(({options:e,isBookmarkedClickContext:t})=>t?{}:"isFromBookmark"in e?void 0!==e.isFromBookmark?{isFromBookmark:e.isFromBookmark}:{}:{isFromBookmark:!0})({options:n,isBookmarkedClickContext:i});return{schema:"iglu:com.condenast/save/jsonschema/2-0-1",data:ce({subject:null!=e?"account_saved_boards":"account_saved_products",...null!=e&&{subjectId:String(e)},...r,...s,isDefault:r.subjectName===me,isAutoSelected:!1})}},pe=({saveContext:e,eventData:t,errorContext:n={}})=>{const i=(Array.isArray(e)?e:[e]).filter(e=>e&&Object.keys(e).length>0).map(e=>ce(e).save_location[0]);((e,t=null,n={})=>{const i={schema:"iglu:com.condenast/save_event/jsonschema/2-0-1",data:e},a=t?[{schema:"iglu:com.condenast/save/jsonschema/2-0-1",data:t}]:[],r=n&&Object.keys(n).length>0?[{schema:"iglu:com.condenast/error_info/jsonschema/1-0-1",data:n}]:[];(0,o.YH)({event:i,context:[...a,...r]})})(t,i.length>0?{save_location:i}:null,n)},he=(e,t=null,n=null,i=null,a=[],r=null)=>{const s=x(n?.target)||n?.target?.closest?.("SVG"),l=(Array.isArray(t)?t:[t]).map(e=>({schema:"iglu:com.condenast/product/jsonschema/2-0-4",data:e})),d={schema:"iglu:com.condenast/video/jsonschema/4-0-3",data:{video_id:""}},c=a?.length?a.reduce((e,t,n)=>(e[n+1]={...d,data:{...d.data,video_id:t}},e),{}):{},m={schema:"iglu:com.condenast/commerce_interaction_event/jsonschema/1-0-1",data:e},u=[...l,..."click"===e?.type&&r?[r]:[],...s?[Q(s,i)]:[],...Object.values(c)];(0,o.YH)({event:m,context:u})},be=e=>(new DOMParser).parseFromString(e,"text/html").body.textContent,we=(e,t,n)=>e?.position||parseInt(n?.indexOf(t),10)+1,fe=(e,t)=>{const n=D(),o=Array.isArray(e)?e:[{...t,target:e?.target}],i=o.map(e=>((e,t,n)=>{const o=t?.getAttribute("href")||e?.link;if(!O(o,M))return null;const i=be(e?.label||t?.innerHTML),a=we(e,i,n);return{product_name:i,product_component:e?.component,product_type:"product",product_system:"ecommerce",index:"number"==typeof a?parseInt(a,10):null,placement:"string"==typeof a?a:null,product_ref:"direct_link",page_layout:window?.dataLayer?.[0]?.content?.contentType??null}})(e,x(e?.target),n)).filter(e=>null!==e);if(0===i.length)return;const a=o[0]?.component,r=o.find(e=>e?.actionId)?.actionId;he({type:"impression",subject:a},i,null,r)},ye=(e,t={})=>{const n=D(),o=x(e?.target),i=o?.getAttribute("href")||t?.link;if(O(i,M)){const i={type:"click",subject:t?.component},s=be(t?.label||o?.innerHTML),l=((e,t,n,o)=>({product_name:e,product_component:o,product_type:"product",product_system:"ecommerce",index:"number"==typeof t?parseInt(t,10):null,placement:"string"==typeof t?t:null,product_ref:"direct_link",page_layout:window?.dataLayer?.[0]?.content?.contentType??null,features_list:n}))(s,we(t,s,n),(a=t?.offerIndex,r=t?.offersLength,null!=a&&r?[{name:"image",index:null,total_index:null},{name:"rating",index:null,total_index:null},{name:"pros&cons",index:null,total_index:null},{name:"badges",index:null,total_index:null},{name:"clip",index:null,total_index:null},{name:"video",index:null,total_index:null},{name:"MBB",index:parseInt(a,10),total_index:parseInt(r,10)}]:null),t?.component);he(i,l,e,t?.actionId)}var a,r},ve=(e,t=null,n={})=>{const{skipDuplicateEvent:i=!0,targetElement:a=null,actionId:r=null,errorInfo:s=null}=n,l=f()({eventData:e});let d={event:{schema:"iglu:com.condenast/navigation_event/jsonschema/3-0-0",data:e}};if(t&&(d={...d,context:[{schema:"iglu:com.condenast/ad/jsonschema/4-0-2",data:{request_type:"interactive",unit:t}}]}),s){const e={schema:"iglu:com.condenast/error_info/jsonschema/1-0-1",data:{type:"error",...s}};d={...d,context:d.context?[...d.context,e]:[e]}}if(a){const e=x(a)||a;if(e&&e.href){const t=Q(e,r);d=d.context?{...d,context:[...d.context,t]}:{...d,context:[t]}}}const c=F.some(e=>v()(e,l));i&&c||(F.push(f()({eventData:e})),(0,o.YH)(d))},Ce=({type:e,subject:t,label:n,placement:o,index:i,content_title:a,content_type:r,content_id:s,content_url:l,total_index:d})=>{const c={type:e,subject:t,label:n,placement:o,index:i,total_index:d,...(a||r||s||l)&&{items:[{content_title:a,content_type:r,content_id:s,content_url:l}]}};ve(c,null,{skipDuplicateEvent:!1})},Ie=()=>{window?.Fides?(()=>{if(window.Fides&&window.Fides.initialized&&window.Fides.shouldShowExperience()){const e=(0,s.be)();(0,o.zm)("trackConsentPending",e)}})():(()=>{if(!(0,k.getCookie)("OptanonAlertBoxClosed")){const e=S()?.split(",")||window?.OnetrustActiveGroups?.split(",")?.slice(1,-1);if(window.OneTrust&&window.OneTrust.GetDomainData){const{IsBannerLoaded:t,ShowAlertNotice:n}=window.OneTrust.GetDomainData();t&&n&&(0,o.zm)("trackConsentPending",e)}}})()},ke=e=>e?{schema:"iglu:com.condenast/video_player/jsonschema/5-0-0",data:{distribution:"oo",platform:"verso",loop:!0,tab_active:!0,volume:0,fullscreen:!1,progress_percent:parseInt(e.progressPercent,10),inview_percent:parseInt(e.inviewPercent,10),current_time:e.currentTime,width:e.width,height:e.height,playing_state:e.type}}:null,Ae=e=>{var t;(0,o.YH)({event:{schema:"iglu:com.condenast/video_player_event/jsonschema/2-0-1",data:{type:e?.type,subject:"clip_player"}},context:[(t=e?.clipId,{schema:"iglu:com.condenast/video/jsonschema/4-0-3",data:{video_id:t}}),ke(e)]})},Se=e=>{(0,o.YH)({event:{schema:"iglu:com.condenast/video_player_event/jsonschema/2-0-1",data:{type:e?.type,subject:"bytes_player"}}})},_e=e=>{(0,o.YH)({event:{schema:"iglu:com.condenast/click_event/jsonschema/1-0-0",data:{type:"click"}},context:[Q(e)]})},Ee=(e,t=[])=>{(0,o.YH)({event:{schema:"iglu:com.condenast/search_filter_event/jsonschema/4-0-0",data:e},...t.length>0&&{context:t}})},Le=(e,t={})=>{const{skipDuplicateEvent:n=!0,errorInfo:i=null,context:a=[]}=t,r=[...a];i&&r.push({schema:"iglu:com.condenast/error_info/jsonschema/1-0-1",data:{type:"error",...i}});const s=f()({eventData:e}),l=q.some(e=>v()(e,s));n&&l||(q.push(f()({eventData:e})),(0,o.YH)({event:{schema:"iglu:com.condenast/content_engagement_event/jsonschema/2-0-3",data:e},...r.length?{context:r}:{}}))},xe=e=>{(0,o.YH)({event:{schema:"iglu:com.condenast/user_account_event/jsonschema/5-0-1",data:e}})},Te=e=>{const t=e.detail;if(t&&["component-hover","component-click"].includes(t.eventType)){const{componentName:e,eventType:n}=t,o=n.replace(/^component-/,""),i=e.split("-");ve({type:i?.[2]&&`${o}_${i?.[2]}`||o,subject:i?.[3]&&`ceros_${i?.[3]}`||null,subject_version:i?.[1]||null},i?.[0]||null)}},Re=e=>e?.toLowerCase().includes("review")?"community_review":"community_comment"},56892(e,t,n){n.r(t),n.d(t,{createCookie:()=>r.n,default:()=>l,deleteCookie:()=>o.Y,getCookie:()=>i.R,getCookieDomain:()=>a.R,getCookieDomainFromHostname:()=>a.A,getCookieFromPrefix:()=>s.Z});var o=n(36099),i=n(76510),a=n(88546),r=n(87664),s=n(94386);const l={getCookieDomain:a.R,getCookieDomainFromHostname:a.A,deleteCookie:o.Y,getCookie:i.R,createCookie:r.n,getCookieFromPrefix:s.Z}},3138(e,t,n){n.d(t,{W:()=>a});var o=n(5736),i=n(50643);async function a(e,t,n){const a={copilotId:t,organizationId:n};try{return await(0,o.j)({federatedGraphqlUrl:e,query:i.x9,variables:a,queryLabelForError:"addRecentlyViewed"})||{}}catch(e){return{}}}},50643(e,t,n){n.d(t,{AQ:()=>c,GK:()=>s,IY:()=>w,Jx:()=>h,TL:()=>d,Yg:()=>m,bw:()=>g,d2:()=>p,fG:()=>i,h9:()=>l,oU:()=>b,x9:()=>u});var o=n(16791);n(70745);const i="\nmutation CreateBookmark($bookmarkName: String!, $organizationId: ID!, $copilotId: String!, $documentType: String!, $meta: String) {\n  createBookmark(bookmarkName: $bookmarkName, organizationId: $organizationId, copilotId: $copilotId, documentType: $documentType, meta: $meta) {\n      id\n      copilotId\n      siteCode\n      bookmarkName\n      documentType\n    }\n  }",a=`\n      fragment bookmarkField on Bookmark {\n        id\n        copilotId\n        bookmarkName\n        content {\n          ...${o.vG}\n        }\n        documentUrl\n        documentType\n        meta\n        siteCode\n        organizationId\n}`,r=`\n  ${a}\n  query AllBookmarks($limit: Int!, $offset: Int!, $organizationId: ID!, $copilotIds: [String], $filter: Filter, $sortOrder: SortOrder, $sortBy: BookmarkSortKeys) {\n    allBookmarks(limit: $limit, offset: $offset, organizationId: $organizationId, copilotIds: $copilotIds, filter: $filter, sortOrder: $sortOrder, sortBy: $sortBy) {\n      bookmarks {\n        ...bookmarkField\n      }\n      allBookmarkCount\n    }\n  }\n`,s=()=>`\n  ${(0,o.AH)()}\n  ${r}\n`,l="\n    mutation DeleteBookmark($bulkIds: [Int], $copilotId: String) {\n    deleteBookmark(bulkIds: $bulkIds, copilotId: $copilotId) {\n      message\n    }\n  }",d="\n    query AllBookmarks($limit: Int!, $offset: Int!, $organizationId: ID!, $copilotIds: [String]) {\n    allBookmarks(limit: $limit, offset: $offset, organizationId: $organizationId, copilotIds: $copilotIds) {\n      bookmarks {\n        id\n        copilotId\n        bookmarkName\n      }\n      allBookmarkCount\n    }\n  }",c="\n    query BookmarkedProducts($limit: Int!, $offset: Int!, $organizationId: ID!, $documentType: String!) {\n    allBookmarks(limit: $limit, offset: $offset, organizationId: $organizationId, documentType: $documentType) {\n      bookmarks {\n        id\n        copilotId\n        bookmarkName\n        documentType\n      }\n      allBookmarkCount\n    }\n  }",m="\n  query GetPhoto($organizationId: ID!, $copilotID: String!) {\n    getPhoto(organizationId: $organizationId, id: $copilotID) {\n      isBookmarked\n    }\n  }\n",u="mutation AddRecentlyViewed($copilotId: String!, $organizationId: ID!) {\n    addRecentlyViewed(copilotId: $copilotId, organizationId: $organizationId) {\n      message\n    }\n  }",g=`\n    ${(0,o._M)(["Photo","Product","Article","Gallery","MusicReview",...o.d7])}\n    ${a}\n    query allCollections(\n      $limit: Int!\n      $offset: Int!\n      $organizationId: ID!\n      $sortBy: CollectionSortKeys\n      $sortOrder: SortOrder\n      $bookmarksLimit: Int!\n      $bookmarksOffset: Int!\n      $bookmarksSortBy: BookmarkCollectionSortKeys\n      $bookmarksSortOrder: SortOrder,\n      $includeBookmarks: Boolean!\n    ) {\n      allCollections(\n        limit: $limit\n        offset: $offset\n        organizationId: $organizationId\n        sortBy: $sortBy\n        sortOrder: $sortOrder\n      ) {\n        allCollectionCount\n        collections {\n          id\n          collectionName\n          totalBookmarkCount\n          lastBookmark {\n            ...bookmarkField\n          }\n          bookmarks(\n            limit: $bookmarksLimit,\n            offset: $bookmarksOffset,\n            sortBy: $bookmarksSortBy,\n            sortOrder: $bookmarksSortOrder\n          ) @include(if: $includeBookmarks) {\n            bookmark {\n              ...bookmarkField\n            }\n          }\n        }\n      }\n    }\n`,p="\n  query allCollections($limit: Int!, $offset: Int!, $organizationId: ID!) {\n    allCollections(\n      limit: $limit\n      offset: $offset\n      organizationId: $organizationId\n    ) {\n      allCollectionCount\n    }\n  }\n",h="mutation UpdateCollection(\n  $updateCollectionId: Int!, \n  $collectionName: String, \n  $organizationId: ID, \n  $addCopilotDetails: [CopilotDetail], \n  $removeCopilotIds: [String], \n  $addBookmarkIds: [Int], \n  $removeBookmarkIds: [Int], \n  $meta: String \n  ) {\n    updateCollection(\n      id: $updateCollectionId, \n      collectionName: $collectionName, \n      organizationId: $organizationId, \n      addCopilotDetails: $addCopilotDetails, \n      removeCopilotIds: $removeCopilotIds, \n      addBookmarkIds: $addBookmarkIds, \n      removeBookmarkIds: $removeBookmarkIds, \n      meta: $meta\n      ) {\n        id\n        collectionName\n        totalBookmarkCount\n        }\n    }\n",b=" \n  mutation CreateCollection($collectionName: String!, $organizationId: ID!, $copilotDetails: [CopilotDetail]) {\n    createCollection(collectionName: $collectionName, organizationId: $organizationId,copilotDetails: $copilotDetails) {\n    id\n    collectionName\n    lastBookmark {\n      copilotId\n    }\n  }\n}",w="\nmutation MoveBookmarks($fromCollectionId: Int!, $toCollectionId: Int!, $copilotIds: [String], $bookmarkIds: [Int], $moveAll: Boolean) {\n  moveBookmarks(fromCollectionId: $fromCollectionId, toCollectionId: $toCollectionId, copilotIds: $copilotIds, bookmarkIds: $bookmarkIds, moveAll: $moveAll) {\n    message\n  }\n}"},55659(e,t,n){n.d(t,{$B:()=>s,I0:()=>i,Je:()=>f,Lp:()=>g,Uz:()=>d,Vr:()=>l,dV:()=>m,pD:()=>p,rO:()=>u,s6:()=>h,sZ:()=>c,vY:()=>a,wX:()=>b});var o=n(26865);n(96472);const i=e=>Math.ceil(e.scrollLeft+e.offsetWidth+1)>=e.scrollWidth,a=e=>0===e.scrollLeft,r=e=>!!window.matchMedia&&window.matchMedia(e).matches,s=()=>r("(max-width: 767px)"),l=()=>r("(min-width: 768px) and (max-width: 1024px)"),d=({isMobile:e,position:t,showControls:n})=>{let o;return o=e?"bottom":"header"===t?"top":"bottom",{showNavControlsAtTop:n&&"top"===o,showNavControlsAtBottom:n&&"bottom"===o}},c=e=>e%1<.5?Math.trunc(e):Math.ceil(e),m=({isSelected:e,theme:t,fullPageTheme:n})=>{const i="inverted"===t.palette||"inverted"===n;return e?i?(0,o._o)(t,"fill","colors.interactive.base.white"):(0,o._o)(t,"fill","colors.interactive.base.black"):i?(0,o._o)(t,"fill","colors.interactive.base.dark"):(0,o._o)(t,"fill","colors.interactive.base.light")},u="mobile",g="tablet",p="desktop",h=(e,t,n,o,i,a,r,s=null)=>{const l=e?.current;if(!l)return;const d=e.current?.children[0]?.offsetWidth||0,c=l.scrollLeft;if(null!==s){const e=(r?d:d*o)*(s-1);return void l.scrollTo({left:e,behavior:"smooth"})}const m=n%o;let u="one-by-one"===t||r?d:d*o;"back"===a&&i&&"one-by-one"!==t&&m>0&&(u=d*m);const g="back"===a?c-u:c+u;l.scrollTo({left:g,behavior:"smooth"})},b=(e,t,n)=>e?"min"!==n?1:2:t?"min"!==n?2:3:"min"!==n?3:4,w={TextCenter:"center",TextCenterPaddingTop:"center",TextLeft:"left",LogoLeftTextLeft:"left",LineAboveLineBelowTextCenter:"center",LineBelowTextCenter:"center",LineAboveLineBelowTextLeft:"left",FullBleedLineAboveOrnamentAboveTextLeft:"left",OrnamentAboveTextLeft:"left",TextLeftWithLineAboveTitle:"left",TextLeftWithLineBelowTitle:"left",TextLeftLineAboveWithHedBackground:"left",FullBleedLineAboveLineBelowTextCenter:"center",LineAboveTextLeft:"left",LineAboveTextCenter:"center",SoftDivider:"center",LineBelowHedTextCenter:"center"},f=(e,t)=>e&&w[e]?w[e]:t},24494(e,t,n){n.d(t,{A:()=>o});const o=["at","be","bg","hr","cy","cz","dk","ee","fi","fr","de","gr","hu","ie","it","lv","lt","lu","mt","nl","pl","pt","ro","sk","si","es","se","is","li","no","gb","uk","ch"]}}]);

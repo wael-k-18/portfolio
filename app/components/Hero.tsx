@@ -1,256 +1,269 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowDown, GitFork, UserCircle, Star, Mail, Terminal, Cpu } from "lucide-react";
-import { personal } from "@/app/data/portfolio";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+const quotes = [
+  "Computer Vision is teaching machines to see.",
+  "Multi-Agent AI orchestrates intelligence.",
+  "Real-time systems demand precision.",
+  "E-Waste AI: 7 categories, 87% accuracy.",
+  "Ambulance AI saves critical minutes.",
+  "Accessibility AI bridges human gaps.",
+];
 
 export default function Hero() {
+  const [mounted, setMounted] = useState(false);
+  const [quoteIndex, setQuoteIndex] = useState(0);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<Particle[]>([]);
+  const animationRef = useRef<number | null>(null);
+  const { scrollY } = useScroll();
+  const videoScale = useTransform(scrollY, [0, 500], [1, 1.3]);
+  const videoOpacity = useTransform(scrollY, [0, 300], [1, 0.3]);
+  const titleTranslate = useTransform(scrollY, [0, 500], [0, -100]);
+  const titleOpacity = useTransform(scrollY, [0, 300], [1, 0]);
+
+  // Convert MotionValues to proper CSS style values
+  const videoScaleStyle = useTransform(videoScale, (v) => `scale(${v})`);
+  const videoOpacityStyle = useTransform(videoOpacity, (v) => v);
+
+  useEffect(() => {
+    setMounted(true);
+    const interval = setInterval(() => {
+      setQuoteIndex((prev) => (prev + 1) % quotes.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted || !canvasRef.current) return;
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+    window.addEventListener("resize", resize);
+
+    particlesRef.current = Array.from({ length: 120 }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      radius: Math.random() * 1.5 + 0.5,
+      opacity: Math.random() * 0.5 + 0.1,
+    }));
+
+    const animate = () => {
+      if (!ctx) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw grid lines
+      ctx.strokeStyle = "rgba(255, 255, 255, 0.02)";
+      ctx.lineWidth = 1;
+      const gridSize = 80;
+      for (let x = 0; x <= canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+      for (let y = 0; y <= canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+
+      // Draw particles
+      particlesRef.current.forEach((p) => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
+        ctx.fill();
+
+        // Draw connections
+        particlesRef.current.forEach((p2) => {
+          const dx = p.x - p2.x;
+          const dy = p.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `rgba(255, 255, 255, ${0.02 * (1 - dist / 120)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        });
+      });
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+    return () => {
+      window.removeEventListener("resize", resize);
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
+  }, [mounted]);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden scanline-overlay">
-      {/* Tokyo Midnight Cyberpunk Atmospheric Background */}
-      <div className="absolute inset-0 bg-background -z-20" />
+    <section className="relative h-screen w-full overflow-hidden" id="hero">
+      {/* Background Video Layer */}
+      <motion.div className="absolute inset-0 z-0" style={{ transform: videoScaleStyle, opacity: videoOpacityStyle }}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          poster="/hero-poster.jpg"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90" />
+        <div className="absolute inset-0 vignette-overlay" />
+      </motion.div>
 
-      {/* Grid Pattern with Glow Effects */}
-      <div
-        className="absolute inset-0 -z-10 opacity-20"
-        style={{
-          backgroundImage: `
-            linear-gradient(to right, rgba(0, 243, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(0, 243, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px',
-        }}
+      {/* Canvas Particle Layer */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 z-10 pointer-events-none"
+        style={{ opacity: 0.6 }}
       />
 
-      {/* Atmospheric Neon Orbs */}
+      {/* Scroll Indicator */}
       <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-1/4 left-10 w-96 h-96 bg-accent-cyan/15 rounded-full blur-[120px] pointer-events-none -z-10"
-      />
-      <motion.div
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent-magenta/15 rounded-full blur-[120px] pointer-events-none -z-10"
-      />
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-3 text-white/60"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 1 }}
+        style={{ opacity: titleOpacity }}
+      >
+        <span className="font-editorial-mono text-xs tracking-widest uppercase">Scroll</span>
+        <motion.div
+          className="w-px h-8 bg-white/30 relative overflow-hidden"
+          animate={{ scaleY: [0, 1, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <motion.div className="absolute w-full h-full bg-white" animate={{ y: ["-100%", "100%"] }} transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} />
+        </motion.div>
+      </motion.div>
 
-      {/* Japanese Ambient Text */}
-      <div className="absolute top-28 right-8 text-8xl font-black text-white/[0.02] select-none font-mono pointer-events-none uppercase">
-        東京
-      </div>
-      <div className="absolute bottom-20 left-8 text-7xl font-black text-white/[0.02] select-none font-mono pointer-events-none uppercase">
-        人工知能
-      </div>
+      {/* Hero Content */}
+      <div className="relative z-20 flex h-full flex-col items-center justify-center px-6 text-center">
+        {/* Ambient Quote */}
+        <motion.div
+          className="mb-8 text-white/40 font-editorial-serif text-lg max-w-2xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.8 }}
+        >
+          <span className="font-editorial-mono text-xs tracking-widest uppercase text-white/30 mr-2">“</span>
+          <span id="ambient-quote" style={{ opacity: 1 }}>
+            {quotes[quoteIndex]}
+          </span>
+        </motion.div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Main Title */}
+        <motion.h1
+          className="font-editorial-heading text-white"
+          style={{
+            fontSize: "clamp(48px, 8vw, 128px)",
+            lineHeight: 0.88,
+            letterSpacing: "-0.02em",
+          }}
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="block">Wael Karbelkar</span>
+          <span className="block shimmer-cta" style={{ fontSize: "0.7em", fontWeight: 400 }}>
+            AI/ML Developer
+          </span>
+        </motion.h1>
 
-          {/* Main Content Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-7 space-y-6 text-left"
+        {/* Subheadline */}
+        <motion.p
+          className="mt-6 max-w-2xl text-white/70 font-editorial-serif text-lg leading-relaxed"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.3, duration: 0.8 }}
+          style={{ opacity: titleOpacity }}
+        >
+          I build intelligent, real-world AI systems and creative digital experiences.
+          Specializing in Computer Vision, Multi-Agent AI, and Full-Stack Development.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          className="mt-10 flex flex-col sm:flex-row items-center gap-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.6, duration: 0.8 }}
+          style={{ opacity: titleOpacity }}
+        >
+          <a
+            href="#projects"
+            className="gq-button group relative overflow-hidden"
+            style={{ zIndex: 1 }}
           >
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass border border-accent-cyan/30 text-xs font-mono text-accent-cyan">
-              <span className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse" />
-              <span>Available for AI/ML & Engineering Roles</span>
-              <span className="text-muted ml-1">· 東京 MIDNIGHT</span>
-            </div>
-
-            {/* Name Header */}
-            <div className="space-y-2">
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-foreground uppercase">
-                {personal.name.split(" ")[0]}{" "}
-                <span className="gradient-text-cyan">{personal.name.split(" ")[1]}</span>
-              </h1>
-              <p className="text-lg sm:text-xl font-mono text-accent-cyan font-medium">
-                {personal.headline}
-              </p>
-            </div>
-
-            {/* Subheadline */}
-            <p className="text-muted text-base sm:text-lg max-w-2xl leading-relaxed">
-              {personal.subheadline}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-4">
-              <a
-                href="#projects"
-                className="px-6 py-3 rounded-md font-mono text-sm font-semibold tracking-wider uppercase text-background bg-accent-cyan hover:bg-accent-cyan/90 transition-all shadow-lg shadow-accent-cyan/20 hover:shadow-accent-cyan/40 hover:-translate-y-0.5"
-              >
-                View Projects
-              </a>
-              <a
-                href="#contact"
-                className="px-6 py-3 rounded-md font-mono text-sm font-semibold tracking-wider uppercase text-foreground glass hover:bg-white/10 hover:border-accent-cyan/50 transition-all hover:-translate-y-0.5"
-              >
-                Contact Me
-              </a>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4 pt-6 border-t border-glass-border">
-              <span className="text-xs font-mono text-muted uppercase tracking-widest">Connect:</span>
-              <div className="flex gap-3">
-                <a
-                  href={personal.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg glass text-muted hover:text-accent-cyan hover:border-accent-cyan/40 transition-all hover:-translate-y-1"
-                  aria-label="GitHub"
-                >
-                  <GitFork className="w-4 h-4" />
-                </a>
-                <a
-                  href={personal.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg glass text-muted hover:text-accent-cyan hover:border-accent-cyan/40 transition-all hover:-translate-y-1"
-                  aria-label="LinkedIn"
-                >
-                  <UserCircle className="w-4 h-4" />
-                </a>
-                <a
-                  href={personal.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 rounded-lg glass text-muted hover:text-accent-magenta hover:border-accent-magenta/40 transition-all hover:-translate-y-1"
-                  aria-label="Instagram"
-                >
-                  <Star className="w-4 h-4" />
-                </a>
-                <a
-                  href={`mailto:${personal.email}`}
-                  className="p-2.5 rounded-lg glass text-muted hover:text-accent-violet hover:border-accent-violet/40 transition-all hover:-translate-y-1"
-                  aria-label="Email"
-                >
-                  <Mail className="w-4 h-4" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Interactive AI / Computer Vision Visual Box */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5"
+            <span className="relative z-10">View Work</span>
+            <span className="absolute inset-0 bg-white translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 ease-[0.16,1,0.3,1]" style={{ zIndex: -1 }} />
+          </a>
+          <a
+            href="#contact"
+            className="gq-button border-white/20 hover:border-white/60"
           >
-            <div className="relative rounded-2xl glass-strong border border-glass-border p-6 shadow-2xl overflow-hidden group">
-              {/* Corner Accent Decorators */}
-              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-accent-cyan rounded-tl-xl" />
-              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-accent-magenta rounded-tr-xl" />
-              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-accent-magenta rounded-bl-xl" />
-              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-accent-cyan rounded-br-xl" />
+            Get In Touch
+          </a>
+        </motion.div>
 
-              {/* Terminal Window Header */}
-              <div className="flex items-center justify-between border-b border-glass-border pb-4 mb-4">
-                <div className="flex items-center space-x-2">
-                  <span className="w-3 h-3 rounded-full bg-red-500/80" />
-                  <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                  <span className="w-3 h-3 rounded-full bg-green-500/80" />
-                </div>
-                <div className="flex items-center gap-1.5 text-xs font-mono text-muted">
-                  <Terminal className="w-3.5 h-3.5 text-accent-cyan" />
-                  <span>vision_pipeline.py</span>
-                </div>
-              </div>
-
-              {/* Simulated Computer Vision Feed */}
-              <div className="relative aspect-video rounded-lg bg-black/60 border border-white/5 overflow-hidden flex items-center justify-center">
-                {/* Scanning Bounding Box Simulation */}
-                <motion.div
-                  animate={{
-                    x: [-20, 20, -20],
-                    y: [-10, 10, -10],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute w-32 h-24 border-2 border-accent-cyan/80 rounded bg-accent-cyan/10 flex flex-col justify-between p-1 shadow-lg shadow-accent-cyan/20"
-                >
-                  <div className="flex justify-between items-center text-[9px] font-mono text-accent-cyan font-bold bg-black/60 px-1 rounded">
-                    <span>E-WASTE</span>
-                    <span>87%</span>
-                  </div>
-                  <div className="text-[8px] font-mono text-accent-cyan/80">
-                    YOLOv8 DETECTED
-                  </div>
-                </motion.div>
-
-                {/* Secondary Target Box */}
-                <motion.div
-                  animate={{
-                    x: [30, -30, 30],
-                    y: [15, -15, 15],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute w-24 h-20 border-2 border-accent-magenta/80 rounded bg-accent-magenta/10 flex flex-col justify-between p-1 shadow-lg shadow-accent-magenta/20"
-                >
-                  <div className="flex justify-between items-center text-[9px] font-mono text-accent-magenta font-bold bg-black/60 px-1 rounded">
-                    <span>GESTURE</span>
-                    <span>94%</span>
-                  </div>
-                  <div className="text-[8px] font-mono text-accent-magenta/80">
-                    CV_FEED
-                  </div>
-                </motion.div>
-
-                {/* Grid Lines in Feed */}
-                <div className="absolute inset-0 bg-[radial-gradient(#00f3ff_1px,transparent_1px)] [background-size:16px_16px] opacity-10" />
-
-                {/* Central Status Icon */}
-                <Cpu className="w-10 h-10 text-accent-cyan/40 animate-pulse" />
-              </div>
-
-              {/* Telemetry Output */}
-              <div className="mt-4 font-mono text-xs space-y-1.5 text-muted/80">
-                <div className="flex justify-between text-accent-cyan">
-                  <span>&gt; MODEL_STATUS: ACTIVE</span>
-                  <span>FPS: 60.0</span>
-                </div>
-                <div className="text-white/40 truncate">
-                  [LOG] Inference time: 113ms | Input: 1080p | Device: CUDA:0
-                </div>
-                <div className="text-white/40 truncate">
-                  [LOG] Agents synchronized: 4/4 | System status: Nominal
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted hover:text-accent-cyan transition-colors cursor-pointer">
-          <span className="text-[10px] font-mono uppercase tracking-widest">Scroll to explore</span>
-          <ArrowDown className="w-4 h-4 animate-bounce" />
-        </div>
+        {/* Social Links */}
+        <motion.div
+          className="absolute bottom-10 left-6 right-6 flex justify-between z-30"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 1 }}
+        >
+          <div className="flex gap-6">
+            <a href="https://github.com/wael-k-18" target="_blank" rel="noopener" className="text-white/50 hover:text-white transition-colors">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.536-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/wael-k18" target="_blank" rel="noopener" className="text-white/50 hover:text-white transition-colors">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/waelfdv_" target="_blank" rel="noopener" className="text-white/50 hover:text-white transition-colors">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-.126-1.281-.14-1.689-.14-4.948 0-3.26.013-3.668.07-4.947.198-4.355 2.618-6.78 6.98-6.98 1.281-.059 1.69-.073 4.949-.073zM12 6.865c-2.838 0-5.135 2.297-5.135 5.135s2.298 5.135 5.135 5.135 5.135-2.298 5.135-5.135-2.297-5.135-5.135-5.135zm0 8.556c-1.888 0-3.423-1.535-3.423-3.423s1.535-3.423 3.423-3.423 3.423 1.535 3.423 3.423-1.535 3.423-3.423 3.423zm5.922-6.044c.786 0 1.424-.638 1.424-1.424s-.638-1.424-1.424-1.424-1.424.638-1.424 1.424.638 1.424 1.424 1.424z"/></svg>
+            </a>
+          </div>
+          <a href="mailto:waelkarbelkar@gmail.com" className="text-white/50 hover:text-white transition-colors font-editorial-mono text-xs tracking-widest uppercase">
+            waelkarbelkar@gmail.com
+          </a>
+        </motion.div>
       </div>
     </section>
   );
+}
+
+interface Particle {
+  x: number;
+  y: number;
+  vx: number;
+  vy: number;
+  radius: number;
+  opacity: number;
 }
